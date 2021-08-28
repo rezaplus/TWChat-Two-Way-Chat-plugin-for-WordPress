@@ -1,0 +1,66 @@
+body{
+    background: #73ff9e26 !important;
+}
+#Country_Code {
+    width: 170px;
+}
+tr th {
+    width: 89px !important;
+}
+#dtwp_message {
+    width: 500px;
+    display: block;
+    height: 170px;
+}
+ .button-primary {
+    background: #029a16c9;
+    border-color: #fff;
+}
+div#wpbody-content {
+    padding: 15px;
+}
+div#wpbody-content h1 {
+    border-bottom: 1px solid #b3b3b3;
+    padding-bottom: 22px;
+    color: #54a470;
+}
+
+
+#SubmitBtn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+ .button{
+    background: #029a16c9 !important;
+    border-color: #fff !important;
+}
+ .button:hover {
+    background: #57b346 !important;
+    border-color: #fff !important;
+}
+.phoneNumber td {
+    display: block;
+}
+tr.phoneNumber td p {
+    color: #b25151;
+    margin-top: 0px;
+}
+#QuickMessage_list {
+    margin-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+    .phoneNumber td {
+        display: block;
+        line-height: 60px;
+    }
+    tr.phoneNumber td p {
+        line-height: 1px;
+    }
+    #sendMessageForm input,#sendMessageForm textarea,#sendMessageForm select{
+        width: 90%;
+    }
+    .SubmitBtn {
+        display: block;
+    }
+}

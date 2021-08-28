@@ -1,0 +1,236 @@
+ h2.nav-tab-wrapper a {
+    background: #9cff9070;
+    border-radius: 5px 5px 0px 0px;
+    color: #01a433;
+}
+ a.nav-tab.nav-tab-active {
+    color: #006a08 !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #0b7217 !important;
+}
+.dtwp-Account-info .button {
+    margin-top: 15px;
+}
+.button-primary {
+    background: #029a16c9 !important;
+    border-color: #fff !important;
+}
+.button:hover {
+    background: #57b346 !important;
+    border-color: #fff !important;
+}
+.button-primary:hover {
+    background: #05a211 !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+.dtwp-form-table label {
+    line-height: 18px;
+}
+.dtwp-form-table td {
+    line-height: 10px;
+}
+.dtwp-form-table .dtwp-select-icon input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+}
+.dtwp-form-table .dtwp-select-icon input[type="radio"]:checked + .dtwp-icon {
+    background: #e2ffee;
+    border-bottom: 2px solid #52a6b7;
+    border-radius: 50px;
+    width: 40px;
+    padding: 8px;
+}
+.dtwp-form-table .dtwp-select-icon .dtwp-icon {
+    width: 35px;
+}
+div#wpfooter {
+    display: none;
+}
+.Page_title {
+    padding-bottom: 22px !important;
+    color: #54a470;
+    font-size: xx-large !important;
+}
+#dtwp_orders_pro_description{
+    margin-top: 25px;
+    background: #f8f8f8;
+    padding: 31px 60px 31px 20px;
+    border: 1px solid #b2b2b2;
+    width: fit-content;
+    display:none;
+}
+.DTWP-License{
+    display: table-caption;
+}
+.DTWP-License input[type="text"] {
+    width: 400px;
+    margin-bottom: 15px;
+}
+.DTWP-License p {
+    margin-top: 0px;
+}
+.Qmessage_dtwp{
+    margin-top:10px;
+}
+.Qmessage_dtwp td a , .faq_dtwp td a  {
+    margin: 0px 4px;
+    display: inline-flex;
+}
+.Qmessage_dtwp td {
+    margin: 0px 4px;
+    white-space: pre-wrap;
+}
+.dtwp-form-table textarea{
+    height: 136px;
+    width: 80%;
+}
+#shortcode li {
+  display: inline-block;
+  margin: 3px 3px;
+  padding:8px;
+  color: #0c6b06;
+  background: #e8f6e7;
+  border: 1px solid #054c003d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dtwp-social-settings tr img {
+    height: 40px;
+}
+.dtwp-social-settings tr th {
+    width: 60px;
+}
+.dtwp-social-settings tr td input {
+    width: 350px;
+}
+.faq_dtwp{
+    margin-top:10px;
+}
+.faq_dtwp td {
+    white-space: pre-wrap;
+}
+.button.button-small.new-ACS-btn {
+    line-height: 27px;
+    margin-top: 1px;
+    padding: 0px 26px;
+}
+#DefaultText {
+    width: 100%;
+    height: 90px;
+}
+.dtwp-Account-info{
+        display: inline-grid;
+}
+.dtwp-Account-info label{
+        margin-bottom: 6px;
+}
+ #img-src {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.dtwp-icon.dtwp-upload {
+    width: 30px;
+    padding: 5px;
+    margin: 3px;
+}
+.Accounts th {
+    width: 100px;
+}
+.dtwp-Account-info input[type=text] {
+    width: 300px;
+}
+.dtwp-form-table.Accounts-view tr {
+    width: 352px;
+    background: white;
+    display: inline-block;
+    padding: 5px 25px;
+    margin: 10px 10px;
+    border-radius: 8px;
+    border: 1px solid #7676766b;
+}
+.dtwp-form-table.Accounts-view tr th {
+    width: 100px;
+}
+.dtwp-form-table.Accounts-view tr th img {
+    width: 80px;
+    height:80px;
+    border-radius: 50px;
+}
+.dtwp-Account-info-view div {
+    display: block;
+    margin: 15px 0px;
+    line-height: 1.3em;
+}
+.Accounts {
+    display: table-cell;
+    width: auto;
+}
+.dtwp-Account-info-view {
+    width: inherit;
+}
+.dtwp-form-table.Accounts.Accounts-view td a {
+    margin: 0px 3px;
+    opacity: 0.7;
+}
+.dtwp-form-table.Accounts.Accounts-view td a:hover {
+    opacity: 1;
+}
+select#Country_Code[readonly] {
+    pointer-events: none;
+    background: #f0f0f1;
+}
+.new-ACS-btn{
+    text-align: center;
+}
+.Accounts.Accounts-view tbody {
+    margin-top: 19px;
+    position: absolute;
+    background: #fff;
+    border-bottom: 1px solid #919191;
+}
+input[type="range"] {
+width: 260px;
+}
+.wp-list-table.widefat.striped.table-view-list {
+    margin: 20px 0px;
+}
+form {
+    background: #fff;
+    padding: 35px 20px;
+    margin: 0px 0px;
+    border-bottom: 1px solid #919191;
+}
+.DTWP_userImg_list img {
+    width: 45px;
+    cursor: pointer;
+}
+.DTWP_userImg_list  {
+    margin-top:5px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .dtwp-form-table label {
+        line-height: 22px;
+    }
+    body .button{
+    margin-top: 27px;
+    }
+    .dtwp-Account-info input {
+    width: 100%;
+    }
+    .Accounts {
+    display: block;
+    }
+    body .dtwp-form-table.Accounts-view tr{
+        display: flex ;
+        width: auto;
+    }
+}
+/* RTL */
+.DTWP_RTL .flex-dt{
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
