@@ -26,7 +26,7 @@ add_action('woocommerce_admin_order_preview_start',function(){ ?>
     }
 </style>
     <div id="DTWhatsap_woocommerce">
-    <img   onclick="sendMessage({{data.data.billing.phone}},'')" src="<?= DTWP_image ?>whatsapp.svg">
+    <img   onclick="sendMessage('{{data.data.billing.phone}}','')" src="<?= DTWP_image ?>whatsapp.svg">
         <div class="qms_premium" style=" filter: grayscale(1); display: flex;">
             <img   src="<?= DTWP_image ?>Quick.svg" id="QuickMessage_btn">
             <span class='dtwp-tooltip'><?php esc_html_e('You need to get the premium version for this feature.','DTWPLANG'); ?></span>

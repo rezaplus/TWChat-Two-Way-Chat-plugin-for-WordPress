@@ -2,7 +2,7 @@
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress, whatsapp floating button, whatsapp icon
 
-Stable tag: 3.1.1
+Stable tag: 3.1.2
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -39,14 +39,7 @@ Open the WP admin panel.. click the “Plugins” page.. and click “Activate�
 
 == Screenshots ==
 
-1. Order preview
-2. Orders (product) page
-3. Orders on mobile
+1. 
 
 == Changelog ==
-== 1.6 ==
-*Fixed warrings
-= 1.5 =
-* Fixed translate default options
-= 1.0 =
-* Initial commit
+

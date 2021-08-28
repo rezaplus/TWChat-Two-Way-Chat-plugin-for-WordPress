@@ -4,7 +4,7 @@
  * Description: Direct To Whatsapp | Interaction between you and your customers by whatsapp.
  * Plugin URI: "https://rellaco.com/product/dtw"
  * Author: rezaplus
- * Version: 3.1.1
+ * Version: 3.1.2
  * Text Domain: DTWPLANG
  * Author URI: https://rezaplus.com/
  * 
@@ -26,7 +26,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 DTWP_class::get_instance();
-define('DTWP_plugin_version', "3.1.1");
+define('DTWP_plugin_version', "3.1.2");
 
 class DTWP_class{
     
