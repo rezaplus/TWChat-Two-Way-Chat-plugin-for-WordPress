@@ -1,7 +1,6 @@
 === DTCHAT - Two-way communication ===
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress, whatsapp floating button, whatsapp icon
-
 Stable tag: 3.1.2
 Requires PHP: 5.4
 License: GPLv2 or later
