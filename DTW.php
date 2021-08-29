@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: DTWhatsapp
- * Description: Direct To Whatsapp | Interaction between you and your customers by whatsapp.
+ * Plugin Name: DTCHAT
+ * Description: Direct To Whatsapp | Communication between you and your customers through WhatsApp.
  * Plugin URI: "https://rellaco.com/product/dtw"
  * Author: rezaplus
  * Version: 3.1.2
