@@ -57,7 +57,7 @@ $Accounts_info = get_option('DTWP_Accounts_list');
             <input type="number" value="<?php echo   isset($_GET['Edit']) ? esc_attr( $Accounts_edit['Account-whatsapp-number'] ) : '' ; ?>" name="Account-whatsapp-number" id="Account-whatsapp-number"  required>
             <br>
             <label for="DefaultText"><?php esc_html_e('Text','DTWPLANG'); ?></label>
-            <textarea id="DefaultText" name="DefaultText"></textarea>
+            <textarea id="DefaultText" name="DefaultText"><?php echo   isset($_GET['Edit']) ? esc_attr( $Accounts_edit['DefaultText'] ) : '' ; ?></textarea>
             <button type="submit" name="submit" class="button button-primary" value="Accounts"><?php isset($_GET['Edit'])? esc_html_e('Save','DTWPLANG') : esc_html_e('Insert','DTWPLANG'); ?></button>
             <br>
             <a href="?page=DTWP_settings&tab=Float&sT=Accounts" class="button button-small new-ACS-btn" style="<?php echo  isset($_GET['Edit']) ? '' : 'display:none;' ?>"><?php esc_html_e('New','DTWPLANG'); ?></a>

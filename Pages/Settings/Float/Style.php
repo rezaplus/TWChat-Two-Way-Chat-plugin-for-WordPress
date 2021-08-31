@@ -58,7 +58,7 @@ require_once DTWP_DIR_path.'Pages/Float.php';
         <th scope="row"><?php esc_html_e('Second background color','DTWPLANG'); ?></th>
         <td>
             <input type="color" value="<?php echo  isset($float_option) ? esc_attr( $float_option['floatBackground2'] ): '#39a805'; ?>" style="width:80px" name="floatBackground2" oninput="this.nextElementSibling.value = this.value">
-            <output><?php echoisset($float_option) ?  esc_html( $float_option['floatBackground2'] ): '#39a805'; ?></output>
+            <output><?php echo isset($float_option) ?  esc_html( $float_option['floatBackground2'] ): '#39a805'; ?></output>
         </td>
     </tr>
     <tr>

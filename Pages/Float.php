@@ -7,7 +7,7 @@ $float_width = $float_option['floatSize']-$float_padding1-$float_padding2;
 <style>
 .dtwpFloatContainer{
     <?php echo esc_html($float_option['float-location']).':'.esc_html($float_option['dtwp_SideSpace']).'px'; ?>;
-    bottom:<?php esc_attr_e($float_option['dtwp_bottomDistance']).'px'; ?>;
+    bottom:<?php echo esc_html($float_option['dtwp_bottomDistance']).'px'; ?>;
 }
 .dtwpFloatBox {
     transform: scale(0);
@@ -42,7 +42,7 @@ $float_width = $float_option['floatSize']-$float_padding1-$float_padding2;
 }
 @media only screen and (max-width: 768px) {
   .dtwpFloatContainer{
-    <?php esc_html_e( $float_option['float-locationMobile']).':'. esc_html($float_option['dtwp_SideSpaceMobile']).'px !important'; ?>;
+    <?php echo esc_html( $float_option['float-locationMobile']).':'. esc_html($float_option['dtwp_SideSpaceMobile']).'px !important'; ?>;
     bottom:<?php echo esc_html($float_option['dtwp_bottomDistanceMobile']).'px !important'; ?>;
 }
 .dtwpFloatBtn{

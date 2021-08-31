@@ -47,14 +47,11 @@ if(!empty($IDs_list)){ ?>
 				<?php
 				foreach($IDs_list as $id_faq){
 					$FAQ_D = get_option($id_faq);
-					$Question = esc_html($FAQ_D['DTW_FAQ_Question']);
-					$Answer = esc_html($FAQ_D['DTW_FAQ_Answer']);
-					$id = esc_html($FAQ_D['id']);
-					echo "<tr><td> $Question </td>";
-					echo "<td><p> $Answer </p></td>";
+					echo "<tr><td>".esc_html($FAQ_D['DTW_FAQ_Question'])."</td>";
+					echo "<td><p>". esc_html($FAQ_D['DTW_FAQ_Answer']) ."</p></td>";
 					echo "<td>";
-					echo "<a href='?page=DTWP_settings&tab=Float&sT=FAQ&Delete=$id'>".__('Delete','DTWPLANG')."</a>";
-					echo "<a href='?page=DTWP_settings&tab=Float&sT=FAQ&Edit=$id'>".__('Edit','DTWPLANG')."</a>";
+					echo "<a href='?page=DTWP_settings&tab=Float&sT=FAQ&Delete=".esc_html($FAQ_D['id'])."'>".esc_html('Delete','DTWPLANG')."</a>";
+					echo "<a href='?page=DTWP_settings&tab=Float&sT=FAQ&Edit=".esc_html($FAQ_D['id'])."'>".esc_html('Edit','DTWPLANG')."</a>";
 					echo "</td>";
 					echo "</tr>";
 				}

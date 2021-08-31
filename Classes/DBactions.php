@@ -6,11 +6,11 @@ class DTWP_DBactions{
     public function __construct(){
     
     }
-    public static function Update($postData,$getEditIdId,$option_name,$url){
+    public static function Update($postData,$getEditId,$option_name,$url){
         $url = esc_url_raw( $url );
         
         unset($postData['submit']);
-        if(!isset($getEditId)){
+        if(empty($getEditId)){
             $id = $option_name.self::randNumber($option_name);
             $postData['id'] = $id;
             

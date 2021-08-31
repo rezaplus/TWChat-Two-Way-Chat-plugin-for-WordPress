@@ -37,11 +37,11 @@ $dwtp_data = get_option('DTWP_General_Option');
             <label for="wc_is_enable" ><?php esc_html_e('Enable/disable the WhatsApp button on orders.','DTWPLANG'); ?></label>
         </td>
     </tr>
-    <tr style="cursor: not-allowed;">
+    <tr>
         <th scope="row"><?php esc_html_e('Quick messages','DTWPLANG');?> - <?php esc_html_e('premium','DTWPLANG');?></th>
-        <td  style="pointer-events: none;">
-            <input type="checkbox" id="qmessage_is_enable" <?php echo  $dwtp_data['wc_is_enable'] == 'true' ? '' : 'disabled'; ?>> 
-            <input type="hidden" name="qmessage_is_enable" >
+        <td>
+            <input type="checkbox" id="qmessage_is_enable" oninput="this.nextElementSibling.value = this.checked" <?php echo  $dwtp_data['wc_is_enable'] == 'true' ? '' : 'disabled'; ?> <?php echo  $dwtp_data['wc_is_enable']=='true' ? 'checked' : 'unchecked'; ?>> 
+            <input type="hidden" name="qmessage_is_enable" value="<?php esc_attr_e($dwtp_data['qmessage_is_enable']); ?>">
             <label for="qmessage_is_enable" ><?php esc_html_e('Enable/Disable whatsapp Ready messages button on orders.','DTWPLANG'); ?></label>
         </td>
     </tr>

@@ -22,7 +22,7 @@ add_action('woocommerce_admin_order_data_after_billing_address', function(){
     width: max-content;
     border-radius: 5px;
     top: -5px;
-    right: 40px;
+    left: 40px;
     }
     .dtwp-tooltip{
         display:none;
@@ -30,10 +30,14 @@ add_action('woocommerce_admin_order_data_after_billing_address', function(){
 </style>
     <div id="DTWhatsap_woocommerce">
         <img  onclick="sendMessage('<?php echo $order->get_billing_phone() ?>','')" src="<?php echo DTWP_image ?>whatsapp.svg">
-        <div class="qms_premium" style=" filter: grayscale(1); display: flex;">
-            <img   src="<?php echo DTWP_image ?>Quick.svg" id="QuickMessage_btn">
-            <span class='dtwp-tooltip'><?php esc_html_e('You need to get the premium version for this feature.','DTWPLANG'); ?></span>
-        </div>
+        <?php
+	    $DTWP_general = get_option('DTWP_General_Option');
+	    if($DTWP_general['qmessage_is_enable']=='true'){ ?>
+            <div class="qms_premium" style=" filter: grayscale(1); display: flex;">
+                <img   src="<?php echo DTWP_image ?>Quick.svg" id="QuickMessage_btn">
+                <span class='dtwp-tooltip'><?php esc_html_e('You need to get the premium version for this feature.','DTWPLANG'); ?></span>
+            </div>
+        <?php } ?>
     </div>
 <?php
 });
