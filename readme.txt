@@ -4,7 +4,7 @@ Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to
 Requires at least: 4.7.0
 Requires PHP: 5.6
 Tested up to: 5.8
-Stable tag: 3.1.2
+Stable tag: 3.1.3
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
