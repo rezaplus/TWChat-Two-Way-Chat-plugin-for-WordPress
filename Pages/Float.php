@@ -7,14 +7,13 @@ $float_width = $float_option['floatSize']-$float_padding1-$float_padding2;
 <style>
 .dtwpFloatContainer{
     <?php echo esc_html($float_option['float-location']).':'.esc_html($float_option['dtwp_SideSpace']).'px'; ?>;
-    bottom:<?= esc_attr($float_option['dtwp_bottomDistance']).'px'; ?>;
+    bottom:<?php esc_attr_e($float_option['dtwp_bottomDistance']).'px'; ?>;
 }
 .dtwpFloatBox {
     transform: scale(0);
     <?php echo esc_html($float_option['float-location']).':'.esc_html($float_option['dtwp_SideSpace']-1).'px'; ?>;
     bottom:<?php echo esc_html($float_option['dtwp_bottomDistance']-1).'px'; ?>;
     transform-origin: <?php echo esc_html($float_option['float-location']); ?> bottom;
-
 }
 .dtwpFloatBtn{
     float:<?php echo esc_html($float_option['float-location']); ?>;
@@ -39,11 +38,11 @@ $float_width = $float_option['floatSize']-$float_padding1-$float_padding2;
     color:<?php echo esc_html($float_option['floatBoxTextColor']); ?>;
 }
 .dtwpBoxHeader svg{
-    fill:<?=esc_html($float_option['floatBoxCloseBtnColor']); ?>;
+    fill:<?php esc_html_e($float_option['floatBoxCloseBtnColor']); ?>;
 }
 @media only screen and (max-width: 768px) {
   .dtwpFloatContainer{
-    <?= esc_html( $float_option['float-locationMobile']).':'. esc_html($float_option['dtwp_SideSpaceMobile']).'px !important'; ?>;
+    <?php esc_html_e( $float_option['float-locationMobile']).':'. esc_html($float_option['dtwp_SideSpaceMobile']).'px !important'; ?>;
     bottom:<?php echo esc_html($float_option['dtwp_bottomDistanceMobile']).'px !important'; ?>;
 }
 .dtwpFloatBtn{
@@ -51,11 +50,11 @@ $float_width = $float_option['floatSize']-$float_padding1-$float_padding2;
 }
 }
 </style>
-<div class="dtwpFloatContainer <?= is_rtl() ? 'RTL' : ''?>">
+<div class="dtwpFloatContainer <?php echo is_rtl() ? 'RTL' : ''?>">
     <?php require_once DTWP_DIR_path.'Pages/FloatBox.php'; ?>
     <div class="dtwpFloatBtn">
         <div>
-            <img src="<?= esc_url(DTWP_image."float-icon/".$float_option['float-icon']); ?>" class="dtwp-icon" onclick="document.getElementById('dtwpFloatBox').classList.toggle('show');">
+            <img src="<?php echo esc_url(DTWP_image."float-icon/".$float_option['float-icon']); ?>" class="dtwp-icon" onclick="document.getElementById('dtwpFloatBox').classList.toggle('show');">
         </div>
     </div>
 </div>

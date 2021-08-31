@@ -14,8 +14,8 @@ if(isset($_POST['submit'])){
             array_push($WC_,str_replace('W_','',$key));
         }
     }
-    update_option('DTWP_Accessibility_settings',$settings_);
-    update_option('DTWP_Accessibility_WC',$WC_);
+    update_option('DTWP_Accessibility_settings',array_map( 'sanitize_text_field', $settings_ ));
+    update_option('DTWP_Accessibility_WC',array_map( 'sanitize_text_field', $WC_ ));
 }
     $settings_get= get_option('DTWP_Accessibility_settings');
     $WC_get= get_option('DTWP_Accessibility_WC');
@@ -36,9 +36,9 @@ unset($roles['subscriber']);
 foreach($roles as $key => $value){
 ?>
     <tr>
-        <td><?= $value['name'] ?></td>
-        <td><input type="checkbox" name="S_<?= $key ?>" value="Settings" <?= in_array($key,$settings_get) ? 'checked' : '' ?>></td>
-        <td><input type="checkbox" name="W_<?= $key ?>"value="WC" <?= in_array($key,$WC_get) ? 'checked' : '' ?>></td>
+        <td><?php echo  $value['name'] ?></td>
+        <td><input type="checkbox" name="S_<?php echo  $key ?>" value="Settings" <?php echo  in_array($key,$settings_get) ? 'checked' : '' ?>></td>
+        <td><input type="checkbox" name="W_<?php echo  $key ?>"value="WC" <?php echo  in_array($key,$WC_get) ? 'checked' : '' ?>></td>
 <?php } ?>
     </tr>
 </table>

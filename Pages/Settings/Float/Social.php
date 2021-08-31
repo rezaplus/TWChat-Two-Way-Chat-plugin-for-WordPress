@@ -14,90 +14,90 @@
     <tbody>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>instagram.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/instagram.svg">
             </th>
             <td>
-                <input name="instagram" type="url" placeholder="https://..." value="<?= isset($DTWP_social['instagram']) ? esc_url($DTWP_social['instagram']) : '' ?>">
+                <input name="instagram" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['instagram']) ? esc_url($DTWP_social['instagram']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>facebook.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/facebook.svg">
             </th>
             <td>
-                <input name="facebook" type="url" placeholder="https://..." value="<?= isset($DTWP_social['facebook']) ? esc_url($DTWP_social['facebook']) : '' ?>">
+                <input name="facebook" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['facebook']) ? esc_url($DTWP_social['facebook']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>twitter.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/twitter.svg">
             </th>
             <td>
-                <input name="twitter" type="url" placeholder="https://..." value="<?= isset($DTWP_social['twitter']) ? esc_url($DTWP_social['twitter']) : '' ?>">
+                <input name="twitter" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['twitter']) ? esc_url($DTWP_social['twitter']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>telegram.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/telegram.svg">
             </th>
             <td>
-                <input name="telegram" type="url" placeholder="https://..." value="<?= isset($DTWP_social['telegram']) ? esc_url( $DTWP_social['telegram']) : '' ?>">
+                <input name="telegram" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['telegram']) ? esc_url( $DTWP_social['telegram']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>linkedin.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/linkedin.svg">
             </th>
             <td>
-                <input name="linkedin" type="url" placeholder="https://..." value="<?= isset($DTWP_social['linkedin']) ? esc_url($DTWP_social['linkedin']) : '' ?>">
+                <input name="linkedin" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['linkedin']) ? esc_url($DTWP_social['linkedin']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>youtube.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/youtube.svg">
             </th>
             <td>
-                <input name="youtube" type="url" placeholder="https://..." value="<?= isset($DTWP_social['youtube']) ? esc_url($DTWP_social['youtube']) : '' ?>">
+                <input name="youtube" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['youtube']) ? esc_url($DTWP_social['youtube']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>snapchat.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/snapchat.svg">
             </th>
             <td>
-                <input name="snapchat" type="url" placeholder="https://..." value="<?= isset($DTWP_social['snapchat']) ? esc_url($DTWP_social['snapchat']) : '' ?>">
+                <input name="snapchat" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['snapchat']) ? esc_url($DTWP_social['snapchat']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>pinterest.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/pinterest.svg">
             </th>
             <td>
-                <input name="pinterest" type="url" placeholder="https://..." value="<?= isset($DTWP_social['pinterest']) ? esc_url($DTWP_social['pinterest']) : '' ?>">
+                <input name="pinterest" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['pinterest']) ? esc_url($DTWP_social['pinterest']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>flickr.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/flickr.svg">
             </th>
             <td>
-                <input name="flickr" type="url" placeholder="https://..." value="<?= isset($DTWP_social['flickr']) ? esc_url($DTWP_social['flickr']) : '' ?>">
+                <input name="flickr" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['flickr']) ? esc_url($DTWP_social['flickr']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>dribbble.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/dribbble.svg">
             </th>
             <td>
-                <input name="dribbble" type="url" placeholder="https://..." value="<?= isset($DTWP_social['dribbble']) ? esc_url($DTWP_social['dribbble']) : '' ?>">
+                <input name="dribbble" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['dribbble']) ? esc_url($DTWP_social['dribbble']) : '' ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <img src="<?= DTWP_image.'socialIcons/'?>behance.svg">
+                <img src="<?php echo DTWP_image ?>socialIcons/behance.svg">
             </th>
             <td>
-                <input name="behance" type="url" placeholder="https://..." value="<?= isset($DTWP_social['behance']) ? esc_url($DTWP_social['behance']) : '' ?>">
+                <input name="behance" type="url" placeholder="https://..." value="<?php echo isset($DTWP_social['behance']) ? esc_url($DTWP_social['behance']) : '' ?>">
             </td>
         <tr>
     </tbody>

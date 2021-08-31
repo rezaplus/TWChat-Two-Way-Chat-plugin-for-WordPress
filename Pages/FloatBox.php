@@ -63,12 +63,12 @@
                         ?>
                         <li class="<?php esc_attr_e($availableLiClass); ?>"><a href="<?php esc_attr_e($ACSWhatsapp); ?>" target="_blank">
                             <div class="dtwpBoxACSF">
-                                <img alt="<?php esc_html_e($ACSInfo['Account-name']) ?>" src="<?= esc_url($ACSInfo['img-ACS']); ?>">
+                                <img alt="<?php esc_html_e($ACSInfo['Account-name']) ?>" src="<?php echo esc_url($ACSInfo['img-ACS']); ?>">
                             </div>
                             <div class="dtwpBoxACSL">
                                 <div class="dtwBoxACSTitle"> <?php esc_html_e($ACSInfo['Account-title']); ?></div>
                                 <div class="dtwBoxACSName"><?php esc_html_e($ACSInfo['Account-name']);?></div>
-                                <div class="dtwBoxACSavailableTime"><?= isset($availableTime) ? esc_html($availableTime) : ''; ?></div>
+                                <div class="dtwBoxACSavailableTime"><?php echo isset($availableTime) ? esc_html($availableTime) : ''; ?></div>
                             </div>
                         </a></li>
             <?php

@@ -7,14 +7,14 @@
         $active_tab = 'General';
     }
     ?>  
-    <div class="wrap <?= is_rtl() ?  'DTWP_RTL' : '' ?>">
+    <div class="wrap <?php echo is_rtl() ?  'DTWP_RTL' : '' ?>">
         <div class="DTW-header">
         <h1 class="Page_title"><?php esc_html_e('Settings','DTWPLANG'); ?></h1>
         <h2 class="nav-tab-wrapper">
-            <a href="?page=DTWP_settings&tab=General" class="nav-tab <?=  $active_tab == 'General' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('General','DTWPLANG'); ?></a>  
-            <a href="?page=DTWP_settings&tab=Qmessage" class="nav-tab <?= $active_tab == 'Qmessage' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Quick message','DTWPLANG'); ?></a> 
-            <a href="?page=DTWP_settings&tab=Float" class="nav-tab <?= $active_tab == 'Float' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Float','DTWPLANG'); ?></a>  
-            <a href="?page=DTWP_settings&tab=Accessibility" class="nav-tab <?= $active_tab == 'Accessibility' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Accessibility','DTWPLANG'); ?></a>  
+            <a href="?page=DTWP_settings&tab=General" class="nav-tab <?php echo $active_tab == 'General' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('General','DTWPLANG'); ?></a>  
+            <a href="?page=DTWP_settings&tab=Qmessage" class="nav-tab <?php echo $active_tab == 'Qmessage' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Quick message','DTWPLANG'); ?></a> 
+            <a href="?page=DTWP_settings&tab=Float" class="nav-tab <?php echo $active_tab == 'Float' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Float','DTWPLANG'); ?></a>  
+            <a href="?page=DTWP_settings&tab=Accessibility" class="nav-tab <?php echo $active_tab == 'Accessibility' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Accessibility','DTWPLANG'); ?></a>  
 
         </h2>  
         </div>

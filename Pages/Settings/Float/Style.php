@@ -20,8 +20,8 @@ require_once DTWP_DIR_path.'Pages/Float.php';
         for($i=0;$i<=18;$i++){ $floatIcon = "float-icon$i.svg";?>
         
         <label>
-            <input name="float-icon" type="radio" value="<?php esc_attr_e($floatIcon); ?>" <?= $float_option['float-icon'] == $floatIcon ? 'checked' : ''; ?>>
-            <img class="dtwp-icon" src="<?= esc_url(DTWP_image."float-icon/".$floatIcon."?ver=".DTWP_plugin_version); ?>" >
+            <input name="float-icon" type="radio" value="<?php esc_attr_e($floatIcon); ?>" <?php echo $float_option['float-icon'] == $floatIcon ? 'checked' : ''; ?>>
+            <img class="dtwp-icon" src="<?php echo esc_url(DTWP_image."float-icon/".$floatIcon."?ver=".DTWP_plugin_version); ?>" >
         </label>
         <?php } ?>
         </td>
@@ -29,50 +29,50 @@ require_once DTWP_DIR_path.'Pages/Float.php';
     <tr>
         <th scope="row"><?php esc_html_e('size','DTWPLANG'); ?></th>
         <td>
-            <input name="floatSize" type="range" value="<?= isset($float_option) ? esc_attr( $float_option['floatSize']) : '40'; ?>" min="25" max="300" oninput="this.nextElementSibling.value = this.value+'px'">
-            <output><?= isset($float_option) ? esc_html( $float_option['floatSize'] ) : '40px'; ?></output>
+            <input name="floatSize" type="range" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatSize']) : '40'; ?>" min="25" max="300" oninput="this.nextElementSibling.value = this.value+'px'">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatSize'] ) : '40px'; ?></output>
         </td>
     </tr>
     <tr>
         <th scope="row"><?php esc_html_e('First background color','DTWPLANG'); ?></th>
         <td>
-            <input type="color" value="<?= isset($float_option) ? esc_attr( $float_option['floatBackground1'] ) : '#39a805'; ?>" style="width:80px" name="floatBackground1" oninput="this.nextElementSibling.value = this.value">
-            <output><?= isset($float_option) ? esc_html( $float_option['floatBackground1'] ) : '#39a805'; ?></output>
+            <input type="color" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatBackground1'] ) : '#39a805'; ?>" style="width:80px" name="floatBackground1" oninput="this.nextElementSibling.value = this.value">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatBackground1'] ) : '#39a805'; ?></output>
         </td>
     </tr>
     <tr>
         <th scope="row"><?php esc_html_e('Rounded corners','DTWPLANG'); ?></th>
         <td>
-            <input name="floatRadius1" type="range" min="0" max="50" value="<?= isset($float_option) ? esc_attr($float_option['floatRadius1']) : '50'; ?>" oninput="this.nextElementSibling.value = this.value+'%'">
-            <output><?= isset($float_option) ? esc_html($float_option['floatRadius1'] ) : '50'; ?>%</output>
+            <input name="floatRadius1" type="range" min="0" max="50" value="<?php echo isset($float_option) ? esc_attr($float_option['floatRadius1']) : '50'; ?>" oninput="this.nextElementSibling.value = this.value+'%'">
+            <output><?php echo isset($float_option) ? esc_html($float_option['floatRadius1'] ) : '50'; ?>%</output>
         </td>
     </tr> 
     <tr>
         <th scope="row"><?php esc_html_e('Padding','DTWPLANG'); ?></th>
         <td>
-            <input name="floatPadding1" type="range" min="0" max="20" value="<?= isset($float_option) ? esc_attr( $float_option['floatPadding1'] ) : '50'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
-            <output><?= isset($float_option) ? esc_html( $float_option['floatPadding1'] ) : '6'; ?>px</output>
+            <input name="floatPadding1" type="range" min="0" max="20" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatPadding1'] ) : '50'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatPadding1'] ) : '6'; ?>px</output>
         </td>
     </tr> 
     <tr>
         <th scope="row"><?php esc_html_e('Second background color','DTWPLANG'); ?></th>
         <td>
-            <input type="color" value="<?=  isset($float_option) ? esc_attr( $float_option['floatBackground2'] ): '#39a805'; ?>" style="width:80px" name="floatBackground2" oninput="this.nextElementSibling.value = this.value">
-            <output><?=isset($float_option) ?  esc_html( $float_option['floatBackground2'] ): '#39a805'; ?></output>
+            <input type="color" value="<?php echo  isset($float_option) ? esc_attr( $float_option['floatBackground2'] ): '#39a805'; ?>" style="width:80px" name="floatBackground2" oninput="this.nextElementSibling.value = this.value">
+            <output><?php echoisset($float_option) ?  esc_html( $float_option['floatBackground2'] ): '#39a805'; ?></output>
         </td>
     </tr>
     <tr>
         <th scope="row"><?php esc_html_e('Rounded corners','DTWPLANG'); ?></th>
         <td>
-            <input name="floatRadius2" type="range" min="0" max="50" value="<?= isset($float_option) ? esc_attr( $float_option['floatRadius2'] ): '50'; ?>" oninput="this.nextElementSibling.value = this.value+'%'">
-            <output><?= isset($float_option) ? esc_html( $float_option['floatRadius2'] ) : '50'; ?>%</output>
+            <input name="floatRadius2" type="range" min="0" max="50" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatRadius2'] ): '50'; ?>" oninput="this.nextElementSibling.value = this.value+'%'">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatRadius2'] ) : '50'; ?>%</output>
         </td>
     </tr>  
     <tr>
         <th scope="row"><?php esc_html_e('Padding','DTWPLANG'); ?></th>
         <td>
-            <input name="floatPadding2" type="range" min="0" max="20" value="<?= isset($float_option) ? esc_attr( $float_option['floatPadding2'] ) : '6'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
-            <output><?= isset($float_option) ? esc_html( $float_option['floatPadding2'] ) : '6'; ?>px</output>
+            <input name="floatPadding2" type="range" min="0" max="20" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatPadding2'] ) : '6'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatPadding2'] ) : '6'; ?>px</output>
         </td>
     </tr> 
     <tr><th><h2><?php esc_html_e("Desktop", 'DTWPLANG'); ?></h2></th><td><hr></td></tr>
@@ -80,11 +80,11 @@ require_once DTWP_DIR_path.'Pages/Float.php';
         <th scope="row"><?php esc_html_e("location", 'DTWPLANG'); ?></th>
         <td class="flex-dt">
         <label style="margin-right:5px;">
-            <input name="float-location" type="radio" Value="Left" <?= $float_option['float-location']=='Left' ? 'checked' : ''; ?>>
+            <input name="float-location" type="radio" Value="Left" <?php echo $float_option['float-location']=='Left' ? 'checked' : ''; ?>>
             <?php esc_html_e('Left','DTWPLANG'); ?>
         </label>
         <label style="margin-left:5px;">
-            <input name="float-location"  type="radio" Value="Right" <?= $float_option['float-location']=='Right' ? 'checked' : ''; ?>>
+            <input name="float-location"  type="radio" Value="Right" <?php echo $float_option['float-location']=='Right' ? 'checked' : ''; ?>>
             <?php esc_html_e('Right','DTWPLANG'); ?>
         </label>
         </td>
@@ -94,13 +94,13 @@ require_once DTWP_DIR_path.'Pages/Float.php';
         <td>
             <Label for="dtwp_SideSpace" style="line-height: 25px;" ><?php esc_html_e('Distance from the side','DTWPLANG'); ?></label>
             <br>
-            <input name="dtwp_SideSpace" type="range" min="1" max="300" value="<?= isset($float_option) ? esc_attr( $float_option['dtwp_SideSpace'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
-            <output><?= isset($float_option) ? esc_html( $float_option['dtwp_SideSpace'] ) : '24'; ?>px</output>
+            <input name="dtwp_SideSpace" type="range" min="1" max="300" value="<?php echo isset($float_option) ? esc_attr( $float_option['dtwp_SideSpace'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['dtwp_SideSpace'] ) : '24'; ?>px</output>
             <br>
             <Label for="dtwp_bottomDistance" style="line-height: 25px;"><?php esc_html_e('Distance from the bottom','DTWPLANG'); ?></label>
             <br>
-            <input name="dtwp_bottomDistance" type="range" min="1" max="300" value="<?=  isset($float_option) ?esc_attr(  $float_option['dtwp_bottomDistance'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
-            <output><?= isset($float_option) ? esc_html( $float_option['dtwp_bottomDistance'] ) : '24'; ?>px</output>
+            <input name="dtwp_bottomDistance" type="range" min="1" max="300" value="<?php echo  isset($float_option) ?esc_attr(  $float_option['dtwp_bottomDistance'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['dtwp_bottomDistance'] ) : '24'; ?>px</output>
         </td>
     </tr>
     <tr><th><h2><?php esc_html_e("Mobile", 'DTWPLANG'); ?></h2></th><td><hr></td></tr>
@@ -108,11 +108,11 @@ require_once DTWP_DIR_path.'Pages/Float.php';
         <th scope="row"><?php esc_html_e("location", 'DTWPLANG'); ?></th>
         <td class="flex-dt">
         <label style="margin-right:5px;">
-            <input name="float-locationMobile" type="radio" Value="Left" <?= $float_option['float-locationMobile']=='Left' ? 'checked' : ''; ?>>
+            <input name="float-locationMobile" type="radio" Value="Left" <?php echo $float_option['float-locationMobile']=='Left' ? 'checked' : ''; ?>>
             <?php esc_html_e('Left','DTWPLANG'); ?>
         </label>
         <label style="margin-left:5px;">
-            <input name="float-locationMobile"  type="radio" Value="Right" <?= $float_option['float-locationMobile']=='Right' ? 'checked' : ''; ?>>
+            <input name="float-locationMobile"  type="radio" Value="Right" <?php echo $float_option['float-locationMobile']=='Right' ? 'checked' : ''; ?>>
             <?php esc_html_e('Right','DTWPLANG'); ?>
         </label>
         </td>
@@ -122,13 +122,13 @@ require_once DTWP_DIR_path.'Pages/Float.php';
         <td>
             <Label for="dtwp_SideSpace" style="line-height: 25px;" ><?php esc_html_e('Distance from the side','DTWPLANG'); ?></label>
             <br>
-            <input name="dtwp_SideSpaceMobile" type="range" min="1" max="300" value="<?= isset($float_option) ? esc_attr( $float_option['dtwp_SideSpaceMobile'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
-            <output><?= isset($float_option) ? esc_html( $float_option['dtwp_SideSpaceMobile'] ) : '24'; ?>px</output>
+            <input name="dtwp_SideSpaceMobile" type="range" min="1" max="300" value="<?php echo isset($float_option) ? esc_attr( $float_option['dtwp_SideSpaceMobile'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['dtwp_SideSpaceMobile'] ) : '24'; ?>px</output>
             <br>
             <Label for="dtwp_bottomDistance" style="line-height: 25px;"><?php esc_html_e('Distance from the bottom','DTWPLANG'); ?></label>
             <br>
-            <input name="dtwp_bottomDistanceMobile" type="range" min="1" max="300" value="<?= isset($float_option) ? esc_attr( $float_option['dtwp_bottomDistanceMobile'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
-            <output><?= isset($float_option) ? esc_html( $float_option['dtwp_bottomDistanceMobile'] ) : '24'; ?>px</output>
+            <input name="dtwp_bottomDistanceMobile" type="range" min="1" max="300" value="<?php echo isset($float_option) ? esc_attr( $float_option['dtwp_bottomDistanceMobile'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['dtwp_bottomDistanceMobile'] ) : '24'; ?>px</output>
         </td>
     </tr>
     <tr><th><h2><?php esc_html_e("Box style", 'DTWPLANG'); ?></h2></th><td><hr></td></tr>
@@ -136,38 +136,38 @@ require_once DTWP_DIR_path.'Pages/Float.php';
         <th scope="row">
             <?php esc_html_e('Title','DTWPLANG'); ?></th>
         <td>
-            <input type="text" value="<?= isset($float_option) ? esc_attr( $float_option['floatBoxHeaderTitle'] ) : 'DTWhatsapp'; ?>" style="width:200px" name="floatBoxHeaderTitle">
+            <input type="text" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatBoxHeaderTitle'] ) : 'DTWhatsapp'; ?>" style="width:200px" name="floatBoxHeaderTitle">
         </td>
     </tr>
     <tr>
         <th scope="row">
             <?php esc_html_e('Description','DTWPLANG'); ?></th>
         <td>
-            <input type="text" value="<?= isset($float_option) ? esc_attr( $float_option['floatBoxHeaderDecs'] ) : '#bdf6cf'; ?>" style="width:350px" name="floatBoxHeaderDecs">
+            <input type="text" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatBoxHeaderDecs'] ) : '#bdf6cf'; ?>" style="width:350px" name="floatBoxHeaderDecs">
         </td>
     </tr>
     <tr>
         <th scope="row">
             <?php esc_html_e('Header background color','DTWPLANG'); ?></th>
         <td>
-            <input type="color" value="<?=  isset($float_option) ? esc_attr( $float_option['floatBoxHeaderBackground'] ) : '#bdf6cf'; ?>" style="width:80px" name="floatBoxHeaderBackground" oninput="this.nextElementSibling.value = this.value">
-            <output><?= isset($float_option) ? esc_html( $float_option['floatBoxHeaderBackground'] ) : '#bdf6cf'; ?></output>
+            <input type="color" value="<?php echo  isset($float_option) ? esc_attr( $float_option['floatBoxHeaderBackground'] ) : '#bdf6cf'; ?>" style="width:80px" name="floatBoxHeaderBackground" oninput="this.nextElementSibling.value = this.value">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatBoxHeaderBackground'] ) : '#bdf6cf'; ?></output>
         </td>
     </tr>
     <tr>
         <th scope="row">
             <?php esc_html_e('Text color','DTWPLANG'); ?></th>
         <td>
-            <input type="color" value="<?= isset($float_option) ? esc_attr( $float_option['floatBoxTextColor'] ) : '#bdf6cf'; ?>" style="width:80px" name="floatBoxTextColor" oninput="this.nextElementSibling.value = this.value">
-            <output><?= isset($float_option) ? esc_html( $float_option['floatBoxTextColor'] ) : '#bdf6cf'; ?></output>
+            <input type="color" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatBoxTextColor'] ) : '#bdf6cf'; ?>" style="width:80px" name="floatBoxTextColor" oninput="this.nextElementSibling.value = this.value">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatBoxTextColor'] ) : '#bdf6cf'; ?></output>
         </td>
     </tr>
     <tr>
         <th scope="row">
             <?php esc_html_e('Close botton color','DTWPLANG'); ?></th>
         <td>
-            <input type="color" value="<?= isset($float_option) ? htmlspecialchars( $float_option['floatBoxCloseBtnColor'] ) : '#bdf6cf'; ?>" style="width:80px" name="floatBoxCloseBtnColor" oninput="this.nextElementSibling.value = this.value">
-            <output><?= isset($float_option) ? esc_html( $float_option['floatBoxCloseBtnColor'] ) : '#bdf6cf'; ?></output>
+            <input type="color" value="<?php echo isset($float_option) ? htmlspecialchars( $float_option['floatBoxCloseBtnColor'] ) : '#bdf6cf'; ?>" style="width:80px" name="floatBoxCloseBtnColor" oninput="this.nextElementSibling.value = this.value">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatBoxCloseBtnColor'] ) : '#bdf6cf'; ?></output>
         </td>
     </tr>
 </table>

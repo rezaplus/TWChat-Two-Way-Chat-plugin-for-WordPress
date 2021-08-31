@@ -15,7 +15,7 @@
 </style>
 <div class="notice notice-warning notice-dtwp-premium">
              <p><?php esc_html_e('You need to get the premium version for this feature.','DTWPLANG'); ?></p>
-             <a href="https://rellaco.com/product/dtw/" target="_blank"class="button-primary"><?= __('Upgrade','DTWPLANG'); ?></a>
+             <a href="https://rellaco.com/product/dtw/" target="_blank"class="button-primary"><?php  esc_html_e('Upgrade','DTWPLANG'); ?></a>
          </div>
 <table class="form-table dtwp-form-table">
     <tbody>
@@ -24,7 +24,7 @@
             <?php esc_html_e('Title','DTWPLANG'); ?>
             </th>
             <td>
-                <input type="text" name="DTW_Qmessage_Title" value="<?=  isset($DTWP_Qmessage_Edit) ? esc_attr( $DTWP_Qmessage_Edit['DTW_Qmessage_Title']) : '' ; ?>" required>
+                <input type="text" name="DTW_Qmessage_Title" value="<?php echo   isset($DTWP_Qmessage_Edit) ? esc_attr( $DTWP_Qmessage_Edit['DTW_Qmessage_Title']) : '' ; ?>" required>
             </td>
         </tr>
         <tr>

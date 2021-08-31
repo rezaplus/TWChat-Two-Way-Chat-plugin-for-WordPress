@@ -6,17 +6,19 @@ class DTWP_DBactions{
     public function __construct(){
     
     }
-    public static function Update($postData,$getData,$option_name,$url){
+    public static function Update($postData,$getEditIdId,$option_name,$url){
+        $url = esc_url_raw( $url );
+        
         unset($postData['submit']);
-        if(!isset($getData['Edit'])){
+        if(!isset($getEditId)){
             $id = $option_name.self::randNumber($option_name);
             $postData['id'] = $id;
             
             //insert to id list
             self::list_manage($id,$option_name.'list');
-        }elseif(isset($getData['Edit'])){
-            $id = $getData['Edit'];
-            $postData['id'] = $getData['Edit'];
+        }elseif(isset($getEditId)){
+            $id = $getEditId;
+            $postData['id'] = $getEditId;
             
             if(!empty($url))
                 header('Location: '.$url);
@@ -48,6 +50,8 @@ class DTWP_DBactions{
     }
 
     public static function Delete($ID,$option_name,$url){
+        $url = esc_url_raw( $url );
+        $ID = sanitize_text_field($ID);
         delete_option($ID);
         $content_list = get_option($option_name.'list');
         if (($key = array_search($ID, $content_list)) !== false) {
@@ -56,6 +60,6 @@ class DTWP_DBactions{
         update_option($option_name.'list', array_map( 'sanitize_text_field', $content_list ));
 
         if(!empty($url))
-            header('Location: '.$url);
+            header('Location:'.$url);
     }
 }

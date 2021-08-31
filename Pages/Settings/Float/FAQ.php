@@ -2,10 +2,11 @@
 require_once  DTWP_DIR_path.'Classes/DBactions.php';
 $current_url = '?page=DTWP_settings&tab=Float&sT=FAQ';
 if(isset($_GET['Delete'])){
-    DTWP_DBactions::Delete(sanitize_text_field($_GET),'DTWP_FAQ_',$current_url);
+    DTWP_DBactions::Delete($_GET['Delete'],'DTWP_FAQ_',$current_url);
 }
 if(isset($_POST['submit'])){
-    DTWP_DBactions::Update($_POST,$_GET,'DTWP_FAQ_',$current_url);
+	$getEditId = ( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '';
+    DTWP_DBactions::Update($_POST,$getEditId,'DTWP_FAQ_',$current_url);
 }
     
 if(isset($_GET['Edit'])){
@@ -20,7 +21,7 @@ if(isset($_GET['Edit'])){
             <?php esc_html_e('Question','DTWPLANG'); ?>
             </th>
             <td>
-                <input type="text" name="DTW_FAQ_Question" value="<?= isset($DTWP_FAQ_Edit) ? esc_attr( $DTWP_FAQ_Edit['DTW_FAQ_Question'] ) : ''; ?>" required>
+                <input type="text" name="DTW_FAQ_Question" value="<?php echo  isset($DTWP_FAQ_Edit) ? esc_attr( $DTWP_FAQ_Edit['DTW_FAQ_Question'] ) : ''; ?>" required>
             </td>
         <tr>
         <tr>
@@ -28,7 +29,7 @@ if(isset($_GET['Edit'])){
             <?php esc_html_e('Answer','DTWPLANG'); ?>
             </th>
             <td>
-                <textarea name="DTW_FAQ_Answer" required><?= esc_textarea(isset($DTWP_FAQ_Edit) ? $DTWP_FAQ_Edit['DTW_FAQ_Answer'] : ''); ?></textarea>
+                <textarea name="DTW_FAQ_Answer" required><?php echo  esc_textarea(isset($DTWP_FAQ_Edit) ? $DTWP_FAQ_Edit['DTW_FAQ_Answer'] : ''); ?></textarea>
             </td>
         <tr>
     </tbody>
