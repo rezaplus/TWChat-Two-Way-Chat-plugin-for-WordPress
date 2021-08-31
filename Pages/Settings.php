@@ -2,7 +2,7 @@
     wp_enqueue_style('DTWP-admin-style',  DTWP_assets .'admin-style.css', array() , DTWP_plugin_version);
 
     if( isset( $_GET[ 'tab' ] ) ) {  
-        $active_tab = $_GET[ 'tab' ];  
+        $active_tab = sanitize_text_field( $_GET[ 'tab' ] );  
     } else {
         $active_tab = 'General';
     }

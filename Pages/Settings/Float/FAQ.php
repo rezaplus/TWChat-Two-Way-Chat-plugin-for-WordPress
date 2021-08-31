@@ -2,7 +2,7 @@
 require_once  DTWP_DIR_path.'Classes/DBactions.php';
 $current_url = '?page=DTWP_settings&tab=Float&sT=FAQ';
 if(isset($_GET['Delete'])){
-    DTWP_DBactions::Delete($_GET,'DTWP_FAQ_',$current_url);
+    DTWP_DBactions::Delete(sanitize_text_field($_GET),'DTWP_FAQ_',$current_url);
 }
 if(isset($_POST['submit'])){
     DTWP_DBactions::Update($_POST,$_GET,'DTWP_FAQ_',$current_url);

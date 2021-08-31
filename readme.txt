@@ -1,9 +1,11 @@
-=== DTCHAT - Two-way communication ===
+=== DTW CHAT - Send or receive messages to your user ===
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress, whatsapp floating button, whatsapp icon
+Requires at least: 4.7.0
+Requires PHP: 5.6
+Tested up to: 5.8
 Stable tag: 3.1.2
-Requires PHP: 5.4
-License: GPLv2 or later
+License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Interaction between you and your customers by whatsapp.

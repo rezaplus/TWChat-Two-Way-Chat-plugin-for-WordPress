@@ -3,7 +3,7 @@
 require_once  DTWP_DIR_path.'Classes/DBactions.php';
 $current_url = '?page=DTWP_settings&tab=Float&sT=Accounts';
 if(isset($_GET['Delete'])){
-    DTWP_DBactions::Delete($_GET,'DTWP_Accounts_',$current_url);
+    DTWP_DBactions::Delete($_GET['Delete'],'DTWP_Accounts_',$current_url);
 }
 if(isset($_POST['submit'])){
     DTWP_DBactions::Update($_POST,$_GET,'DTWP_Accounts_',$current_url);

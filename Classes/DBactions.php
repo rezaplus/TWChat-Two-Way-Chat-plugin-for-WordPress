@@ -47,13 +47,15 @@ class DTWP_DBactions{
         }
     }
 
-    public static function Delete($getData,$option_name,$url){
-        delete_option($getData['Delete']);
+    public static function Delete($ID,$option_name,$url){
+        delete_option($ID);
         $content_list = get_option($option_name.'list');
-        if (($key = array_search($getData['Delete'], $content_list)) !== false) {
+        if (($key = array_search($ID, $content_list)) !== false) {
             unset($content_list[$key]);
         }
         update_option($option_name.'list', array_map( 'sanitize_text_field', $content_list ));
-        header('Location: '.$url);
+
+        if(!empty($url))
+            header('Location: '.$url);
     }
 }

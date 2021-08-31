@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: DTCHAT
+ * Plugin Name: DTW
  * Description: Direct To Whatsapp | Communication between you and your customers through WhatsApp.
  * Plugin URI: "https://rellaco.com/product/dtw"
  * Author: rezaplus
@@ -37,17 +37,7 @@ class DTWP_class{
         //Localization
         add_action( 'init', array( $this, 'Localization_setup' ));
         //include main functions
-        require_once  DTWP_DIR_path.'Classes/functions.php';
-        
-        /**
-         * settings session start
-         * only zhaket version
-        */
-        add_action('admin_init',function(){
-            if(isset($_GET['page']))
-                if($_GET['page']=='DTWP_settings')
-                    session_start();
-        });        
+        require_once  DTWP_DIR_path.'Classes/functions.php';     
     }
     /**
      * define all constants and main addresses
