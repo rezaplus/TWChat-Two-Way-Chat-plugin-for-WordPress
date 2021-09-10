@@ -86,7 +86,7 @@ class TWCH_update{
 
     /**
      * rename option key
-     *
+     * for update 2.1
      * @param [String] $oldName
      * @param [String] $newName
      * @return status
@@ -96,6 +96,8 @@ class TWCH_update{
         // option data
         $option = get_option($oldName);
         if (!empty($option)) {
+            str_replace('DTWP','TWCH',$option);
+            str_replace('DTW','TWCH',$option);
             //create new option
             $status = update_option($newName, $option);
             if ($status) {
