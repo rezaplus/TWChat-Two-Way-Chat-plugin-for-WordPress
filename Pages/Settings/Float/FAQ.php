@@ -1,57 +1,57 @@
 <?php
-require_once  DTWP_DIR_path.'Classes/DBactions.php';
-$current_url = '?page=DTWP_settings&tab=Float&sT=FAQ';
+require_once  TWCH_DIR_path.'Classes/DBactions.php';
+$current_url = '?page=TWCH_settings&tab=Float&sT=FAQ';
 if(isset($_GET['Delete'])){
-    DTWP_DBactions::Delete($_GET['Delete'],'DTWP_FAQ_',$current_url);
+    TWCH_DBactions::Delete($_GET['Delete'],'TWCH_FAQ_',$current_url);
 }
 if(isset($_POST['submit'])){
 	$getEditId = ( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '';
-    DTWP_DBactions::Update($_POST,$getEditId,'DTWP_FAQ_',$current_url);
+    TWCH_DBactions::Update($_POST,$getEditId,'TWCH_FAQ_',$current_url);
 }
     
 if(isset($_GET['Edit'])){
-    $DTWP_FAQ_Edit = get_option($_GET['Edit']);
+    $TWCH_FAQ_Edit = get_option($_GET['Edit']);
 }
     
 ?>
-<table class="form-table dtwp-form-table">
+<table class="form-table TWCH-form-table">
     <tbody>
         <tr>
             <th scope="row">
-            <?php esc_html_e('Question','DTWPLANG'); ?>
+            <?php esc_html_e('Question','TWCHLANG'); ?>
             </th>
             <td>
-                <input type="text" name="DTW_FAQ_Question" value="<?php echo  isset($DTWP_FAQ_Edit) ? esc_attr( $DTWP_FAQ_Edit['DTW_FAQ_Question'] ) : ''; ?>" required>
+                <input type="text" name="TWCH_FAQ_Question" value="<?php echo  isset($TWCH_FAQ_Edit) ? esc_attr( $TWCH_FAQ_Edit['TWCH_FAQ_Question'] ) : ''; ?>" required>
             </td>
         <tr>
         <tr>
             <th scope="row">
-            <?php esc_html_e('Answer','DTWPLANG'); ?>
+            <?php esc_html_e('Answer','TWCHLANG'); ?>
             </th>
             <td>
-                <textarea name="DTW_FAQ_Answer" required><?php echo  esc_textarea(isset($DTWP_FAQ_Edit) ? $DTWP_FAQ_Edit['DTW_FAQ_Answer'] : ''); ?></textarea>
+                <textarea name="TWCH_FAQ_Answer" required><?php echo  esc_textarea(isset($TWCH_FAQ_Edit) ? $TWCH_FAQ_Edit['TWCH_FAQ_Answer'] : ''); ?></textarea>
             </td>
         <tr>
     </tbody>
 </Table>
-<button type="submit" name="submit" class="button button-primary" value="FAQ"><?php isset($_GET['Edit'])? esc_html_e('Save','DTWPLANG') : esc_html_e('Insert','DTWPLANG'); ?></button>
+<button type="submit" name="submit" class="button button-primary" value="FAQ"><?php isset($_GET['Edit'])? esc_html_e('Save','TWCHLANG') : esc_html_e('Insert','TWCHLANG'); ?></button>
 <?php 
-	$IDs_list = get_option('DTWP_FAQ_list');
+	$IDs_list = get_option('TWCH_FAQ_list');
 if(!empty($IDs_list)){ ?>
-	<table class="wp-list-table widefat striped table-view-list faq_dtwp">
+	<table class="wp-list-table widefat striped table-view-list faq_TWCH">
 		<tbody>
 			<tr>
-				<th><?php esc_html_e('Question','DTWPLANG'); ?></th>
-				<th><?php esc_html_e('Answer','DTWPLANG'); ?></th>
-				<th><?php esc_html_e('Actions','DTWPLANG'); ?></th>
+				<th><?php esc_html_e('Question','TWCHLANG'); ?></th>
+				<th><?php esc_html_e('Answer','TWCHLANG'); ?></th>
+				<th><?php esc_html_e('Actions','TWCHLANG'); ?></th>
 				<?php
 				foreach($IDs_list as $id_faq){
 					$FAQ_D = get_option($id_faq);
-					echo "<tr><td>".esc_html($FAQ_D['DTW_FAQ_Question'])."</td>";
-					echo "<td><p>". esc_html($FAQ_D['DTW_FAQ_Answer']) ."</p></td>";
+					echo "<tr><td>".esc_html($FAQ_D['TWCH_FAQ_Question'])."</td>";
+					echo "<td><p>". esc_html($FAQ_D['TWCH_FAQ_Answer']) ."</p></td>";
 					echo "<td>";
-					echo "<a href='?page=DTWP_settings&tab=Float&sT=FAQ&Delete=".esc_html($FAQ_D['id'])."'>".esc_html('Delete','DTWPLANG')."</a>";
-					echo "<a href='?page=DTWP_settings&tab=Float&sT=FAQ&Edit=".esc_html($FAQ_D['id'])."'>".esc_html('Edit','DTWPLANG')."</a>";
+					echo "<a href='?page=TWCH_settings&tab=Float&sT=FAQ&Delete=".esc_html($FAQ_D['id'])."'>".esc_html('Delete','TWCHLANG')."</a>";
+					echo "<a href='?page=TWCH_settings&tab=Float&sT=FAQ&Edit=".esc_html($FAQ_D['id'])."'>".esc_html('Edit','TWCHLANG')."</a>";
 					echo "</td>";
 					echo "</tr>";
 				}

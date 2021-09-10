@@ -1,5 +1,5 @@
     <?php
-    wp_enqueue_style('DTWP-admin-style',  DTWP_assets .'admin-style.css', array() , DTWP_plugin_version);
+    wp_enqueue_style('TWCH-admin-style',  TWCH_assets .'admin-style.css', array() , TWCH_plugin_version);
 
     if( isset( $_GET[ 'tab' ] ) ) {  
         $active_tab = sanitize_text_field( $_GET[ 'tab' ] );  
@@ -7,14 +7,14 @@
         $active_tab = 'General';
     }
     ?>  
-    <div class="wrap <?php echo is_rtl() ?  'DTWP_RTL' : '' ?>">
-        <div class="DTW-header">
-        <h1 class="Page_title"><?php esc_html_e('Settings','DTWPLANG'); ?></h1>
+    <div class="wrap <?php echo is_rtl() ?  'TWCH_RTL' : '' ?>">
+        <div class="TWCH-header">
+        <h1 class="Page_title"><?php esc_html_e('Settings','TWCHLANG'); ?></h1>
         <h2 class="nav-tab-wrapper">
-            <a href="?page=DTWP_settings&tab=General" class="nav-tab <?php echo $active_tab == 'General' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('General','DTWPLANG'); ?></a>  
-            <a href="?page=DTWP_settings&tab=Qmessage" class="nav-tab <?php echo $active_tab == 'Qmessage' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Quick message','DTWPLANG'); ?></a> 
-            <a href="?page=DTWP_settings&tab=Float" class="nav-tab <?php echo $active_tab == 'Float' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Float','DTWPLANG'); ?></a>  
-            <a href="?page=DTWP_settings&tab=Accessibility" class="nav-tab <?php echo $active_tab == 'Accessibility' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Accessibility','DTWPLANG'); ?></a>  
+            <a href="?page=TWCH_settings&tab=General" class="nav-tab <?php echo $active_tab == 'General' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('General','TWCHLANG'); ?></a>  
+            <a href="?page=TWCH_settings&tab=Qmessage" class="nav-tab <?php echo $active_tab == 'Qmessage' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Quick message','TWCHLANG'); ?></a> 
+            <a href="?page=TWCH_settings&tab=Float" class="nav-tab <?php echo $active_tab == 'Float' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Float','TWCHLANG'); ?></a>  
+            <a href="?page=TWCH_settings&tab=Accessibility" class="nav-tab <?php echo $active_tab == 'Accessibility' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Accessibility','TWCHLANG'); ?></a>  
 
         </h2>  
         </div>

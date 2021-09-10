@@ -1,12 +1,12 @@
 <?php
 add_action('woocommerce_admin_order_preview_start',function(){ ?>
 <style>
-    #DTWhatsap_woocommerce img {
+    #TWCH_woocommerce img {
         color: #00aa20a6;
         width: 30px;
         cursor: pointer;
     }
-    #DTWhatsap_woocommerce {
+    #TWCH_woocommerce {
         margin-top: 8px;
         display: flex;
     }
@@ -21,20 +21,20 @@ add_action('woocommerce_admin_order_preview_start',function(){ ?>
     top: -5px;
     left: 40px;
     }
-    .dtwp-tooltip{
+    .TWCH-tooltip{
         display:none;
     }
 </style>
-    <div id="DTWhatsap_woocommerce">
-    <img   onclick="sendMessage('{{data.data.billing.phone}}','')" src="<?php echo DTWP_image ?>whatsapp.svg">
+    <div id="TWCH_woocommerce">
+    <img   onclick="sendMessage('{{data.data.billing.phone}}','')" src="<?php echo TWCH_image ?>whatsapp.svg">
     <?php
-	$DTWP_general = get_option('DTWP_General_Option');
-	if($DTWP_general['qmessage_is_enable']=='true'){ ?>
+	$TWCH_general = get_option('TWCH_General_Option');
+	if($TWCH_general['qmessage_is_enable']=='true'){ ?>
         <div class="qms_premium" style=" filter: grayscale(1); display: flex;">
-            <img   src="<?php echo DTWP_image ?>Quick.svg" id="QuickMessage_btn">
-            <span class='dtwp-tooltip'><?php esc_html_e('You need to get the premium version for this feature.','DTWPLANG'); ?></span>
+            <img   src="<?php echo TWCH_image ?>Quick.svg" id="QuickMessage_btn">
+            <span class='TWCH-tooltip'><?php esc_html_e('You need to get the premium version for this feature.','TWCHLANG'); ?></span>
         </div>
     <?php } ?>
     </div>
-    <style onload="DTWP_Preview_order_pos();"></style>
+    <style onload="TWCH_Preview_order_pos();"></style>
     <?php });

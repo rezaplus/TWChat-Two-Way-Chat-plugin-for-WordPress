@@ -8,7 +8,7 @@
     font-weight: bold !important;
     border-bottom: 2px solid #0b7217 !important;
 }
-.dtwp-Account-info .button {
+.TWCH-Account-info .button {
     margin-top: 15px;
 }
 .button-primary {
@@ -24,24 +24,24 @@
     border-color: #fff !important;
     color: #fff !important;
 }
-.dtwp-form-table label {
+.TWCH-form-table label {
     line-height: 18px;
 }
-.dtwp-form-table td {
+.TWCH-form-table td {
     line-height: 10px;
 }
-.dtwp-form-table .dtwp-select-icon input[type="radio"] {
+.TWCH-form-table .TWCH-select-icon input[type="radio"] {
     opacity: 0;
     position: fixed;
 }
-.dtwp-form-table .dtwp-select-icon input[type="radio"]:checked + .dtwp-icon {
+.TWCH-form-table .TWCH-select-icon input[type="radio"]:checked + .TWCH-icon {
     background: #e2ffee;
     border-bottom: 2px solid #52a6b7;
     border-radius: 50px;
     width: 40px;
     padding: 8px;
 }
-.dtwp-form-table .dtwp-select-icon .dtwp-icon {
+.TWCH-form-table .TWCH-select-icon .TWCH-icon {
     width: 35px;
 }
 div#wpfooter {
@@ -52,7 +52,7 @@ div#wpfooter {
     color: #54a470;
     font-size: xx-large !important;
 }
-#dtwp_orders_pro_description{
+#TWCH_orders_pro_description{
     margin-top: 25px;
     background: #f8f8f8;
     padding: 31px 60px 31px 20px;
@@ -60,28 +60,28 @@ div#wpfooter {
     width: fit-content;
     display:none;
 }
-.DTWP-License{
+.TWCH-License{
     display: table-caption;
 }
-.DTWP-License input[type="text"] {
+.TWCH-License input[type="text"] {
     width: 400px;
     margin-bottom: 15px;
 }
-.DTWP-License p {
+.TWCH-License p {
     margin-top: 0px;
 }
-.Qmessage_dtwp{
+.Qmessage_TWCH{
     margin-top:10px;
 }
-.Qmessage_dtwp td a , .faq_dtwp td a  {
+.Qmessage_TWCH td a , .faq_TWCH td a  {
     margin: 0px 4px;
     display: inline-flex;
 }
-.Qmessage_dtwp td {
+.Qmessage_TWCH td {
     margin: 0px 4px;
     white-space: pre-wrap;
 }
-.dtwp-form-table textarea{
+.TWCH-form-table textarea{
     height: 136px;
     width: 80%;
 }
@@ -95,19 +95,19 @@ div#wpfooter {
   border-radius: 5px;
   cursor: pointer;
 }
-.dtwp-social-settings tr img {
+.TWCH-social-settings tr img {
     height: 40px;
 }
-.dtwp-social-settings tr th {
+.TWCH-social-settings tr th {
     width: 60px;
 }
-.dtwp-social-settings tr td input {
+.TWCH-social-settings tr td input {
     width: 350px;
 }
-.faq_dtwp{
+.faq_TWCH{
     margin-top:10px;
 }
-.faq_dtwp td {
+.faq_TWCH td {
     white-space: pre-wrap;
 }
 .button.button-small.new-ACS-btn {
@@ -119,10 +119,10 @@ div#wpfooter {
     width: 100%;
     height: 90px;
 }
-.dtwp-Account-info{
+.TWCH-Account-info{
         display: inline-grid;
 }
-.dtwp-Account-info label{
+.TWCH-Account-info label{
         margin-bottom: 6px;
 }
  #img-src {
@@ -130,7 +130,7 @@ div#wpfooter {
     height: 100px;
     border-radius: 50px;
 }
-.dtwp-icon.dtwp-upload {
+.TWCH-icon.TWCH-upload {
     width: 30px;
     padding: 5px;
     margin: 3px;
@@ -138,10 +138,10 @@ div#wpfooter {
 .Accounts th {
     width: 100px;
 }
-.dtwp-Account-info input[type=text] {
+.TWCH-Account-info input[type=text] {
     width: 300px;
 }
-.dtwp-form-table.Accounts-view tr {
+.TWCH-form-table.Accounts-view tr {
     width: 352px;
     background: white;
     display: inline-block;
@@ -150,15 +150,15 @@ div#wpfooter {
     border-radius: 8px;
     border: 1px solid #7676766b;
 }
-.dtwp-form-table.Accounts-view tr th {
+.TWCH-form-table.Accounts-view tr th {
     width: 100px;
 }
-.dtwp-form-table.Accounts-view tr th img {
+.TWCH-form-table.Accounts-view tr th img {
     width: 80px;
     height:80px;
     border-radius: 50px;
 }
-.dtwp-Account-info-view div {
+.TWCH-Account-info-view div {
     display: block;
     margin: 15px 0px;
     line-height: 1.3em;
@@ -167,14 +167,14 @@ div#wpfooter {
     display: table-cell;
     width: auto;
 }
-.dtwp-Account-info-view {
+.TWCH-Account-info-view {
     width: inherit;
 }
-.dtwp-form-table.Accounts.Accounts-view td a {
+.TWCH-form-table.Accounts.Accounts-view td a {
     margin: 0px 3px;
     opacity: 0.7;
 }
-.dtwp-form-table.Accounts.Accounts-view td a:hover {
+.TWCH-form-table.Accounts.Accounts-view td a:hover {
     opacity: 1;
 }
 select#Country_Code[readonly] {
@@ -202,35 +202,35 @@ form {
     margin: 0px 0px;
     border-bottom: 1px solid #919191;
 }
-.DTWP_userImg_list img {
+.TWCH_userImg_list img {
     width: 45px;
     cursor: pointer;
 }
-.DTWP_userImg_list  {
+.TWCH_userImg_list  {
     margin-top:5px;
 }
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
-    .dtwp-form-table label {
+    .TWCH-form-table label {
         line-height: 22px;
     }
     body .button{
     margin-top: 27px;
     }
-    .dtwp-Account-info input {
+    .TWCH-Account-info input {
     width: 100%;
     }
     .Accounts {
     display: block;
     }
-    body .dtwp-form-table.Accounts-view tr{
+    body .TWCH-form-table.Accounts-view tr{
         display: flex ;
         width: auto;
     }
 }
 /* RTL */
-.DTWP_RTL .flex-dt{
+.TWCH_RTL .flex-dt{
     display: inline-flex;
     flex-direction: row-reverse;
 }

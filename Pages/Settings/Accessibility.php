@@ -1,6 +1,6 @@
 <?php
 if(!current_user_can('administrator')){
-    die(esc_html('Only administrators have access to this page.','DTWPLANG'));
+    die(esc_html('Only administrators have access to this page.','TWCHLANG'));
 }
 
 if(isset($_POST['submit'])){
@@ -14,23 +14,23 @@ if(isset($_POST['submit'])){
             array_push($WC_,str_replace('W_','',$key));
         }
     }
-    update_option('DTWP_Accessibility_settings',array_map( 'sanitize_text_field', $settings_ ));
-    update_option('DTWP_Accessibility_WC',array_map( 'sanitize_text_field', $WC_ ));
+    update_option('TWCH_Accessibility_settings',array_map( 'sanitize_text_field', $settings_ ));
+    update_option('TWCH_Accessibility_WC',array_map( 'sanitize_text_field', $WC_ ));
 }
-    $settings_get= get_option('DTWP_Accessibility_settings');
-    $WC_get= get_option('DTWP_Accessibility_WC');
+    $settings_get= get_option('TWCH_Accessibility_settings');
+    $WC_get= get_option('TWCH_Accessibility_WC');
 
 global $wp_roles;
 $roles = $wp_roles->roles;
 unset($roles['administrator']);
 unset($roles['subscriber']);
 ?>
-<h2><?php esc_html_e('Selected user roles will have access to plugin features.','DTWPLANG'); ?></h2>
+<h2><?php esc_html_e('Selected user roles will have access to plugin features.','TWCHLANG'); ?></h2>
 <table class="wp-list-table widefat striped table-view-list">
     <tr>
-        <th><?php esc_html_e('Role','DTWPLANG'); ?></th>
-        <th><?php esc_html_e('Settings','DTWPLANG'); ?></th>
-        <th><?php esc_html_e('Woocommerce','DTWPLANG'); ?></th>
+        <th><?php esc_html_e('Role','TWCHLANG'); ?></th>
+        <th><?php esc_html_e('Settings','TWCHLANG'); ?></th>
+        <th><?php esc_html_e('Woocommerce','TWCHLANG'); ?></th>
     </tr>
 <?php
 foreach($roles as $key => $value){
@@ -42,4 +42,4 @@ foreach($roles as $key => $value){
 <?php } ?>
     </tr>
 </table>
-<button type="submit" name="submit" class="button button-primary" value="Accessibility"><?php esc_html_e('Save Changes','DTWPLANG'); ?></button>
+<button type="submit" name="submit" class="button button-primary" value="Accessibility"><?php esc_html_e('Save Changes','TWCHLANG'); ?></button>

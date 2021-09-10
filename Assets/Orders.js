@@ -11,26 +11,26 @@ function sendMessage(phone,message)
     //remove 0 from phone number
     phone = parseInt(phone);
     
-    if(DTWP_ORS.Applicationmode == "app" || jQuery.browser.mobile){
+    if(TWCH_ORS.Applicationmode == "app" || jQuery.browser.mobile){
         appmode="whatsapp://";
     }
-    else if(DTWP_ORS.Applicationmode == "web"){
+    else if(TWCH_ORS.Applicationmode == "web"){
         appmode="https://web.whatsapp.com/";
     }
     else{
         appmode="https://api.whatsapp.com/";
     }
     var country_code="";
-    if(DTWP_ORS.fix_countrycode=='true'){
-        country_code = DTWP_ORS.Country_Code;
+    if(TWCH_ORS.fix_countrycode=='true'){
+        country_code = TWCH_ORS.Country_Code;
     }
     window.open(appmode+"send?phone="+ country_code + phone + "&text=" + message.replace(/\n/g, "%0D%0A") +"" );
 }
 
-function DTWP_Preview_order_pos()
+function TWCH_Preview_order_pos()
 {
     var tel = jQuery("#wc-backbone-modal-dialog .wc-order-preview-address a[href*=\"tel\"]");
-    jQuery(jQuery("#DTWhatsap_woocommerce").remove()).insertAfter(tel);
+    jQuery(jQuery("#TWCHhatsap_woocommerce").remove()).insertAfter(tel);
 }
 function Quickmessage()
 {

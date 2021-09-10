@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: DTW
- * Description: Direct To Whatsapp | Communication between you and your customers through WhatsApp.
- * Plugin URI: "https://rellaco.com/product/dtw"
+ * Plugin Name: TWChat
+ * Description: Two Way Chat | Communication between you and your customers through WhatsApp.
+ * Plugin URI: "https://rellaco.com/product/TwoWayChat"
  * Author: rezaplus
- * Version: 3.1.3
- * Text Domain: DTWPLANG
+ * Version: 3.1.4
+ * Text Domain: TWCHLANG
  * Author URI: https://rezaplus.com/
  * 
  * Requires PHP: 5.4
@@ -25,10 +25,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-DTWP_class::get_instance();
-define('DTWP_plugin_version', "3.1.3");
+TWCH_class::get_instance();
+define('TWCH_plugin_version', "3.1.4");
 
-class DTWP_class{
+class TWCH_class{
     
     static $instance = null;
 
@@ -37,19 +37,19 @@ class DTWP_class{
         //Localization
         add_action( 'init', array( $this, 'Localization_setup' ));
         //include main functions
-        require_once  DTWP_DIR_path.'Classes/functions.php';     
+        require_once  TWCH_DIR_path.'Classes/functions.php';     
     }
     /**
      * define all constants and main addresses
      */
     function define_constants(){
         
-        $this->define('DTWP_DIR_path_file', __FILE__ );
-        $this->define('DTWP_BASE_NAME', plugin_basename(__FILE__) );
-        $this->define('DTWP_DIR_path',plugin_dir_path( __FILE__ ));
-        $this->define('DTWP_classes_path', plugin_dir_path((__FILE__)) . 'Classes/');
-        $this->define('DTWP_image', plugin_dir_url((__FILE__)) . 'Assets/img/');
-        $this->define('DTWP_assets', plugin_dir_url((__FILE__)) . 'Assets/');
+        $this->define('TWCH_DIR_path_file', __FILE__ );
+        $this->define('TWCH_BASE_NAME', plugin_basename(__FILE__) );
+        $this->define('TWCH_DIR_path',plugin_dir_path( __FILE__ ));
+        $this->define('TWCH_classes_path', plugin_dir_path((__FILE__)) . 'Classes/');
+        $this->define('TWCH_image', plugin_dir_url((__FILE__)) . 'Assets/img/');
+        $this->define('TWCH_assets', plugin_dir_url((__FILE__)) . 'Assets/');
     }
     /**
     * Define constant if not already defined
@@ -66,7 +66,7 @@ class DTWP_class{
      * @uses load_plugin_textdomain()
      */
     public function Localization_setup() {
-        load_plugin_textdomain('DTWPLANG', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+        load_plugin_textdomain('TWCHLANG', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
     }
     
     public static function get_instance() {

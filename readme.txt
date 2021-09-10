@@ -1,17 +1,17 @@
-=== DTW CHAT - Send or receive messages to your user ===
+=== Two Way CHAT - Send or receive messages to your user ===
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress, whatsapp floating button, whatsapp icon
 Requires at least: 4.7.0
 Requires PHP: 5.6
 Tested up to: 5.8
-Stable tag: 3.1.3
+Stable tag: 3.1.4
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Interaction between you and your customers by whatsapp.
+TWChat | Send a message to the user and receive a message from the user by WhatsApp.
 
 == Description ==
-## With this plugin, your communication with users is two-sided. What does that mean? ##
+## With this plugin, your communication with users is two-way. What does that mean? ##
 This means that you can send messages to your customers via WhatsApp, and users can send messages to you via the floating WhatsApp button.
 
 ## See the screenshots and Video below to get an even better idea of the plugins functionality. ##
@@ -43,14 +43,14 @@ You can fully customize the floating button and the account box.
 * **- Send a message to the desired number:**
 You are not limited to WooCommerce numbers, you can send messages to any number you want.
 
-## DTWhatsapp evolves your relationship with your users, in line with customer satisfaction and increasing your company's profitability. ##
+## Two Way chat evolves your relationship with your users, in line with customer satisfaction and increasing your company's profitability. ##
 
 == Installation ==
 
 
 From the WP admin panel, click “Plugins” -> “Add new”.
-In the browser input box, type “DTWhatsapp”.
-Select the “DTWhatsapp” plugin and click “Install”.
+In the browser input box, type “Two Way chat”.
+Select the “Two Way chat” plugin and click “Install”.
 Activate the plugin.
 OR…
 

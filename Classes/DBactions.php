@@ -1,5 +1,5 @@
 <?php
-class DTWP_DBactions{
+class TWCH_DBactions{
     
     static $instance = null;
     

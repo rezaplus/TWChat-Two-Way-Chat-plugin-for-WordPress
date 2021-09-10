@@ -11,62 +11,62 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-DTWP_MainFunctions::get_instance();
+TWCH_MainFunctions::get_instance();
 
 
-class DTWP_MainFunctions{
+class TWCH_MainFunctions{
     
     static $instance = null;
-    public $DTWP_general;
+    public $TWCH_general;
     
     public function __construct(){
         //set default data and get general data
         $this->defaultData();
         //plugins page action.
-        add_filter( 'plugin_action_links_'.DTWP_BASE_NAME, array($this,'plugin_actions') );
+        add_filter( 'plugin_action_links_'.TWCH_BASE_NAME, array($this,'plugin_actions') );
         //display admin menu
         add_action('admin_menu',array($this,'admin_menu'),99);
         //include Float widget
         add_action( 'wp_footer', array($this,'floatWidget'));
         //admin bar send message button
-        add_action('admin_bar_menu', array($this,'admin_bar_DTWP'), 90);
+        add_action('admin_bar_menu', array($this,'admin_bar_TWCH'), 90);
         //include woocommerce class
         add_action('admin_init',array($this,'woocommerce'));
     }
     function defaultData(){
         //get general data
-        $this->DTWP_general = get_option('DTWP_General_Option');
+        $this->TWCH_general = get_option('TWCH_General_Option');
         
         //default general data
-        if(empty($this->DTWP_general)){
-            require_once  DTWP_DIR_path.'Classes/install.php';
+        if(empty($this->TWCH_general)){
+            require_once  TWCH_DIR_path.'Classes/install.php';
         }  
     }
     /**
      * display plugin links on plugins page.
      */
     function plugin_actions( $actions ) {
-        $actions[] = '<a href="'. esc_url( get_admin_url(null, 'admin.php?page=DTWP_settings') ) .'">'.__('Settings','DTWPLANG').'</a>';
+        $actions[] = '<a href="'. esc_url( get_admin_url(null, 'admin.php?page=TWCH_settings') ) .'">'.__('Settings','TWCHLANG').'</a>';
         return $actions;
     }
     /**
      *display pages on admin menu. 
      */
     function admin_menu() {
-        add_menu_page('Send Message', esc_html__('DTWhatsapp', 'DTWPLANG') , 'manage_options', 'DTWP_menu', 'sendmessage', 'dashicons-whatsapp', 150);
-        if($this->check_user_Accessibility('DTWP_Accessibility_WC'))
-            add_submenu_page('DTWP_menu', esc_html__('Send Message', 'DTWPLANG') , esc_html__('Send Message', 'DTWPLANG') , 'manage_options', "sendmessage", function(){require_once  DTWP_DIR_path.'Pages/sendMessage.php';}, 0);
-        if($this->check_user_Accessibility('DTWP_Accessibility_settings'))
-            add_submenu_page('DTWP_menu', esc_html__('DTWhatsapp settings') , esc_html__('Settings', 'DTWPLANG') , 'manage_options', "DTWP_settings", array($this,'DTWP_settings_page'), 1);
-        remove_submenu_page('DTWP_menu', 'DTWP_menu');
+        add_menu_page('Send Message', esc_html__('TWChat', 'TWCHLANG') , 'manage_options', 'TWCH_menu', 'sendmessage', 'dashicons-whatsapp', 150);
+        if($this->check_user_Accessibility('TWCH_Accessibility_WC'))
+            add_submenu_page('TWCH_menu', esc_html__('Send Message', 'TWCHLANG') , esc_html__('Send Message', 'TWCHLANG') , 'manage_options', "sendmessage", function(){require_once  TWCH_DIR_path.'Pages/sendMessage.php';}, 0);
+        if($this->check_user_Accessibility('TWCH_Accessibility_settings'))
+            add_submenu_page('TWCH_menu', esc_html__('Two Way chat settings') , esc_html__('Settings', 'TWCHLANG') , 'manage_options', "TWCH_settings", array($this,'TWCH_settings_page'), 1);
+        remove_submenu_page('TWCH_menu', 'TWCH_menu');
     }
     /**
      * display settings page.
      * check update database.
      */
-    public function DTWP_settings_page(){
-        require_once  DTWP_DIR_path.'Classes/update.php';
-        require_once DTWP_DIR_path.'Pages/Settings.php'; 
+    public function TWCH_settings_page(){
+        require_once  TWCH_DIR_path.'Classes/update.php';
+        require_once TWCH_DIR_path.'Pages/Settings.php'; 
     }
     /**
      * check user Accessibility.
@@ -88,23 +88,23 @@ class DTWP_MainFunctions{
      * check accessibility.
      */
     function woocommerce(){
-        if(class_exists( 'WooCommerce' ) && $this->check_user_Accessibility('DTWP_Accessibility_WC')){
-            require_once  DTWP_DIR_path.'Classes/woocommerce.php';
+        if(class_exists( 'WooCommerce' ) && $this->check_user_Accessibility('TWCH_Accessibility_WC')){
+            require_once  TWCH_DIR_path.'Classes/woocommerce.php';
         }
     }
     /**
      * display float on front-end
      */
     function floatWidget(){
-        if($this->DTWP_general['float_is_enable']=='true') {
-            wp_enqueue_style( 'Float', DTWP_assets . 'floatStyle.css',true,DTWP_plugin_version);
-            require_once DTWP_DIR_path.'Pages/Float.php';
+        if($this->TWCH_general['float_is_enable']=='true') {
+            wp_enqueue_style( 'Float', TWCH_assets . 'floatStyle.css',true,TWCH_plugin_version);
+            require_once TWCH_DIR_path.'Pages/Float.php';
         }
     }
     /**
      * display send message button on admin bar.
      */
-    function admin_bar_DTWP($wp_admin_bar)
+    function admin_bar_TWCH($wp_admin_bar)
     {
         $args = array(
             'id' => 'sendmessage',
