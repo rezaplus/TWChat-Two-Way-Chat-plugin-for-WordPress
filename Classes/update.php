@@ -96,8 +96,8 @@ class TWCH_update{
         // option data
         $option = get_option($oldName);
         if (!empty($option)) {
-            str_replace('DTWP','TWCH',$option);
-            str_replace('DTW','TWCH',$option);
+            $option = str_replace('DTWP','TWCH',$option);
+            $option = str_replace('DTW','TWCH',$option);
             //create new option
             $status = update_option($newName, $option);
             if ($status) {
