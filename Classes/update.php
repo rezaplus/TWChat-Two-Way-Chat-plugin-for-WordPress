@@ -47,13 +47,12 @@ class TWCH_update{
         //rename options key
         global $wpdb;
         $table_name = $wpdb->prefix . 'options';
-        $options_name = $wpdb->get_results("SELECT option_name FROM $table_name where option_name LIKE '%DTWP%'");
+        $options_name = $wpdb->get_results("SELECT option_name FROM $table_name where option_name LIKE 'DTWP%'");
         var_dump($options_name);
-        foreach($options_name as $option_Name){
+        foreach ($options_name as $option_Name) {
             $this->rename_option($option_Name->option_name, str_replace('DTWP', 'TWCH', $option_Name->option_name));
         }
-        //update_option('DTW_db_version', 2.1);
-
+        update_option('DTW_db_version', 2.1);
     }
     private function update_to_2(){
         //insert floatApplication input
@@ -87,25 +86,48 @@ class TWCH_update{
     /**
      * rename option key
      * for update 2.1
+     * 
      * @param [String] $oldName
      * @param [String] $newName
      * @return status
      */
     private function rename_option($oldName,$newName){
         $status = false;
-        // option data
-        $option = get_option($oldName);
-        if (!empty($option)) {
-            $option = str_replace('DTWP','TWCH',$option);
-            $option = str_replace('DTW','TWCH',$option);
-            //create new option
-            $status = update_option($newName, $option);
+        $option_data = get_option($oldName);
+
+        // rename option content
+        if (!empty($option_data)) {
+            //rename array contents
+            if (is_array($option_data)) {
+                foreach ($option_data as $key => $value) {
+                    //rename array key
+                    $key_new = $key;
+                    if (strpos($key, 'DTW') !== false ) {
+                        $key_new = str_replace('DTWP', 'TWCH', $key_new);
+                        $key_new = str_replace('DTW', 'TWCH', $key_new);
+                        $option_data[$key_new] = $value;
+                        unset($option_data[$key]);
+                    }
+                    //rename array value
+                    if (strpos($value, 'DTW') !== false ) {
+                        $value = str_replace('DTWP', 'TWCH', $value);
+                        $value = str_replace('DTW', 'TWCH', $value);
+                        $option_data[$key_new] = $value;
+                    }
+                }
+            }else{//rename value
+                str_replace('DTWP','TWCHAT',$option_data);
+                str_replace('DTW','TWCHAT',$option_data);
+            }
+
+            //rename option name
+            $status = update_option($newName, $option_data);
             if ($status) {
                 //delete old option
                 delete_option($oldName);
             }
         }
-        return $option;
+        return $status;
     }
     
     
