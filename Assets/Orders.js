@@ -30,7 +30,7 @@ function sendMessage(phone,message)
 function TWCH_Preview_order_pos()
 {
     var tel = jQuery("#wc-backbone-modal-dialog .wc-order-preview-address a[href*=\"tel\"]");
-    jQuery(jQuery("#TWCHhatsap_woocommerce").remove()).insertAfter(tel);
+    jQuery(jQuery("#TWCH_woocommerce").remove()).insertAfter(tel);
 }
 function Quickmessage()
 {

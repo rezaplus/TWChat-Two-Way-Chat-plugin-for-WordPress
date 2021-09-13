@@ -1,13 +1,4 @@
-    <option value=""> <?php esc_html_e('Select Country Code','TWCHLANG'); ?> </option>
-      <option data-countryCode="IR" value="98">Iran +98
-      </option>
-      <option data-countryCode="US" value="1">USA +1
-      </option>
-      <option data-countryCode="TR" value="90">Turkey +90
-      </option>
-      <option data-countryCode="AZ" value="994">Azerbaijan +994
-      </option>
-      <optgroup label="<?php esc_html_e("Other countries", 'TWCHLANG'); ?>">
+        <option value=""> <?php esc_html_e('Select Country Code','TWCHLANG'); ?> </option>
         <option data-countryCode="DZ" value="213">Algeria +213
         </option>
         <option data-countryCode="AD" value="376">Andorra +376
@@ -436,4 +427,3 @@
         </option>
         <option data-countryCode="ZW" value="263">Zimbabwe +263
         </option>
-      </optgroup>

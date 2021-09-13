@@ -19,8 +19,9 @@ $float_width = $float_option['floatSize']-$float_padding1-$float_padding2;
     float:<?php echo esc_html($float_option['float-location']); ?>;
     border-radius:<?php echo esc_html($float_option['floatRadius2']).'%'; ?>;
     padding:<?php echo esc_html($float_padding2).'px'; ?>;
-    <?php if($float_option['floatBackground2'] != 0){ ?>
-    background-color:<?php echo esc_html($float_option['floatBackground2']); }?>;
+    <?php if($float_padding2 != 0): ?>
+        background-color:<?php echo esc_html($float_option['floatBackground2']); ?>;
+    <?php endif ?>
 }
 .TWCHFloatBtn .TWCH-icon{
     width:<?php echo esc_html( $float_width).'px'; ?>;
@@ -30,8 +31,9 @@ $float_width = $float_option['floatSize']-$float_padding1-$float_padding2;
 .TWCHFloatBtn div{
     padding:<?php echo esc_html( $float_padding1).'px'; ?>;
     border-radius:<?php echo esc_html($float_option['floatRadius1']).'%'; ?>;
-    <?php if($float_option['floatBackground1'] != 0){ ?>
-    background-color:<?php echo esc_html($float_option['floatBackground1']); }?>;
+    <?php if($float_padding1 != 0): ?>
+        background-color:<?php echo esc_html($float_option['floatBackground1']); ?>;
+    <?php endif ?>
 }
 .TWCHBoxHeader{
     background-color:<?php echo esc_html($float_option['floatBoxHeaderBackground']); ?>;
