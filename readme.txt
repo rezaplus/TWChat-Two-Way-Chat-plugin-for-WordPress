@@ -1,6 +1,6 @@
 === Two Way CHAT - Send or receive messages to your user ===
 Contributors: Rellaco, rezaplus
-Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress, whatsapp floating button, whatsapp icon
+Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress
 Requires at least: 4.7.0
 Requires PHP: 5.6
 Tested up to: 5.8

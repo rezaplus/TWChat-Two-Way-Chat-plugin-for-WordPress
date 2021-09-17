@@ -5,7 +5,7 @@ if(isset($_GET['Delete'])){
     TWCH_DBactions::Delete($_GET['Delete'],'TWCH_FAQ_',$current_url);
 }
 if(isset($_POST['submit'])){
-	$getEditId = ( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '';
+	$getEditId = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
     TWCH_DBactions::Update($_POST,$getEditId,'TWCH_FAQ_',$current_url);
 }
     

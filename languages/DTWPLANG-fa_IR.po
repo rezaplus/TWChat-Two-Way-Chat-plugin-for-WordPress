@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: TwoWayChat.php\n"
+"X-Poedit-WPHeader: TWChat.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -36,7 +36,7 @@ msgstr "تنظیمات"
 
 #. Plugin Name of the plugin/theme
 #: Classes/functions.php:56
-msgid "Two Way chat"
+msgid "TWChat"
 msgstr "واتساپ"
 
 #: Classes/functions.php:58
@@ -44,7 +44,7 @@ msgid "Send Message"
 msgstr "ارسال پیام"
 
 #: Classes/functions.php:60
-msgid "Two Way chat settings"
+msgid "TWChat settings"
 msgstr "تنظیمات | TWCH"
 
 #: Classes/install.php:40

@@ -108,11 +108,11 @@ require_once TWCH_DIR_path.'Pages/Float.php';
         <th scope="row"><?php esc_html_e("location", 'TWCHLANG'); ?></th>
         <td class="flex-dt">
         <label style="margin-right:5px;">
-            <input name="float-locationMobile" type="radio" Value="Left" <?php echo $float_option['float-locationMobile']=='Left' ? 'checked' : ''; ?>>
+            <input name="float-locationMobile" type="radio" Value="Left" <?php esc_html_e($float_option['float-locationMobile']=='Left' ? 'checked' : ''); ?>>
             <?php esc_html_e('Left','TWCHLANG'); ?>
         </label>
         <label style="margin-left:5px;">
-            <input name="float-locationMobile"  type="radio" Value="Right" <?php echo $float_option['float-locationMobile']=='Right' ? 'checked' : ''; ?>>
+            <input name="float-locationMobile"  type="radio" Value="Right" <?php esc_html_e($float_option['float-locationMobile']=='Right' ? 'checked' : ''); ?>>
             <?php esc_html_e('Right','TWCHLANG'); ?>
         </label>
         </td>

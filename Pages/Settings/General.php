@@ -2,7 +2,7 @@
 //Save and update this page options
 if(isset($_POST['submit'])){
     unset($_POST['submit']);
-    if(update_option('TWCH_General_Option', $_POST ));
+    update_option('TWCH_General_Option',array_map( 'sanitize_text_field', $_POST ) );
 }
 
 //Get this page options

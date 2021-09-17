@@ -6,7 +6,7 @@ if(isset($_GET['Delete'])){
     TWCH_DBactions::Delete($_GET['Delete'],'TWCH_Accounts_',$current_url);
 }
 if(isset($_POST['submit'])){
-    $getEditId = ( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '';
+    $getEditId = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
     TWCH_DBactions::Update($_POST,sanitize_text_field($getEditId),'TWCH_Accounts_',$current_url);
 }
 
@@ -119,7 +119,7 @@ $Accounts_info = get_option('TWCH_Accounts_list');
     
     <?php
     if(isset($_GET['Edit'])){ ?>
-        document.getElementById('Country_Code').value="<?php echo  $Accounts_edit['Country_Code']; ?>";
+        document.getElementById('Country_Code').value="<?php esc_html_e($Accounts_edit['Country_Code']); ?>";
     <?php } ?>
     
     jQuery('#Account-whatsapp-number').on('input', function() {
