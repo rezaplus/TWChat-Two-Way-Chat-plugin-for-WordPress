@@ -1,10 +1,17 @@
 <?php
 //Save and update this page options
 if(isset($_POST['submit'])){
-    unset($_POST['submit']);
-    update_option('TWCH_General_Option',array_map( 'sanitize_text_field', $_POST ) );
+    $fields_TWCH = array(
+        'float_is_enable' => $_POST['float_is_enable'],
+        'floatApplication' => $_POST['floatApplication'],
+        'wc_is_enable' => $_POST['wc_is_enable'],
+        'qmessage_is_enable' => $_POST['qmessage_is_enable'],
+        'Applicationmode' => $_POST['Applicationmode'],
+        'fix_countrycode' => $_POST['fix_countrycode'],
+        'Country_Code' => $_POST['Country_Code']
+    );
+    update_option('TWCH_General_Option',array_map( 'sanitize_text_field', $fields_TWCH ) );
 }
-
 //Get this page options
 $dwtp_data = get_option('TWCH_General_Option');
 
@@ -67,6 +74,7 @@ $dwtp_data = get_option('TWCH_General_Option');
     <tr>
         <th scope="row"><?php esc_html_e('Country code','TWCHLANG'); ?></th>
         <td>
+            <input type="hidden" name="Country_Code" value="">
             <select name="Country_Code" id="Country_Code" <?php echo  $dwtp_data['fix_countrycode'] == 'true' ? '' : 'disabled'; ?>>
                 <?php require_once TWCH_DIR_path.'Assets/Country_code.php'; ?>
             </select>

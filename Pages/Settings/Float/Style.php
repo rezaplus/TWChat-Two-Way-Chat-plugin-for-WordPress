@@ -1,8 +1,28 @@
 <?php
 
 if(isset($_POST['submit'])){
-    unset($_POST['submit']);
-    update_option('TWCH_float_options',array_map( 'sanitize_text_field', $_POST ));
+    $fields_TWCH = array(
+        'float-icon' => $_POST['float-icon'],
+        'floatSize' => $_POST['floatSize'],
+        'floatBackground1' => $_POST['floatBackground1'],
+        'floatRadius1' => $_POST['floatRadius1'],
+        'floatPadding1' => $_POST['floatPadding1'],
+        'floatBackground2' => $_POST['floatBackground2'],
+        'floatRadius2' => $_POST['floatRadius2'],
+        'floatPadding2' => $_POST['floatPadding2'],
+        'float-location' => $_POST['float-location'],
+        'TWCH_SideSpace' => $_POST['TWCH_SideSpace'],
+        'TWCH_bottomDistance' => $_POST['TWCH_bottomDistance'],
+        'float-locationMobile' => $_POST['float-locationMobile'],
+        'TWCH_SideSpaceMobile' => $_POST['TWCH_SideSpaceMobile'],
+        'TWCH_bottomDistanceMobile' => $_POST['TWCH_bottomDistanceMobile'],
+        'floatBoxHeaderTitle' => $_POST['floatBoxHeaderTitle'],
+        'floatBoxHeaderDecs' => $_POST['floatBoxHeaderDecs'],
+        'floatBoxHeaderBackground' => $_POST['floatBoxHeaderBackground'],
+        'floatBoxTextColor' => $_POST['floatBoxTextColor'],
+        'floatBoxCloseBtnColor' => $_POST['floatBoxCloseBtnColor']
+    );
+    update_option('TWCH_float_options',array_map( 'sanitize_text_field', $fields_TWCH ));
 }
 $float_option = get_option('TWCH_float_options');
 

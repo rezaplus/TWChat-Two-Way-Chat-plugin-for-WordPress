@@ -1,18 +1,27 @@
 <?php
 
 require_once  TWCH_DIR_path.'Classes/DBactions.php';
-$current_url = '?page=TWCH_settings&tab=Float&sT=Accounts';
+$current_url_TWCH = '?page=TWCH_settings&tab=Float&sT=Accounts';
 if(isset($_GET['Delete'])){
-    TWCH_DBactions::Delete($_GET['Delete'],'TWCH_Accounts_',$current_url);
+    TWCH_DBactions::Delete(sanitize_text_field($_GET['Delete']),'TWCH_Accounts_',$current_url);
 }
 if(isset($_POST['submit'])){
-    $getEditId = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
-    TWCH_DBactions::Update($_POST,sanitize_text_field($getEditId),'TWCH_Accounts_',$current_url);
+    $getEditId_TWCH = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
+    $fields_TWCH= array(
+        'img-ACS' => $_POST['img-ACS'],
+        'Account-name' => $_POST['Account-name'],
+        'Account-title' => $_POST['Account-title'],
+        'Account-availableFrom' => $_POST['Account-availableFrom'],
+        'Account-availableTo' => $_POST['Account-availableTo'],
+        'Country_Code' => $_POST['Country_Code'],
+        'Account-whatsapp-number' => $_POST['Account-whatsapp-number'],
+        'DefaultText' => $_POST['DefaultText']
+    );
+    TWCH_DBactions::Update($fields_TWCH,$getEditId_TWCH,'TWCH_Accounts_',$current_url_TWCH);
 }
-
 //Edit Account
 if(isset($_GET['Edit'])){
-   $Accounts_edit = get_option($_GET['Edit']); 
+   $Accounts_edit = get_option(sanitize_text_field( $_GET['Edit'] )); 
 }
 
 //Get this page options

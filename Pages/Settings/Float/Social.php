@@ -1,12 +1,13 @@
 <?php
     if(isset($_POST['submit'])){
         unset($_POST['submit']);
+        $fields_TWCH = array();
         foreach($_POST as $key => $value){
-            if(empty($value)){
-                unset($_POST[$key]);
+            if(!empty($value)){
+                $fields_TWCH[$key] = $value;
             }
         }
-        update_option('TWCH_Float_social',array_map( 'sanitize_text_field', $_POST));
+        update_option('TWCH_Float_social',array_map( 'esc_url_raw', $fields_TWCH));
     }
     $TWCH_social = get_option('TWCH_Float_social');
 ?>

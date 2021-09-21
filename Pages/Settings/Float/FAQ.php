@@ -1,16 +1,19 @@
 <?php
 require_once  TWCH_DIR_path.'Classes/DBactions.php';
-$current_url = '?page=TWCH_settings&tab=Float&sT=FAQ';
+$current_url_TWCH = '?page=TWCH_settings&tab=Float&sT=FAQ';
 if(isset($_GET['Delete'])){
-    TWCH_DBactions::Delete($_GET['Delete'],'TWCH_FAQ_',$current_url);
+    TWCH_DBactions::Delete(sanitize_text_field($_GET['Delete']),'TWCH_FAQ_',$current_url);
 }
 if(isset($_POST['submit'])){
-	$getEditId = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
-    TWCH_DBactions::Update($_POST,$getEditId,'TWCH_FAQ_',$current_url);
+	$getEditId_TWCH = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
+	$fields_TWCH = array(
+		'TWCH_FAQ_Question' => $_POST['TWCH_FAQ_Question'],
+		'TWCH_FAQ_Answer' => $_POST['TWCH_FAQ_Answer']
+	);
+    TWCH_DBactions::Update($fields_TWCH,$getEditId_TWCH,'TWCH_FAQ_',$current_url_TWCH);
 }
-    
 if(isset($_GET['Edit'])){
-    $TWCH_FAQ_Edit = get_option($_GET['Edit']);
+    $TWCH_FAQ_Edit = get_option(sanitize_text_field($_GET['Edit']));
 }
     
 ?>

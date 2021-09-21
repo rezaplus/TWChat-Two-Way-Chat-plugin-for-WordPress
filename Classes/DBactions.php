@@ -6,11 +6,9 @@ class TWCH_DBactions{
     public function __construct(){
     
     }
-    public static function Update($postData,$getEditId,$option_name,$url){
-        $url = esc_url_raw( $url );
-        
-        unset($postData['submit']);
+    public static function Update($fields,$getEditId,$option_name,$url){
         if(empty($getEditId)){
+            
             $id = $option_name.self::randNumber($option_name);
             $postData['id'] = $id;
             
@@ -18,12 +16,12 @@ class TWCH_DBactions{
             self::list_manage($id,$option_name.'list');
         }elseif(isset($getEditId)){
             $id = $getEditId;
-            $postData['id'] = $getEditId;
+            $fields['id'] = $getEditId;
             
             if(!empty($url))
                 header('Location: '.$url);
         }
-        update_option($id,array_map( 'sanitize_textarea_field', $postData ));
+        update_option($id,array_map( 'sanitize_textarea_field', $fields ));
         
     }
   
