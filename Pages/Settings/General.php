@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 //Save and update this page options
 if(isset($_POST['submit'])){
     $fields_TWCH = array(

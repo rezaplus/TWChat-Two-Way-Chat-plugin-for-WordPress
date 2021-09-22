@@ -9,7 +9,7 @@
  * check user Accessibility
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 TWCH_MainFunctions::get_instance();
 

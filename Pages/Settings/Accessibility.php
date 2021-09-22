@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if(!current_user_can('administrator')){
     die(esc_html('Only administrators have access to this page.','TWCHLANG'));
 }

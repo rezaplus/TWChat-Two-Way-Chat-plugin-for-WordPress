@@ -1,4 +1,5 @@
         <?php  
+        if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
         if( isset( $_GET[ 'sT' ] ) ) {  
             $active_Stab = sanitize_text_field($_GET[ 'sT' ]);
         } else {

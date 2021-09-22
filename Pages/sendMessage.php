@@ -1,5 +1,5 @@
 <?php
-
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $TWCH_general = get_option('TWCH_General_Option');
 wp_enqueue_style('sendMessage',  TWCH_assets .'sendMessage.css', array() , TWCH_plugin_version);
 wp_enqueue_script('TWCH_ORS', TWCH_assets . 'Orders.js', array() , TWCH_plugin_version , true);

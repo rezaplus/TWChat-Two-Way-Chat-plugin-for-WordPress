@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 require_once  TWCH_DIR_path.'Classes/DBactions.php';
 $current_url_TWCH = '?page=TWCH_settings&tab=Float&sT=FAQ';
 if(isset($_GET['Delete'])){

@@ -1,4 +1,6 @@
     <?php
+    if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+    
     wp_enqueue_style('TWCH-admin-style',  TWCH_assets .'admin-style.css', array() , TWCH_plugin_version);
 
     if( isset( $_GET[ 'tab' ] ) ) {  

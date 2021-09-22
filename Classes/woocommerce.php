@@ -1,6 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
- TWCH_woocommerce::get_instance();
+TWCH_woocommerce::get_instance();
 
 class TWCH_woocommerce extends TWCH_class{
     

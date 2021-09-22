@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 add_action('woocommerce_admin_order_data_after_billing_address', function(){
     global  $post;
     $order = new WC_Order($post->ID);

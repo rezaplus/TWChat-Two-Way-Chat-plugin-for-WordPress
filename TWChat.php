@@ -7,7 +7,7 @@
  * Version: 3.1.4
  * Text Domain: TWCHLANG
  * Author URI: https://rezaplus.com/
- * 
+ *
  * Requires PHP: 5.4
  * WC requires at least: 3.0
  * WC tested up to: 5.6
@@ -23,30 +23,33 @@
  * GNU General Public License for more details.
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if (! defined('ABSPATH')) {
+    exit;
+} // Exit if accessed directly
 
 TWCH_class::get_instance();
 define('TWCH_plugin_version', "3.1.4");
 
-class TWCH_class{
-    
-    static $instance = null;
+class TWCH_class
+{
+    public static $instance = null;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->define_constants();
         //Localization
-        add_action( 'init', array( $this, 'Localization_setup' ));
+        add_action('init', array( $this, 'Localization_setup' ));
         //include main functions
-        require_once  TWCH_DIR_path.'Classes/functions.php';     
+        require_once  TWCH_DIR_path.'Classes/functions.php';
     }
     /**
      * define all constants and main addresses
      */
-    function define_constants(){
-        
-        $this->define('TWCH_DIR_path_file', __FILE__ );
-        $this->define('TWCH_BASE_NAME', plugin_basename(__FILE__) );
-        $this->define('TWCH_DIR_path',plugin_dir_path( __FILE__ ));
+    public function define_constants()
+    {
+        $this->define('TWCH_DIR_path_file', __FILE__);
+        $this->define('TWCH_BASE_NAME', plugin_basename(__FILE__));
+        $this->define('TWCH_DIR_path', plugin_dir_path(__FILE__));
         $this->define('TWCH_classes_path', plugin_dir_path((__FILE__)) . 'Classes/');
         $this->define('TWCH_image', plugin_dir_url((__FILE__)) . 'Assets/img/');
         $this->define('TWCH_assets', plugin_dir_url((__FILE__)) . 'Assets/');
@@ -54,9 +57,10 @@ class TWCH_class{
     /**
     * Define constant if not already defined
     */
-    protected function define( $name, $value ) {
-        if ( ! defined( $name ) ) {
-            define( $name, $value );
+    protected function define($name, $value)
+    {
+        if (! defined($name)) {
+            define($name, $value);
         }
     }
     
@@ -65,16 +69,17 @@ class TWCH_class{
      *
      * @uses load_plugin_textdomain()
      */
-    public function Localization_setup() {
-        load_plugin_textdomain('TWCHLANG', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+    public function Localization_setup()
+    {
+        load_plugin_textdomain('TWCHLANG', false, dirname(plugin_basename(__FILE__)) . '/languages/');
     }
     
-    public static function get_instance() {
-    // If the single instance hasn't been set, set it now.
-    if ( null == self::$instance ) {
-        self::$instance = new self;
-    }
-    return self::$instance;
+    public static function get_instance()
+    {
+        // If the single instance hasn't been set, set it now.
+        if (null == self::$instance) {
+            self::$instance = new self;
+        }
+        return self::$instance;
     }
 }
-

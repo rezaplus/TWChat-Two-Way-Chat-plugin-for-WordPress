@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 add_action('woocommerce_admin_order_preview_start',function(){ ?>
 <style>
     #TWCH_woocommerce img {

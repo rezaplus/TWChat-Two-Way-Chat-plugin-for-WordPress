@@ -1,5 +1,6 @@
 <?php
- TWCH_update::get_instance();
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+TWCH_update::get_instance();
 class TWCH_update{
     //DB stable version
     public $StableVersion_DB = '2.1';
