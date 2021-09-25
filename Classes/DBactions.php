@@ -22,7 +22,7 @@ class TWCH_DBactions{
             if(!empty($url))
                 header('Location: '.$url);
         }
-        update_option($id,array_map( 'sanitize_textarea_field', $fields ));
+        update_option($id,$fields);
         
     }
   

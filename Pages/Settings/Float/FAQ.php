@@ -8,8 +8,8 @@ if(isset($_GET['Delete'])){
 if(isset($_POST['submit'])){
 	$getEditId_TWCH = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
 	$fields_TWCH = array(
-		'TWCH_FAQ_Question' => $_POST['TWCH_FAQ_Question'],
-		'TWCH_FAQ_Answer' => $_POST['TWCH_FAQ_Answer']
+		'TWCH_FAQ_Question' => sanitize_text_field( $_POST['TWCH_FAQ_Question'] ),
+		'TWCH_FAQ_Answer' => sanitize_text_field( $_POST['TWCH_FAQ_Answer'] )
 	);
     TWCH_DBactions::Update($fields_TWCH,$getEditId_TWCH,'TWCH_FAQ_',$current_url_TWCH);
 }

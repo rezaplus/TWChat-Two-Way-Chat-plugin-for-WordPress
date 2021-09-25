@@ -3,15 +3,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 //Save and update this page options
 if(isset($_POST['submit'])){
     $fields_TWCH = array(
-        'float_is_enable' => $_POST['float_is_enable'],
-        'floatApplication' => $_POST['floatApplication'],
-        'wc_is_enable' => $_POST['wc_is_enable'],
-        'qmessage_is_enable' => $_POST['qmessage_is_enable'],
-        'Applicationmode' => $_POST['Applicationmode'],
-        'fix_countrycode' => $_POST['fix_countrycode'],
-        'Country_Code' => $_POST['Country_Code']
+        'float_is_enable' => sanitize_text_field( $_POST['float_is_enable'] ),
+        'floatApplication' => sanitize_text_field( $_POST['floatApplication'] ),
+        'wc_is_enable' => sanitize_text_field( $_POST['wc_is_enable'] ),
+        'qmessage_is_enable' => sanitize_text_field( $_POST['qmessage_is_enable'] ),
+        'Applicationmode' => sanitize_text_field( $_POST['Applicationmode'] ),
+        'fix_countrycode' => sanitize_text_field( $_POST['fix_countrycode'] ),
+        'Country_Code' => sanitize_text_field( $_POST['Country_Code'] )
     );
-    update_option('TWCH_General_Option',array_map( 'sanitize_text_field', $fields_TWCH ) );
+    update_option('TWCH_General_Option', $fields_TWCH );
 }
 //Get this page options
 $dwtp_data = get_option('TWCH_General_Option');

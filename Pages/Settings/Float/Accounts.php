@@ -8,14 +8,14 @@ if(isset($_GET['Delete'])){
 if(isset($_POST['submit'])){
     $getEditId_TWCH = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
     $fields_TWCH= array(
-        'img-ACS' => $_POST['img-ACS'],
-        'Account-name' => $_POST['Account-name'],
-        'Account-title' => $_POST['Account-title'],
-        'Account-availableFrom' => $_POST['Account-availableFrom'],
-        'Account-availableTo' => $_POST['Account-availableTo'],
-        'Country_Code' => $_POST['Country_Code'],
-        'Account-whatsapp-number' => $_POST['Account-whatsapp-number'],
-        'DefaultText' => $_POST['DefaultText']
+        'img-ACS' => sanitize_text_field( $_POST['img-ACS'] ),
+        'Account-name' => sanitize_text_field( $_POST['Account-name'] ),
+        'Account-title' => sanitize_text_field( $_POST['Account-title'] ),
+        'Account-availableFrom' => sanitize_text_field( $_POST['Account-availableFrom'] ),
+        'Account-availableTo' => sanitize_text_field( $_POST['Account-availableTo'] ),
+        'Country_Code' => sanitize_text_field( $_POST['Country_Code'] ),
+        'Account-whatsapp-number' => sanitize_text_field( $_POST['Account-whatsapp-number'] ),
+        'DefaultText' => sanitize_textarea_field( $_POST['DefaultText'] )
     );
     TWCH_DBactions::Update($fields_TWCH,$getEditId_TWCH,'TWCH_Accounts_',$current_url_TWCH);
 }
