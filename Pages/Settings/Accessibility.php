@@ -10,13 +10,13 @@ if(isset($_POST['submit'])){
     $WC_ = array();
     foreach($_POST as $key => $val){
         if($val=='Settings'){
-            array_push($settings_,str_replace('S_','',$key));
+            array_push($settings_,str_replace('S_','',sanitize_text_field($key)));
         }elseif($val=='WC'){
-            array_push($WC_,str_replace('W_','',$key));
+            array_push($WC_,str_replace('W_','',sanitize_text_field($key)));
         }
     }
-    update_option('TWCH_Accessibility_settings',array_map( 'sanitize_text_field', $settings_ ));
-    update_option('TWCH_Accessibility_WC',array_map( 'sanitize_text_field', $WC_ ));
+    update_option('TWCH_Accessibility_settings',$settings_ );
+    update_option('TWCH_Accessibility_WC', $WC_ );
 }
     $settings_get= get_option('TWCH_Accessibility_settings');
     $WC_get= get_option('TWCH_Accessibility_WC');

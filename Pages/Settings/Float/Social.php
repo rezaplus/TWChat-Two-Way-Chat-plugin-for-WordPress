@@ -5,10 +5,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
         $fields_TWCH = array();
         foreach($_POST as $key => $value){
             if(!empty($value)){
-                $fields_TWCH[$key] = $value;
+                $fields_TWCH[$key] = esc_url_raw($value);
             }
         }
-        update_option('TWCH_Float_social',array_map( 'esc_url_raw', $fields_TWCH));
+        update_option('TWCH_Float_social',$fields_TWCH);
     }
     $TWCH_social = get_option('TWCH_Float_social');
 ?>
