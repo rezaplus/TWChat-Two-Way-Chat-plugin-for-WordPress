@@ -1,9 +1,9 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 require_once  TWCH_DIR_path.'Classes/DBactions.php';
-$current_url_TWCH = '?page=TWCH_settings&tab=Float&sT=Accounts';
+
 if(isset($_GET['Delete'])){
-    TWCH_DBactions::Delete(sanitize_text_field($_GET['Delete']),'TWCH_Accounts_',$current_url);
+    TWCH_DBactions::Delete(sanitize_text_field($_GET['Delete']),'TWCH_Accounts_');
 }
 if(isset($_POST['submit'])){
     $getEditId_TWCH = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
         'Account-whatsapp-number' => sanitize_text_field( $_POST['Account-whatsapp-number'] ),
         'DefaultText' => sanitize_textarea_field( $_POST['DefaultText'] )
     );
-    TWCH_DBactions::Update($fields_TWCH,$getEditId_TWCH,'TWCH_Accounts_',$current_url_TWCH);
+    TWCH_DBactions::Update($fields_TWCH,$getEditId_TWCH,'TWCH_Accounts_');
 }
 //Edit Account
 if(isset($_GET['Edit'])){

@@ -15,7 +15,7 @@
 </style>
 <div class="notice notice-warning notice-TWCH-premium">
              <p><?php esc_html_e('You need to get the premium version for this feature.','TWCHLANG'); ?></p>
-             <a href="https://rellaco.com/product/TWCH/" target="_blank"class="button-primary"><?php  esc_html_e('Upgrade','TWCHLANG'); ?></a>
+             <a href="https://rellaco.com/product/TWChat/" target="_blank"class="button-primary"><?php  esc_html_e('Upgrade','TWCHLANG'); ?></a>
 </div>
 <table class="form-table TWCH-form-table">
     <tbody>

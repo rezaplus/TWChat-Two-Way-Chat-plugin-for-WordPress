@@ -1,9 +1,8 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 require_once  TWCH_DIR_path.'Classes/DBactions.php';
-$current_url_TWCH = '?page=TWCH_settings&tab=Float&sT=FAQ';
 if(isset($_GET['Delete'])){
-    TWCH_DBactions::Delete(sanitize_text_field($_GET['Delete']),'TWCH_FAQ_',$current_url);
+    TWCH_DBactions::Delete(sanitize_text_field($_GET['Delete']),'TWCH_FAQ_');
 }
 if(isset($_POST['submit'])){
 	$getEditId_TWCH = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
@@ -11,7 +10,7 @@ if(isset($_POST['submit'])){
 		'TWCH_FAQ_Question' => sanitize_text_field( $_POST['TWCH_FAQ_Question'] ),
 		'TWCH_FAQ_Answer' => sanitize_text_field( $_POST['TWCH_FAQ_Answer'] )
 	);
-    TWCH_DBactions::Update($fields_TWCH,$getEditId_TWCH,'TWCH_FAQ_',$current_url_TWCH);
+    TWCH_DBactions::Update($fields_TWCH,$getEditId_TWCH,'TWCH_FAQ_');
 }
 if(isset($_GET['Edit'])){
     $TWCH_FAQ_Edit = get_option(sanitize_text_field($_GET['Edit']));

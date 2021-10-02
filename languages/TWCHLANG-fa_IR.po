@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: TWCH\n"
-"POT-Creation-Date: 2021-08-16 21:03+0430\n"
-"PO-Revision-Date: 2021-08-16 21:04+0430\n"
+"Project-Id-Version: TWChat\n"
+"POT-Creation-Date: 2021-10-01 19:18+0330\n"
+"PO-Revision-Date: 2021-10-01 19:22+0330\n"
 "Last-Translator: rezaplus\n"
 "Language-Team: rezaplus\n"
 "Language: fa_IR\n"
@@ -25,308 +25,299 @@ msgstr ""
 msgid "Select Country Code"
 msgstr "کد کشور"
 
-#: Assets/Country_code.php:10
-msgid "Other countries"
-msgstr "همه کشور ها"
-
-#: Classes/functions.php:49 Classes/functions.php:60 Pages/Settings.php:17
-#: Pages/Settings/Accessibility.php:32
+#: Classes/functions.php:49 Classes/functions.php:60 Pages/Settings.php:14
+#: Pages/Settings/Accessibility.php:33
 msgid "Settings"
 msgstr "تنظیمات"
 
 #. Plugin Name of the plugin/theme
 #: Classes/functions.php:56
 msgid "TWChat"
-msgstr "واتساپ"
+msgstr ""
 
 #: Classes/functions.php:58
 msgid "Send Message"
 msgstr "ارسال پیام"
 
 #: Classes/functions.php:60
-msgid "TWChat settings"
-msgstr "تنظیمات | TWCH"
+msgid "Two Way chat settings"
+msgstr "تنظیمات | TWChat"
 
-#: Classes/install.php:40
+#: Classes/install.php:41
 msgid "Hello!"
 msgstr "سلام!"
 
-#: Classes/install.php:41
+#: Classes/install.php:42
 msgid ""
 "If you do not find the answer to the following questions, we are ready to "
 "answer."
 msgstr "چمتنچه سوال شما در سوالات متداول نبود همکاران ما آماده پاسخگویی هستند."
 
-#: Classes/woocommerce/Order_details_page.php:26
-#: Classes/woocommerce/Preview_order_button.php:26 Pages/sendMessage.php:26
-msgid "Choose Quick message"
-msgstr "انتخاب پیام فوری"
+#: Classes/woocommerce/Order_details_page.php:39
+#: Classes/woocommerce/Preview_order_button.php:36
+#: Pages/Settings/Qmessage.php:17
+msgid "You need to get the premium version for this feature."
+msgstr "این ویژگی برای نسخه حرفه ای دردسترس می باشد."
 
-#: Classes/woocommerce/Preview_get_order_details.php:27
-msgid "Qty: "
-msgstr "تعداد:"
-
-#: Pages/FloatBox.php:43 Pages/Settings/Float/Accounts.php:46
-#: Pages/Settings/Float/Accounts.php:78
+#: Pages/FloatBox.php:43 Pages/Settings/Float/Accounts.php:56
+#: Pages/Settings/Float/Accounts.php:85
 msgid "Available from"
 msgstr "دسترسی از"
 
-#: Pages/FloatBox.php:43 Pages/Settings/Float/Accounts.php:49
-#: Pages/Settings/Float/Accounts.php:78
+#: Pages/FloatBox.php:43 Pages/Settings/Float/Accounts.php:59
+#: Pages/Settings/Float/Accounts.php:85
 msgid "To"
 msgstr "تا"
 
-#: Pages/Settings.php:20
+#: Pages/Settings.php:16
 msgid "General"
 msgstr "عمومی"
 
-#: Pages/Settings.php:21
+#: Pages/Settings.php:17
 msgid "Quick message"
 msgstr "پیام فوری"
 
-#: Pages/Settings.php:22
+#: Pages/Settings.php:18
 msgid "Float"
 msgstr "شناور"
 
-#: Pages/Settings.php:23
+#: Pages/Settings.php:19
 msgid "Accessibility"
 msgstr "دسترسی ها"
 
-#: Pages/Settings.php:25
-msgid "License"
-msgstr "لایسنس"
-
-#: Pages/Settings/Accessibility.php:3
+#: Pages/Settings/Accessibility.php:4
 msgid "Only administrators have access to this page."
 msgstr "فقط مدیران اصلی به این صفحه دسترسی دارند."
 
-#: Pages/Settings/Accessibility.php:28
+#: Pages/Settings/Accessibility.php:29
 msgid "Selected user roles will have access to plugin features."
 msgstr "نقش های کاربری انتخاب شده به ویژگی های افزونه دسترسی خواهند داشت."
 
-#: Pages/Settings/Accessibility.php:31
+#: Pages/Settings/Accessibility.php:32
 msgid "Role"
 msgstr "نقش کاربری"
 
-#: Pages/Settings/Accessibility.php:33 Pages/Settings/General.php:33
+#: Pages/Settings/Accessibility.php:34 Pages/Settings/General.php:41
 msgid "Woocommerce"
 msgstr "ووکامرس"
 
-#: Pages/Settings/Accessibility.php:45 Pages/Settings/Float/Social.php:105
-#: Pages/Settings/Float/Style.php:174 Pages/Settings/General.php:89
+#: Pages/Settings/Accessibility.php:46 Pages/Settings/Float/Social.php:107
+#: Pages/Settings/Float/Style.php:194 Pages/Settings/General.php:97
 msgid "Save Changes"
 msgstr "ذخیره تغییرات"
 
-#: Pages/Settings/Float.php:11
+#: Pages/Settings/Float.php:12
 msgid "Style"
 msgstr "استایل"
 
-#: Pages/Settings/Float.php:12
+#: Pages/Settings/Float.php:13
 msgid "FAQ List"
 msgstr "لیست سوالات متداول"
 
-#: Pages/Settings/Float.php:13
+#: Pages/Settings/Float.php:14
 msgid "Accounts"
 msgstr "حساب ها"
 
-#: Pages/Settings/Float.php:14
+#: Pages/Settings/Float.php:15
 msgid "Social"
 msgstr "شبکه های اجتماعی"
 
-#: Pages/Settings/Float/Accounts.php:40
+#: Pages/Settings/Float/Accounts.php:50
 msgid "Full name"
 msgstr "نام کامل"
 
-#: Pages/Settings/Float/Accounts.php:43 Pages/Settings/Float/Style.php:137
-#: Pages/Settings/Qmessage.php:19 Pages/Settings/Qmessage.php:64
+#: Pages/Settings/Float/Accounts.php:53 Pages/Settings/Float/Style.php:157
+#: Pages/Settings/Qmessage.php:24
 msgid "Title"
 msgstr "عنوان"
 
-#: Pages/Settings/Float/Accounts.php:52 Pages/Settings/General.php:69
+#: Pages/Settings/Float/Accounts.php:62 Pages/Settings/General.php:76
 msgid "Country code"
 msgstr "کد کشور"
 
-#: Pages/Settings/Float/Accounts.php:55
+#: Pages/Settings/Float/Accounts.php:65
 msgid "Whatsapp number"
 msgstr "شماره واتساپ"
 
-#: Pages/Settings/Float/Accounts.php:58
+#: Pages/Settings/Float/Accounts.php:68
 msgid "Text"
 msgstr "متن"
 
-#: Pages/Settings/Float/Accounts.php:60 Pages/Settings/Float/FAQ.php:36
-#: Pages/Settings/Qmessage.php:57
+#: Pages/Settings/Float/Accounts.php:70 Pages/Settings/Float/FAQ.php:40
 msgid "Save"
 msgstr "ذخیره"
 
-#: Pages/Settings/Float/Accounts.php:60 Pages/Settings/Float/FAQ.php:36
-#: Pages/Settings/Qmessage.php:57
+#: Pages/Settings/Float/Accounts.php:70 Pages/Settings/Float/FAQ.php:40
 msgid "Insert"
 msgstr "افزودن"
 
-#: Pages/Settings/Float/Accounts.php:62
+#: Pages/Settings/Float/Accounts.php:72
 msgid "New"
 msgstr "جدید"
 
-#: Pages/Settings/Float/Accounts.php:93 Pages/Settings/Float/FAQ.php:56
-#: Pages/Settings/Qmessage.php:78
+#: Pages/Settings/Float/Accounts.php:97 Pages/Settings/Float/FAQ.php:57
 msgid "Edit"
 msgstr "ویرایش"
 
-#: Pages/Settings/Float/Accounts.php:94 Pages/Settings/Float/FAQ.php:55
-#: Pages/Settings/Qmessage.php:77
+#: Pages/Settings/Float/Accounts.php:98 Pages/Settings/Float/FAQ.php:56
 msgid "Delete"
 msgstr "حذف"
 
-#: Pages/Settings/Float/FAQ.php:20 Pages/Settings/Float/FAQ.php:43
+#: Pages/Settings/Float/FAQ.php:24 Pages/Settings/Float/FAQ.php:47
 msgid "Question"
 msgstr "سوال"
 
-#: Pages/Settings/Float/FAQ.php:28 Pages/Settings/Float/FAQ.php:44
+#: Pages/Settings/Float/FAQ.php:32 Pages/Settings/Float/FAQ.php:48
 msgid "Answer"
 msgstr "پاسخ"
 
-#: Pages/Settings/Float/FAQ.php:45 Pages/Settings/Qmessage.php:66
+#: Pages/Settings/Float/FAQ.php:49
 msgid "Actions"
 msgstr "عملیات"
 
-#: Pages/Settings/Float/Style.php:14
+#: Pages/Settings/Float/Style.php:34
 msgid "Button style"
 msgstr "استایل دکمه"
 
-#: Pages/Settings/Float/Style.php:17
+#: Pages/Settings/Float/Style.php:37
 msgid "Icon"
 msgstr "ایکون"
 
-#: Pages/Settings/Float/Style.php:30
+#: Pages/Settings/Float/Style.php:50
 msgid "size"
 msgstr "سایز"
 
-#: Pages/Settings/Float/Style.php:37
+#: Pages/Settings/Float/Style.php:57
 msgid "First background color"
 msgstr "رنگ پس زمینه اول"
 
-#: Pages/Settings/Float/Style.php:44 Pages/Settings/Float/Style.php:65
+#: Pages/Settings/Float/Style.php:64 Pages/Settings/Float/Style.php:85
 msgid "Rounded corners"
 msgstr "گردی گوشه ها"
 
-#: Pages/Settings/Float/Style.php:51 Pages/Settings/Float/Style.php:72
+#: Pages/Settings/Float/Style.php:71 Pages/Settings/Float/Style.php:92
 msgid "Padding"
 msgstr "لایه داخلی"
 
-#: Pages/Settings/Float/Style.php:58
+#: Pages/Settings/Float/Style.php:78
 msgid "Second background color"
 msgstr "رنگ پس زمینه دوم"
 
-#: Pages/Settings/Float/Style.php:78
+#: Pages/Settings/Float/Style.php:98
 msgid "Desktop"
 msgstr "دسکتاپ"
 
-#: Pages/Settings/Float/Style.php:80 Pages/Settings/Float/Style.php:108
+#: Pages/Settings/Float/Style.php:100 Pages/Settings/Float/Style.php:128
 msgid "location"
 msgstr "مکان"
 
-#: Pages/Settings/Float/Style.php:84 Pages/Settings/Float/Style.php:112
+#: Pages/Settings/Float/Style.php:104 Pages/Settings/Float/Style.php:131
+#: Pages/Settings/Float/Style.php:132
 msgid "Left"
 msgstr "چپ"
 
-#: Pages/Settings/Float/Style.php:88 Pages/Settings/Float/Style.php:116
+#: Pages/Settings/Float/Style.php:108 Pages/Settings/Float/Style.php:135
+#: Pages/Settings/Float/Style.php:136
 msgid "Right"
 msgstr "راست"
 
-#: Pages/Settings/Float/Style.php:93 Pages/Settings/Float/Style.php:121
+#: Pages/Settings/Float/Style.php:113 Pages/Settings/Float/Style.php:141
 msgid "position"
 msgstr "موقعیت"
 
-#: Pages/Settings/Float/Style.php:95 Pages/Settings/Float/Style.php:123
+#: Pages/Settings/Float/Style.php:115 Pages/Settings/Float/Style.php:143
 msgid "Distance from the side"
 msgstr "فاصله از کنار"
 
-#: Pages/Settings/Float/Style.php:100 Pages/Settings/Float/Style.php:128
+#: Pages/Settings/Float/Style.php:120 Pages/Settings/Float/Style.php:148
 msgid "Distance from the bottom"
 msgstr "فاصله از پایین"
 
-#: Pages/Settings/Float/Style.php:106
+#: Pages/Settings/Float/Style.php:126
 msgid "Mobile"
 msgstr "موبایل"
 
-#: Pages/Settings/Float/Style.php:134
+#: Pages/Settings/Float/Style.php:154
 msgid "Box style"
 msgstr "استایل جعبه"
 
-#: Pages/Settings/Float/Style.php:144
+#: Pages/Settings/Float/Style.php:164
 msgid "Description"
 msgstr "توضیحات"
 
-#: Pages/Settings/Float/Style.php:151
+#: Pages/Settings/Float/Style.php:171
 msgid "Header background color"
 msgstr "رنگ پس زمینه هدر"
 
-#: Pages/Settings/Float/Style.php:159
+#: Pages/Settings/Float/Style.php:179
 msgid "Text color"
 msgstr "رنگ متن"
 
-#: Pages/Settings/Float/Style.php:167
+#: Pages/Settings/Float/Style.php:187
 msgid "Close botton color"
 msgstr "رنگ دکمه بستن باکس"
 
-#: Pages/Settings/General.php:14
+#: Pages/Settings/General.php:22
 msgid "Float widget"
 msgstr "ویجت شناور"
 
-#: Pages/Settings/General.php:18
+#: Pages/Settings/General.php:26
 msgid "Enable/Disable float whatsapp button."
 msgstr "فعال/غیرفعال کردن دکمه شناور واتساپ."
 
-#: Pages/Settings/General.php:22
+#: Pages/Settings/General.php:30
 msgid "Float desktop Application"
 msgstr "اپلیکیشن شناوربرای دسکتاپ"
 
-#: Pages/Settings/General.php:25
+#: Pages/Settings/General.php:33
 msgid "application"
 msgstr "اپلیکیشن"
 
-#: Pages/Settings/General.php:26 Pages/Settings/General.php:54
+#: Pages/Settings/General.php:34 Pages/Settings/General.php:61
 msgid "web application"
 msgstr "وب اپلیکیشن"
 
-#: Pages/Settings/General.php:27
+#: Pages/Settings/General.php:35
 msgid "Auto"
 msgstr "خودکار"
 
-#: Pages/Settings/General.php:37
+#: Pages/Settings/General.php:45
 msgid "Enable/disable the WhatsApp button on orders."
 msgstr "فعال/غیرفعال سازی دکمه واتساپ در سفارشات."
 
-#: Pages/Settings/General.php:41
+#: Pages/Settings/General.php:49
 msgid "Quick messages"
 msgstr "پیام فوری"
 
-#: Pages/Settings/General.php:46
+#: Pages/Settings/General.php:49
+msgid "premium"
+msgstr "نسخه حرفه ای"
+
+#: Pages/Settings/General.php:53
 msgid "Enable/Disable whatsapp Ready messages button on orders."
 msgstr "فعال/غیرفعال سازی دکمه پیام های آماده واستاپ در سفارشات."
 
-#: Pages/Settings/General.php:50
+#: Pages/Settings/General.php:57
 msgid "Woocommerce Application"
 msgstr "اپلیکیشن ووکامرس"
 
-#: Pages/Settings/General.php:53
+#: Pages/Settings/General.php:60
 msgid "application (Recommended)"
 msgstr "اپلیکیشن(پیشنهادی)"
 
-#: Pages/Settings/General.php:55
+#: Pages/Settings/General.php:62
 msgid "Auto (Not recommended)"
 msgstr "خودکار"
 
-#: Pages/Settings/General.php:57
+#: Pages/Settings/General.php:64
 msgid "Choose the way you want to talk on WhatsApp."
 msgstr "روشی را که می خواهید در واتساپ صحبت کنید را انتخاب کنید."
 
-#: Pages/Settings/General.php:61
+#: Pages/Settings/General.php:68
 msgid "Fixed country code"
 msgstr "کد کشور ثابت"
 
-#: Pages/Settings/General.php:65
+#: Pages/Settings/General.php:72
 msgid ""
 "This option does not need to be activated if the users phone number comes "
 "with the country code."
@@ -334,113 +325,104 @@ msgstr ""
 "در صورتی که شماره تلفن های کاربران همراه با کد کشور می باشد، این گزینه نیازی "
 "به فعال سازی ندارد."
 
-#: Pages/Settings/General.php:79
+#: Pages/Settings/General.php:87
 msgid "Orders pro"
 msgstr "سفارشات حرفه ای"
 
-#: Pages/Settings/General.php:82
+#: Pages/Settings/General.php:90
 msgid "Suggested feature"
 msgstr "ویژگی پیشنهادی"
 
-#: Pages/Settings/General.php:83
+#: Pages/Settings/General.php:91
 #, php-format
 msgid "It is recommended to install the %s plugin."
 msgstr "پیشنهاد می شود افزونه %s را نصب کنید."
 
-#: Pages/Settings/License.php:26
-msgid "Enter your license key"
-msgstr "کد لایسنس را وارد کنید"
+#: Pages/Settings/Qmessage.php:18
+msgid "Upgrade"
+msgstr "ارتقا"
 
-#: Pages/Settings/License.php:30
-msgid "activate"
-msgstr "فعال سازی"
-
-#: Pages/Settings/License.php:31
-msgid "Deactivate"
-msgstr "غیرفعال سازی"
-
-#: Pages/Settings/Qmessage.php:27 Pages/Settings/Qmessage.php:65
-#: Pages/sendMessage.php:23
+#: Pages/Settings/Qmessage.php:32 Pages/sendMessage.php:23
 msgid "Message"
 msgstr "پیام"
 
-#: Pages/Settings/Qmessage.php:32
+#: Pages/Settings/Qmessage.php:37
 msgid "First name"
 msgstr "نام"
 
-#: Pages/Settings/Qmessage.php:33
+#: Pages/Settings/Qmessage.php:38
 msgid "Last name"
 msgstr "نام خانوادگی"
 
-#: Pages/Settings/Qmessage.php:34 Pages/sendMessage.php:16
+#: Pages/Settings/Qmessage.php:39 Pages/sendMessage.php:16
 msgid "Phone"
 msgstr "تلفن"
 
-#: Pages/Settings/Qmessage.php:35
+#: Pages/Settings/Qmessage.php:40
 msgid "Email"
 msgstr "ایمیل"
 
-#: Pages/Settings/Qmessage.php:36
+#: Pages/Settings/Qmessage.php:41
 msgid "State"
 msgstr "استان"
 
-#: Pages/Settings/Qmessage.php:37
+#: Pages/Settings/Qmessage.php:42
 msgid "City"
 msgstr "شهر"
 
-#: Pages/Settings/Qmessage.php:38
+#: Pages/Settings/Qmessage.php:43
 msgid "Address"
 msgstr "آدرس"
 
-#: Pages/Settings/Qmessage.php:39
+#: Pages/Settings/Qmessage.php:44
 msgid "Address2"
 msgstr "آدرس2"
 
-#: Pages/Settings/Qmessage.php:40
+#: Pages/Settings/Qmessage.php:45
 msgid "Payment method"
 msgstr "روش پرداخت"
 
-#: Pages/Settings/Qmessage.php:41
+#: Pages/Settings/Qmessage.php:46
 msgid "Transaction number"
 msgstr "شماره تراکنش"
 
-#: Pages/Settings/Qmessage.php:42
+#: Pages/Settings/Qmessage.php:47
 msgid "Payment link"
 msgstr "لینک پرداخت"
 
-#: Pages/Settings/Qmessage.php:43
+#: Pages/Settings/Qmessage.php:48
 msgid "Shipping method"
 msgstr "روش حمل و نقل"
 
-#: Pages/Settings/Qmessage.php:44
+#: Pages/Settings/Qmessage.php:49
 msgid "Shipping cost"
 msgstr "هزینه حمل و تقل"
 
-#: Pages/Settings/Qmessage.php:45
+#: Pages/Settings/Qmessage.php:50
 msgid "Order status"
 msgstr "وضعیت سفارش"
 
-#: Pages/Settings/Qmessage.php:46
+#: Pages/Settings/Qmessage.php:51
 msgid "Order items"
 msgstr "اقلام سفارش"
 
-#: Pages/Settings/Qmessage.php:47
+#: Pages/Settings/Qmessage.php:52
 msgid "Order items link"
 msgstr "لینک اقلام سفارش"
 
-#: Pages/Settings/Qmessage.php:48
+#: Pages/Settings/Qmessage.php:53
 msgid "Order id"
 msgstr "شماره سفارش"
 
-#: Pages/Settings/Qmessage.php:49
+#: Pages/Settings/Qmessage.php:54
 msgid "Order total"
 msgstr "مبلغ کل سفارش"
 
-#: Pages/Settings/Qmessage.php:50
+#: Pages/Settings/Qmessage.php:55
 msgid "Thank you page"
 msgstr "لینک صفحه تشکر"
 
-#: Pages/Settings/Qmessage.php:51
+#: Pages/Settings/Qmessage.php:56
 msgid "Order items review link"
 msgstr "لینک نظرات اقلام سفارش شده"
 
@@ -452,22 +434,44 @@ msgstr "ارسال پیام"
 msgid "Country code is required"
 msgstr "وارد کردن کد کشور الزامی می باشد"
 
+#: Pages/sendMessage.php:26
+msgid "Choose Quick message"
+msgstr "انتخاب پیام فوری"
+
 #. Plugin URI of the plugin/theme
-msgid "\"https://rellaco.com/product/TWCH\""
+msgid "\"https://rellaco.com/product/TwoWayChat\""
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Direct To Whatsapp | Interaction between you and your customers by whatsapp."
+"Two Way Chat | Communication between you and your customers through WhatsApp."
 msgstr "Two Way chat | ارتباط دو طرفه بین شما و مشتریان در واتساپ."
 
 #. Author of the plugin/theme
-msgid "rezaplus"
+msgid "rellaco"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "\"rellaco.com\""
+msgid "https://rellaco.com/"
 msgstr ""
+
+#~ msgid "Other countries"
+#~ msgstr "همه کشور ها"
+
+#~ msgid "Qty: "
+#~ msgstr "تعداد:"
+
+#~ msgid "License"
+#~ msgstr "لایسنس"
+
+#~ msgid "Enter your license key"
+#~ msgstr "کد لایسنس را وارد کنید"
+
+#~ msgid "activate"
+#~ msgstr "فعال سازی"
+
+#~ msgid "Deactivate"
+#~ msgstr "غیرفعال سازی"
 
 #~ msgid "More features in Woocommerce order preview."
 #~ msgstr "ویژگی های بیشتر در پیش نمایش سفارش ووکامرس."

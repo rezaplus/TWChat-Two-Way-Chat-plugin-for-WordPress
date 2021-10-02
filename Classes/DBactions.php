@@ -7,20 +7,17 @@ class TWCH_DBactions{
     public function __construct(){
     
     }
-    public static function Update($fields,$getEditId,$option_name,$url){
+    public static function Update($fields,$getEditId,$option_name){
         if(empty($getEditId)){
             
             $id = $option_name.self::randNumber($option_name);
-            $postData['id'] = $id;
+            $fields['id'] = $id;
             
             //insert to id list
             self::list_manage($id,$option_name.'list');
         }elseif(isset($getEditId)){
             $id = $getEditId;
             $fields['id'] = $getEditId;
-            
-            if(!empty($url))
-                header('Location: '.$url);
         }
         update_option($id,$fields);
         
@@ -48,7 +45,7 @@ class TWCH_DBactions{
         }
     }
 
-    public static function Delete($ID,$option_name,$url){
+    public static function Delete($ID,$option_name){
         $url = esc_url_raw( $url );
         $ID = sanitize_text_field($ID);
         delete_option($ID);
@@ -58,7 +55,5 @@ class TWCH_DBactions{
         }
         update_option($option_name.'list', array_map( 'sanitize_text_field', $content_list ));
 
-        if(!empty($url))
-            header('Location:'.$url);
     }
 }
