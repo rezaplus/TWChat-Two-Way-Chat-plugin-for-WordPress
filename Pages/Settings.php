@@ -1,6 +1,6 @@
     <?php
     if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-    
+
     wp_enqueue_style('TWCH-admin-style',  TWCH_assets .'admin-style.css', array() , TWCH_plugin_version);
 
     if( isset( $_GET[ 'tab' ] ) ) {  
@@ -22,9 +22,12 @@
         </div>
         <form method="post"> 
         <?php
-            require_once "Settings/$active_tab.php";
+            //insert nonce field in form.
+            wp_nonce_field( 'TWCH_nonce_field' ); 
+            if (in_array($active_tab,array('General','Qmessage','Float','Accessibility'))) {
+                require_once "Settings/$active_tab.php";
+            }
         ?>
  
         </form> 
     </div>
-     

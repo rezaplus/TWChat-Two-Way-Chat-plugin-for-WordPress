@@ -1,21 +1,38 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 require_once  TWCH_DIR_path.'Classes/DBactions.php';
+
+//Delete FAQ row
 if(isset($_GET['Delete'])){
-    TWCH_DBactions::Delete(sanitize_text_field($_GET['Delete']),'TWCH_FAQ_');
+	TWCH_delete_FAQ();
 }
-if(isset($_POST['submit'])){
-	$getEditId_TWCH = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
-	$fields_TWCH = array(
-		'TWCH_FAQ_Question' => sanitize_text_field( $_POST['TWCH_FAQ_Question'] ),
-		'TWCH_FAQ_Answer' => sanitize_text_field( $_POST['TWCH_FAQ_Answer'] )
-	);
-    TWCH_DBactions::Update($fields_TWCH,$getEditId_TWCH,'TWCH_FAQ_');
+// update and Edit
+if (isset($_POST['submit'])) {
+    TWCH_update_edit_submit();
 }
+function TWCH_update_edit_submit(){
+    if (isset($_POST['_wpnonce'])
+    && wp_verify_nonce($_POST['_wpnonce'], 'TWCH_nonce_field')) {
+        $getEditId_TWCH = sanitize_text_field((isset($_GET['Edit'])) ? $_GET['Edit'] : '');
+        $fields_TWCH = array(
+        'TWCH_FAQ_Question' => sanitize_text_field($_POST['TWCH_FAQ_Question']),
+        'TWCH_FAQ_Answer' => sanitize_text_field($_POST['TWCH_FAQ_Answer'])
+    );
+        TWCH_DBactions::Update($fields_TWCH, $getEditId_TWCH, 'TWCH_FAQ_');
+    }
+}
+
+function TWCH_delete_FAQ(){
+    if (isset($_GET['_wpnonce'])
+    && wp_verify_nonce($_GET['_wpnonce'], 'TWCH_nonce_field')) {
+        TWCH_DBactions::Delete(sanitize_text_field($_GET['Delete']), 'TWCH_FAQ_');
+    }
+}
+
 if(isset($_GET['Edit'])){
     $TWCH_FAQ_Edit = get_option(sanitize_text_field($_GET['Edit']));
 }
-    
+
 ?>
 <table class="form-table TWCH-form-table">
     <tbody>
@@ -53,8 +70,8 @@ if(!empty($IDs_list)){ ?>
 					echo "<tr><td>".esc_html($FAQ_D['TWCH_FAQ_Question'])."</td>";
 					echo "<td><p>". esc_html($FAQ_D['TWCH_FAQ_Answer']) ."</p></td>";
 					echo "<td>";
-					echo "<a href='?page=TWCH_settings&tab=Float&sT=FAQ&Delete=".esc_html($FAQ_D['id'])."'>".esc_html('Delete','TWCHLANG')."</a>";
-					echo "<a href='?page=TWCH_settings&tab=Float&sT=FAQ&Edit=".esc_html($FAQ_D['id'])."'>".esc_html('Edit','TWCHLANG')."</a>";
+					echo "<a href='?page=TWCH_settings&tab=Float&sT=FAQ&Delete=".esc_html($FAQ_D['id']).'&_wpnonce='.wp_create_nonce('TWCH_nonce_field')."'>".esc_html('Delete','TWCHLANG')."</a>";
+					echo "<a href='?page=TWCH_settings&tab=Float&sT=FAQ&Edit=".esc_html($FAQ_D['id']).'&_wpnonce='.wp_create_nonce('TWCH_nonce_field')."'>".esc_html('Edit','TWCHLANG')."</a>";
 					echo "</td>";
 					echo "</tr>";
 				}

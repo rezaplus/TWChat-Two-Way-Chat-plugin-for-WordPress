@@ -8,7 +8,7 @@
  * Text Domain: TWCHLANG
  * Author URI: https://rellaco.com/
  *
- * Requires PHP: 5.4
+ * Requires PHP: 5.6
  * WC requires at least: 4.7.0
  * WC tested up to: 5.7.1
  *

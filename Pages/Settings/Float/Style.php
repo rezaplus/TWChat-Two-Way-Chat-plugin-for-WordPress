@@ -1,6 +1,8 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-if(isset($_POST['submit'])){
+if(isset($_POST['submit'])
+    && isset( $_POST['_wpnonce'] )
+    && wp_verify_nonce( $_POST['_wpnonce'],'TWCH_nonce_field' )){
     $fields_TWCH = array(
         'float-icon' => sanitize_text_field( $_POST['float-icon'] ),
         'floatSize' => sanitize_text_field( $_POST['floatSize'] ),

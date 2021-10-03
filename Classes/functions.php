@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 TWCH_MainFunctions::get_instance();
 
 
+
 class TWCH_MainFunctions{
     
     static $instance = null;
@@ -53,11 +54,15 @@ class TWCH_MainFunctions{
      *display pages on admin menu. 
      */
     function admin_menu() {
-        add_menu_page('Send Message', esc_html__('TWChat', 'TWCHLANG') , 'manage_options', 'TWCH_menu', 'sendmessage', 'dashicons-whatsapp', 150);
-        if($this->check_user_Accessibility('TWCH_Accessibility_WC'))
-            add_submenu_page('TWCH_menu', esc_html__('Send Message', 'TWCHLANG') , esc_html__('Send Message', 'TWCHLANG') , 'manage_options', "sendmessage", function(){require_once  TWCH_DIR_path.'Pages/sendMessage.php';}, 0);
-        if($this->check_user_Accessibility('TWCH_Accessibility_settings'))
-            add_submenu_page('TWCH_menu', esc_html__('Two Way chat settings') , esc_html__('Settings', 'TWCHLANG') , 'manage_options', "TWCH_settings", array($this,'TWCH_settings_page'), 1);
+        add_menu_page('Send Message', esc_html__('TWChat', 'TWCHLANG'), 'manage_options', 'TWCH_menu', 'sendmessage', 'dashicons-whatsapp', 150);
+        if (current_user_can('TWCH_woocommerce') or current_user_can('administrator')) {
+            add_submenu_page('TWCH_menu', esc_html__('Send Message', 'TWCHLANG'), esc_html__('Send Message', 'TWCHLANG'), 'manage_options', "sendmessage", function () {
+                require_once  TWCH_DIR_path.'Pages/sendMessage.php';
+            }, 0);
+        }
+        if (current_user_can('TWCH_settings') or current_user_can('administrator')) {
+            add_submenu_page('TWCH_menu', esc_html__('Two Way chat settings'), esc_html__('Settings', 'TWCHLANG'), 'manage_options', "TWCH_settings", array($this,'TWCH_settings_page'), 1);
+        }
         remove_submenu_page('TWCH_menu', 'TWCH_menu');
     }
     /**
@@ -67,28 +72,14 @@ class TWCH_MainFunctions{
     public function TWCH_settings_page(){
         require_once  TWCH_DIR_path.'Classes/update.php';
         require_once TWCH_DIR_path.'Pages/Settings.php'; 
-    }
-    /**
-     * check user Accessibility.
-     * called from admin_menu function.
-     * called from woocommerce function.
-     */
-    function check_user_Accessibility($Type){
-        $user = wp_get_current_user();  
-        $settings_roles = get_option($Type);
-        if ( !empty( $user->roles ) && is_array( $user->roles ) ) {
-            foreach ( $user->roles as $role )
-                if(in_array($role,$settings_roles) or $role=='administrator'){ return true;} 
-            return false;
-        }
-        return false;
+        
     }
     /**
      * require woocommerce class.
      * check accessibility.
      */
     function woocommerce(){
-        if(class_exists( 'WooCommerce' ) && $this->check_user_Accessibility('TWCH_Accessibility_WC')){
+        if(current_user_can('TWCH_woocommerce') or current_user_can('administrator')){
             require_once  TWCH_DIR_path.'Classes/woocommerce.php';
         }
     }

@@ -3,28 +3,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if(!current_user_can('administrator')){
     die(esc_html('Only administrators have access to this page.','TWCHLANG'));
 }
+//import accessibility functions
+require_once  TWCH_DIR_path.'Classes/accessibility.php';
 
-if(isset($_POST['submit'])){
-    unset($_POST['submit']);
-    $settings_=array();
-    $WC_ = array();
-    foreach($_POST as $key => $val){
-        if($val=='Settings'){
-            array_push($settings_,str_replace('S_','',sanitize_text_field($key)));
-        }elseif($val=='WC'){
-            array_push($WC_,str_replace('W_','',sanitize_text_field($key)));
-        }
-    }
-    update_option('TWCH_Accessibility_settings',$settings_ );
-    update_option('TWCH_Accessibility_WC', $WC_ );
-}
-    $settings_get= get_option('TWCH_Accessibility_settings');
-    $WC_get= get_option('TWCH_Accessibility_WC');
+//submit accessibilitys changes
+if(isset($_POST['submit']) && $_POST['submit'] == 'Accessibility')
+    TWCH_manage_accessibility();
 
-global $wp_roles;
-$roles = $wp_roles->roles;
-unset($roles['administrator']);
-unset($roles['subscriber']);
+// get users with accessibilitys
+$roles = get_users_roles();
+
 ?>
 <h2><?php esc_html_e('Selected user roles will have access to plugin features.','TWCHLANG'); ?></h2>
 <table class="wp-list-table widefat striped table-view-list">
@@ -38,8 +26,8 @@ foreach($roles as $key => $value){
 ?>
     <tr>
         <td><?php echo  $value['name'] ?></td>
-        <td><input type="checkbox" name="S_<?php echo  $key ?>" value="Settings" <?php echo  in_array($key,$settings_get) ? 'checked' : '' ?>></td>
-        <td><input type="checkbox" name="W_<?php echo  $key ?>"value="WC" <?php echo  in_array($key,$WC_get) ? 'checked' : '' ?>></td>
+        <td><input type="checkbox" name="S_<?php echo  $key ?>" value="TWCH_settings" <?php echo  (isset($value['capabilities']['TWCH_settings'])) ? 'checked' : '' ?>></td>
+        <td><input type="checkbox" name="W_<?php echo  $key ?>" value="TWCH_woocommerce" <?php echo  (isset($value['capabilities']['TWCH_woocommerce'])) ? 'checked' : '' ?>></td>
 <?php } ?>
     </tr>
 </table>

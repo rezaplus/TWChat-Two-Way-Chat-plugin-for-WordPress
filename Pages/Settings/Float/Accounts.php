@@ -5,7 +5,9 @@ require_once  TWCH_DIR_path.'Classes/DBactions.php';
 if(isset($_GET['Delete'])){
     TWCH_DBactions::Delete(sanitize_text_field($_GET['Delete']),'TWCH_Accounts_');
 }
-if(isset($_POST['submit'])){
+if(isset($_POST['submit'])
+    && isset( $_POST['_wpnonce'] )
+    && wp_verify_nonce( $_POST['_wpnonce'],'TWCH_nonce_field' )){
     $getEditId_TWCH = sanitize_text_field(( isset( $_GET['Edit'] ) ) ? $_GET['Edit'] : '');
     $fields_TWCH= array(
         'img-ACS' => sanitize_text_field( $_POST['img-ACS'] ),

@@ -17,7 +17,9 @@
             </div>
             <form method="post"> 
             <?php
-                require_once "Float/$active_Stab.php";
+                if (in_array($active_Stab, array('Style','FAQ','Accounts','Social'))) {
+                    require_once "Float/$active_Stab.php";
+                }
 
             ?>
 

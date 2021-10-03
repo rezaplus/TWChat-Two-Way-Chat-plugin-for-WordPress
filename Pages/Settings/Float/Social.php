@@ -1,17 +1,27 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-    if(isset($_POST['submit'])){
-        unset($_POST['submit']);
-        $fields_TWCH = array();
-        foreach($_POST as $key => $value){
-            if(!empty($value)){
-                $fields_TWCH[$key] = esc_url_raw($value);
-            }
-        }
-        update_option('TWCH_Float_social',$fields_TWCH);
-    }
-    $TWCH_social = get_option('TWCH_Float_social');
-?>
+
+if(isset( $_POST['submit'] )
+    && isset( $_POST['_wpnonce'] )
+    && wp_verify_nonce( $_POST['_wpnonce'],'TWCH_nonce_field' ) ){
+        $fields_TWCH = array(
+            'instagram' => esc_url($_POST['instagram']),
+            'facebook' => esc_url($_POST['facebook']),
+            'twitter' => esc_url($_POST['twitter']),
+            'telegram' => esc_url($_POST['telegram']),
+            'linkedin' => esc_url($_POST['linkedin']),
+            'youtube' => esc_url($_POST['youtube']),
+            'snapchat' => esc_url($_POST['snapchat']),
+            'pinterest' => esc_url($_POST['pinterest']),
+            'flickr' => esc_url($_POST['flickr']),
+            'dribbble' => esc_url($_POST['dribbble']),
+            'behance' => esc_url($_POST['behance'])
+        );
+    update_option('TWCH_Float_social',$fields_TWCH);
+}
+
+$TWCH_social = get_option('TWCH_Float_social');
+?> 
 <table class="form-table TWCH-form-table TWCH-social-settings">
     <tbody>
         <tr>

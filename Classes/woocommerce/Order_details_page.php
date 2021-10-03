@@ -30,7 +30,7 @@ add_action('woocommerce_admin_order_data_after_billing_address', function(){
     }
 </style>
     <div id="TWCH_woocommerce">
-        <img  onclick="sendMessage('<?php echo $order->get_billing_phone() ?>','')" src="<?php echo TWCH_image ?>whatsapp.svg">
+        <img  onclick="sendMessage('<?php esc_html_e($order->get_billing_phone()) ?>','')" src="<?php echo TWCH_image ?>whatsapp.svg">
         <?php
 	    $TWCH_general = get_option('TWCH_General_Option');
 	    if($TWCH_general['qmessage_is_enable']=='true'){ ?>
