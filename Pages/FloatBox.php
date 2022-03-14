@@ -17,7 +17,7 @@
                             <div class="TWCHBoxQuestion">
                                 <label for="<?php esc_attr_e($FAQInfos) ?>"> <span>⦿ </span><?php esc_html_e($FAQ['TWCH_FAQ_Question']); ?></label>
                                 <input type="checkbox" id="<?php esc_attr_e($FAQInfos); ?>">
-                                <div class="TWCHBoxAnswer"><?php esc_html_e($FAQ['TWCH_FAQ_Answer']) ?></div>
+                                <div class="TWCHBoxAnswer"><?php echo wp_kses_post($FAQ['TWCH_FAQ_Answer']) ?></div>
                             </div>
         
                         </li>
@@ -83,6 +83,7 @@
         $TWCH_social = get_option('TWCH_Float_social');
         if(!empty($TWCH_social)){
             foreach($TWCH_social as $key => $value){
+                if (empty($value)) continue;
                 $link = TWCH_image.'socialIcons/'.$key.'.svg';
                 echo "<a href='".esc_url($value)."' target='_blank'><img alt='Social' src='".esc_url($link)."'></a>";
             }

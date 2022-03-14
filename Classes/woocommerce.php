@@ -16,7 +16,7 @@ class TWCH_woocommerce extends TWCH_class{
         $this->generalOptions = get_option('TWCH_General_Option');
         if($this->generalOptions['wc_is_enable']=='true'){
             require_once 'woocommerce/Preview_order_button.php' ;   
-            require_once 'woocommerce/Order_details_page.php' ;   
+            require_once 'woocommerce/order_edit_admin.php' ;   
         }    
     }
         

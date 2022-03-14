@@ -16,7 +16,7 @@ function TWCH_update_edit_submit(){
         $getEditId_TWCH = sanitize_text_field((isset($_GET['Edit'])) ? $_GET['Edit'] : '');
         $fields_TWCH = array(
         'TWCH_FAQ_Question' => sanitize_text_field($_POST['TWCH_FAQ_Question']),
-        'TWCH_FAQ_Answer' => sanitize_text_field($_POST['TWCH_FAQ_Answer'])
+        'TWCH_FAQ_Answer' => wp_kses_post($_POST['TWCH_FAQ_Answer'])
     );
         TWCH_DBactions::Update($fields_TWCH, $getEditId_TWCH, 'TWCH_FAQ_');
     }
@@ -49,7 +49,9 @@ if(isset($_GET['Edit'])){
             <?php esc_html_e('Answer','TWCHLANG'); ?>
             </th>
             <td>
-                <textarea name="TWCH_FAQ_Answer" required><?php echo  esc_textarea(isset($TWCH_FAQ_Edit) ? $TWCH_FAQ_Edit['TWCH_FAQ_Answer'] : ''); ?></textarea>
+                <?php 
+                $TWCH_FAQ_Answer_Text = wp_kses_post(isset($TWCH_FAQ_Edit) ? $TWCH_FAQ_Edit['TWCH_FAQ_Answer'] : '');
+                wp_editor($TWCH_FAQ_Answer_Text,'TWCH_FAQ_Answer'); ?>
             </td>
         <tr>
     </tbody>
@@ -68,7 +70,7 @@ if(!empty($IDs_list)){ ?>
 				foreach($IDs_list as $id_faq){
 					$FAQ_D = get_option($id_faq);
 					echo "<tr><td>".esc_html($FAQ_D['TWCH_FAQ_Question'])."</td>";
-					echo "<td><p>". esc_html($FAQ_D['TWCH_FAQ_Answer']) ."</p></td>";
+					echo "<td><p>". wp_kses_post($FAQ_D['TWCH_FAQ_Answer']) ."</p></td>";
 					echo "<td>";
 					echo "<a href='?page=TWCH_settings&tab=Float&sT=FAQ&Delete=".esc_html($FAQ_D['id']).'&_wpnonce='.wp_create_nonce('TWCH_nonce_field')."'>".esc_html('Delete','TWCHLANG')."</a>";
 					echo "<a href='?page=TWCH_settings&tab=Float&sT=FAQ&Edit=".esc_html($FAQ_D['id']).'&_wpnonce='.wp_create_nonce('TWCH_nonce_field')."'>".esc_html('Edit','TWCHLANG')."</a>";

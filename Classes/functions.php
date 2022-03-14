@@ -67,12 +67,9 @@ class TWCH_MainFunctions{
     }
     /**
      * display settings page.
-     * check update database.
      */
     public function TWCH_settings_page(){
-        require_once  TWCH_DIR_path.'Classes/update.php';
         require_once TWCH_DIR_path.'Pages/Settings.php'; 
-        
     }
     /**
      * require woocommerce class.
@@ -87,7 +84,7 @@ class TWCH_MainFunctions{
      * display float on front-end
      */
     function floatWidget(){
-        if($this->TWCH_general['float_is_enable']=='true') {
+        if($this->TWCH_general['float_is_enable']=='true' and !is_admin()) {
             wp_enqueue_style( 'Float', TWCH_assets . 'floatStyle.css',true,TWCH_plugin_version);
             require_once TWCH_DIR_path.'Pages/Float.php';
         }

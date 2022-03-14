@@ -49,25 +49,25 @@ $Accounts_info = get_option('TWCH_Accounts_list');
         </div>
         </th>
         <td class="TWCH-Account-info">
-            <label for="Account-name"><?php esc_html_e('Full name','TWCHLANG'); ?></label>
+            <label for="Account-name"><?php esc_html_e('Full Name','TWCHLANG'); ?></label>
             <input type="text" name="Account-name" value="<?php echo  isset($_GET['Edit']) ? esc_attr( $Accounts_edit['Account-name'] ) : ''; ?>" >
             <br>
             <label for="Account-title"><?php esc_html_e('Title','TWCHLANG'); ?></label>
             <input type="text" name="Account-title" value="<?php echo  isset($_GET['Edit']) ? esc_attr( $Accounts_edit['Account-title']  ): ''; ?>" >
             <br>
-            <label for="Account-availableFrom"><?php esc_html_e('Available from','TWCHLANG'); ?></label>
+            <label for="Account-availableFrom"><?php esc_html_e('Available From','TWCHLANG'); ?></label>
             <input type="time" name="Account-availableFrom" value="<?php echo  isset($_GET['Edit']) ? esc_attr( $Accounts_edit['Account-availableFrom'] ) : '' ; ?>" >
             <br>
             <label for="Account-availableTo"><?php esc_html_e('To','TWCHLANG'); ?></label>
             <input type="time" name="Account-availableTo" value="<?php echo   isset($_GET['Edit']) ? esc_attr( $Accounts_edit['Account-availableTo'] ) : '' ; ?>" >
             <br>
-            <label ><?php esc_html_e('Country code','TWCHLANG'); ?></label>
+            <label ><?php esc_html_e('Country Code','TWCHLANG'); ?></label>
             <select name="Country_Code" id="Country_Code" required><?php require_once TWCH_DIR_path.'Assets/Country_code.php'; ?></select>
             <br>
-            <label for="Account-whatsapp-number"><?php esc_html_e('Whatsapp number','TWCHLANG'); ?></label>
+            <label for="Account-whatsapp-number"><?php esc_html_e('Whatsapp Number','TWCHLANG'); ?></label>
             <input type="number" value="<?php echo   isset($_GET['Edit']) ? esc_attr( $Accounts_edit['Account-whatsapp-number'] ) : '' ; ?>" name="Account-whatsapp-number" id="Account-whatsapp-number"  required>
             <br>
-            <label for="DefaultText"><?php esc_html_e('Text','TWCHLANG'); ?></label>
+            <label for="DefaultText"><?php esc_html_e('Message Text','TWCHLANG'); ?></label>
             <textarea id="DefaultText" name="DefaultText"><?php echo   isset($_GET['Edit']) ? esc_attr( $Accounts_edit['DefaultText'] ) : '' ; ?></textarea>
             <button type="submit" name="submit" class="button button-primary" value="Accounts"><?php isset($_GET['Edit'])? esc_html_e('Save','TWCHLANG') : esc_html_e('Insert','TWCHLANG'); ?></button>
             <br>

@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 function TWCH_manage_accessibility(){
     //check nonce.
     if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'],'TWCH_nonce_field' )) {
