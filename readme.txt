@@ -1,10 +1,12 @@
 === Two Way CHAT - Send or receive messages to your user ===
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress
-Requires at least: 4.7.0
+Requires at least: 5.8
 Requires PHP: 5.6
-Tested up to: 5.8.1
-Stable tag: 3.1.5
+Tested up to: 5.9.3
+Stable tag: 3.1.6
+WC requires at least: 4.0
+WC tested up to: 6.3.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
