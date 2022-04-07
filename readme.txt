@@ -79,6 +79,6 @@ Open the WP admin panel.. click the “Plugins” page.. and click “Activate�
 
 == Changelog ==
 
-== 5.1.6 ==
+== 3.1.6 ==
 * Fixed reported bugs
 * Improved WhatsApp section on the order page
