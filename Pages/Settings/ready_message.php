@@ -8,7 +8,7 @@
 }
 .notice-TWCH-premium {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 7px 15px;
     align-items: center;
 }

@@ -39,7 +39,7 @@ class TWCH_install{
                 'TWCH_SideSpaceMobile' => 50,
                 'TWCH_bottomDistanceMobile' => 40,
                 'floatBoxHeaderTitle' =>  __('Hello!','TWCHLANG'),
-                'floatBoxHeaderDecs' => __('If you do not find the answer to the following questions, we are ready to answer.','TWCHLANG'),
+                'floatBoxHeaderDecs' => __("if you couldn't find your question in FAQs, text me without hesitation.",'TWCHLANG'),
                 'floatBoxHeaderBackground' => '#24ae5b',
                 'floatBoxTextColor' => '#ffffff',
                 'floatBoxCloseBtnColor' => '#ffffff'

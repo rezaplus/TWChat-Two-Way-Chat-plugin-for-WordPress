@@ -27,15 +27,15 @@ $dwtp_data = get_option('TWCH_General_Option');
         <td>
             <input type="checkbox" id="float_is_enable" oninput="this.nextElementSibling.value = this.checked" <?php echo  $dwtp_data['float_is_enable'] == 'true' ? 'checked' : 'unchecked'; ?>>
             <input type="hidden" name="float_is_enable" value="<?php esc_attr_e($dwtp_data['float_is_enable']); ?>">
-            <label for="float_is_enable"><?php esc_html_e('Enable/Disable float whatsapp button.', 'TWCHLANG'); ?></label>
+            <label for="float_is_enable"><?php esc_html_e('Enable/Disable Whatsapp float button.', 'TWCHLANG'); ?></label>
         </td>
     </tr>
     <tr>
         <th scope="row"><?php esc_html_e('Float Desktop Application', 'TWCHLANG'); ?></th>
         <td>
             <select name="floatApplication" required>
-                <option value="app" <?php echo  $dwtp_data['Applicationmode'] == 'app' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("application", 'TWCHLANG'); ?></option>
-                <option value="web" <?php echo  $dwtp_data['Applicationmode'] == 'web' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("web application", 'TWCHLANG'); ?></option>
+                <option value="app" <?php echo  $dwtp_data['Applicationmode'] == 'app' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("Application", 'TWCHLANG'); ?></option>
+                <option value="web" <?php echo  $dwtp_data['Applicationmode'] == 'web' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("Web application", 'TWCHLANG'); ?></option>
                 <option value="auto" <?php echo  $dwtp_data['Applicationmode'] == 'auto' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("Auto", 'TWCHLANG'); ?></option>
             </select>
         </td>
@@ -49,19 +49,19 @@ $dwtp_data = get_option('TWCH_General_Option');
         </td>
     </tr>
     <tr class="twchat-woocommerce-tr">
-        <th scope="row"><?php esc_html_e('Ready Messages', 'TWCHLANG'); ?></th>
+        <th scope="row"><?php esc_html_e('Quick Messages', 'TWCHLANG'); ?></th>
         <td>
             <input type="checkbox" id="qmessage_is_enable" oninput="this.nextElementSibling.value = this.checked" <?php echo  $dwtp_data['wc_is_enable'] == 'true' ? '' : 'disabled'; ?> <?php echo  $dwtp_data['qmessage_is_enable'] == 'true' ? 'checked' : 'unchecked'; ?>>
             <input type="hidden" name="qmessage_is_enable" value="<?php esc_attr_e($dwtp_data['qmessage_is_enable']); ?>">
-            <label for="qmessage_is_enable"><?php esc_html_e('Enable/Disable whatsapp Ready messages button on orders.', 'TWCHLANG'); ?></label>
+            <label for="qmessage_is_enable"><?php esc_html_e('Enable/Disable Whatsapp quick message button on orders.', 'TWCHLANG'); ?></label>
         </td>
     </tr>
     <tr class="twchat-woocommerce-tr">
         <th scope="row"><?php esc_html_e("Woocommerce Application", 'TWCHLANG'); ?></th>
         <td>
             <select name="Applicationmode" required>
-                <option value="app" <?php echo  $dwtp_data['Applicationmode'] == 'app' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("application (Recommended)", 'TWCHLANG'); ?></option>
-                <option value="web" <?php echo  $dwtp_data['Applicationmode'] == 'web' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("web application", 'TWCHLANG'); ?></option>
+                <option value="app" <?php echo  $dwtp_data['Applicationmode'] == 'app' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("Application (Recommended)", 'TWCHLANG'); ?></option>
+                <option value="web" <?php echo  $dwtp_data['Applicationmode'] == 'web' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("Web application", 'TWCHLANG'); ?></option>
                 <option value="auto" <?php echo  $dwtp_data['Applicationmode'] == 'auto' ? 'selected="selected"' : '';  ?>> <?php esc_html_e("Auto (Not recommended)", 'TWCHLANG'); ?></option>
             </select>
             <p class="description"><?php esc_html_e("Choose the way you want to talk on WhatsApp.", 'TWCHLANG'); ?></p>

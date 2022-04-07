@@ -67,7 +67,7 @@ $Accounts_info = get_option('TWCH_Accounts_list');
             <label for="Account-whatsapp-number"><?php esc_html_e('Whatsapp Number','TWCHLANG'); ?></label>
             <input type="number" value="<?php echo   isset($_GET['Edit']) ? esc_attr( $Accounts_edit['Account-whatsapp-number'] ) : '' ; ?>" name="Account-whatsapp-number" id="Account-whatsapp-number"  required>
             <br>
-            <label for="DefaultText"><?php esc_html_e('Message Text','TWCHLANG'); ?></label>
+            <label for="DefaultText"><?php esc_html_e('Message','TWCHLANG'); ?></label>
             <textarea id="DefaultText" name="DefaultText"><?php echo   isset($_GET['Edit']) ? esc_attr( $Accounts_edit['DefaultText'] ) : '' ; ?></textarea>
             <button type="submit" name="submit" class="button button-primary" value="Accounts"><?php isset($_GET['Edit'])? esc_html_e('Save','TWCHLANG') : esc_html_e('Insert','TWCHLANG'); ?></button>
             <br>

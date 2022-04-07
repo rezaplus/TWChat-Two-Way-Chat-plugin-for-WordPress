@@ -15,7 +15,7 @@
             <h2 class="nav-tab-wrapper">
             <a href="?page=TWCH_settings&tab=General" class="nav-tab <?php echo $active_tab == 'General' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('General','TWCHLANG'); ?></a>  
                     <?php if(class_exists('WooCommerce')): ?>
-           <a href="?page=TWCH_settings&tab=ready_message" class="nav-tab <?php echo $active_tab == 'ready_message' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Ready Message', 'TWCHLANG'); ?></a> 
+           <a href="?page=TWCH_settings&tab=ready_message" class="nav-tab <?php echo $active_tab == 'ready_message' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Quick Message', 'TWCHLANG'); ?></a> 
 
 
 

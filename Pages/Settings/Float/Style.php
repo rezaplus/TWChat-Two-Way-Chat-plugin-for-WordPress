@@ -55,20 +55,7 @@ require_once TWCH_DIR_path.'Pages/Float.php';
             <output><?php echo isset($float_option) ? esc_html( $float_option['floatSize'] ) : '40px'; ?></output>
         </td>
     </tr>
-    <tr>
-        <th scope="row"><?php esc_html_e('First background color','TWCHLANG'); ?></th>
-        <td>
-            <input type="color" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatBackground1'] ) : '#39a805'; ?>" style="width:80px" name="floatBackground1" oninput="this.nextElementSibling.value = this.value">
-            <output><?php echo isset($float_option) ? esc_html( $float_option['floatBackground1'] ) : '#39a805'; ?></output>
-        </td>
-    </tr>
-    <tr>
-        <th scope="row"><?php esc_html_e('Rounded corners','TWCHLANG'); ?></th>
-        <td>
-            <input name="floatRadius1" type="range" min="0" max="50" value="<?php echo isset($float_option) ? esc_attr($float_option['floatRadius1']) : '50'; ?>" oninput="this.nextElementSibling.value = this.value+'%'">
-            <output><?php echo isset($float_option) ? esc_html($float_option['floatRadius1'] ) : '50'; ?>%</output>
-        </td>
-    </tr> 
+    <tr><th><h2><?php esc_html_e("First layer", 'TWCHLANG'); ?></h2></th><td><hr></td></tr>
     <tr>
         <th scope="row"><?php esc_html_e('Padding','TWCHLANG'); ?></th>
         <td>
@@ -77,19 +64,20 @@ require_once TWCH_DIR_path.'Pages/Float.php';
         </td>
     </tr> 
     <tr>
-        <th scope="row"><?php esc_html_e('Second background color','TWCHLANG'); ?></th>
+        <th scope="row"><?php esc_html_e('Background color','TWCHLANG'); ?></th>
         <td>
-            <input type="color" value="<?php echo  isset($float_option) ? esc_attr( $float_option['floatBackground2'] ): '#39a805'; ?>" style="width:80px" name="floatBackground2" oninput="this.nextElementSibling.value = this.value">
-            <output><?php echo isset($float_option) ?  esc_html( $float_option['floatBackground2'] ): '#39a805'; ?></output>
+            <input type="color" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatBackground1'] ) : '#39a805'; ?>" style="width:80px" name="floatBackground1" oninput="this.nextElementSibling.value = this.value">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatBackground1'] ) : '#39a805'; ?></output>
         </td>
     </tr>
     <tr>
-        <th scope="row"><?php esc_html_e('Rounded corners','TWCHLANG'); ?></th>
+        <th scope="row"><?php esc_html_e('Radius','TWCHLANG'); ?></th>
         <td>
-            <input name="floatRadius2" type="range" min="0" max="50" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatRadius2'] ): '50'; ?>" oninput="this.nextElementSibling.value = this.value+'%'">
-            <output><?php echo isset($float_option) ? esc_html( $float_option['floatRadius2'] ) : '50'; ?>%</output>
+            <input name="floatRadius1" type="range" min="0" max="50" value="<?php echo isset($float_option) ? esc_attr($float_option['floatRadius1']) : '50'; ?>" oninput="this.nextElementSibling.value = this.value+'%'">
+            <output><?php echo isset($float_option) ? esc_html($float_option['floatRadius1'] ) : '50'; ?>%</output>
         </td>
-    </tr>  
+    </tr> 
+    <tr><th><h2><?php esc_html_e("Second layer", 'TWCHLANG'); ?></h2></th><td><hr></td></tr>
     <tr>
         <th scope="row"><?php esc_html_e('Padding','TWCHLANG'); ?></th>
         <td>
@@ -97,9 +85,23 @@ require_once TWCH_DIR_path.'Pages/Float.php';
             <output><?php echo isset($float_option) ? esc_html( $float_option['floatPadding2'] ) : '6'; ?>px</output>
         </td>
     </tr> 
+    <tr>
+        <th scope="row"><?php esc_html_e('Background color','TWCHLANG'); ?></th>
+        <td>
+            <input type="color" value="<?php echo  isset($float_option) ? esc_attr( $float_option['floatBackground2'] ): '#39a805'; ?>" style="width:80px" name="floatBackground2" oninput="this.nextElementSibling.value = this.value">
+            <output><?php echo isset($float_option) ?  esc_html( $float_option['floatBackground2'] ): '#39a805'; ?></output>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row"><?php esc_html_e('Radius','TWCHLANG'); ?></th>
+        <td>
+            <input name="floatRadius2" type="range" min="0" max="50" value="<?php echo isset($float_option) ? esc_attr( $float_option['floatRadius2'] ): '50'; ?>" oninput="this.nextElementSibling.value = this.value+'%'">
+            <output><?php echo isset($float_option) ? esc_html( $float_option['floatRadius2'] ) : '50'; ?>%</output>
+        </td>
+    </tr>  
     <tr><th><h2><?php esc_html_e("Desktop", 'TWCHLANG'); ?></h2></th><td><hr></td></tr>
     <tr>
-        <th scope="row"><?php esc_html_e("location", 'TWCHLANG'); ?></th>
+        <th scope="row"><?php esc_html_e("Location", 'TWCHLANG'); ?></th>
         <td class="flex-dt">
         <label style="margin-right:5px;">
             <input name="float-location" type="radio" Value="Left" <?php echo $float_option['float-location']=='Left' ? 'checked' : ''; ?>>
@@ -112,14 +114,14 @@ require_once TWCH_DIR_path.'Pages/Float.php';
         </td>
     </tr>
     <tr>
-        <th scope="row"><?php esc_html_e('position','TWCHLANG'); ?></th>
+        <th scope="row"><?php esc_html_e('Position','TWCHLANG'); ?></th>
         <td>
-            <Label for="TWCH_SideSpace" style="line-height: 25px;" ><?php esc_html_e('Distance from the side','TWCHLANG'); ?></label>
+            <Label for="TWCH_SideSpace" style="line-height: 25px;" ><?php esc_html_e('Horizontal','TWCHLANG'); ?></label>
             <br>
             <input name="TWCH_SideSpace" type="range" min="1" max="300" value="<?php echo isset($float_option) ? esc_attr( $float_option['TWCH_SideSpace'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
             <output><?php echo isset($float_option) ? esc_html( $float_option['TWCH_SideSpace'] ) : '24'; ?>px</output>
             <br>
-            <Label for="TWCH_bottomDistance" style="line-height: 25px;"><?php esc_html_e('Distance from the bottom','TWCHLANG'); ?></label>
+            <Label for="TWCH_bottomDistance" style="line-height: 25px;"><?php esc_html_e('Vertical','TWCHLANG'); ?></label>
             <br>
             <input name="TWCH_bottomDistance" type="range" min="1" max="300" value="<?php echo  isset($float_option) ?esc_attr(  $float_option['TWCH_bottomDistance'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
             <output><?php echo isset($float_option) ? esc_html( $float_option['TWCH_bottomDistance'] ) : '24'; ?>px</output>
@@ -127,7 +129,7 @@ require_once TWCH_DIR_path.'Pages/Float.php';
     </tr>
     <tr><th><h2><?php esc_html_e("Mobile", 'TWCHLANG'); ?></h2></th><td><hr></td></tr>
     <tr>
-        <th scope="row"><?php esc_html_e("location", 'TWCHLANG'); ?></th>
+        <th scope="row"><?php esc_html_e("Location", 'TWCHLANG'); ?></th>
         <td class="flex-dt">
         <label style="margin-right:5px;">
             <input name="float-locationMobile" type="radio" Value="Left" <?php esc_html_e($float_option['float-locationMobile']=='Left' ? 'checked' : ''); ?>>
@@ -140,14 +142,14 @@ require_once TWCH_DIR_path.'Pages/Float.php';
         </td>
     </tr>
     <tr>
-        <th scope="row"><?php esc_html_e('position','TWCHLANG'); ?></th>
+        <th scope="row"><?php esc_html_e('Position','TWCHLANG'); ?></th>
         <td>
-            <Label for="TWCH_SideSpace" style="line-height: 25px;" ><?php esc_html_e('Distance from the side','TWCHLANG'); ?></label>
+            <Label for="TWCH_SideSpace" style="line-height: 25px;" ><?php esc_html_e('Horizontal','TWCHLANG'); ?></label>
             <br>
             <input name="TWCH_SideSpaceMobile" type="range" min="1" max="300" value="<?php echo isset($float_option) ? esc_attr( $float_option['TWCH_SideSpaceMobile'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
             <output><?php echo isset($float_option) ? esc_html( $float_option['TWCH_SideSpaceMobile'] ) : '24'; ?>px</output>
             <br>
-            <Label for="TWCH_bottomDistance" style="line-height: 25px;"><?php esc_html_e('Distance from the bottom','TWCHLANG'); ?></label>
+            <Label for="TWCH_bottomDistance" style="line-height: 25px;"><?php esc_html_e('Vertical','TWCHLANG'); ?></label>
             <br>
             <input name="TWCH_bottomDistanceMobile" type="range" min="1" max="300" value="<?php echo isset($float_option) ? esc_attr( $float_option['TWCH_bottomDistanceMobile'] ) : '24'; ?>" oninput="this.nextElementSibling.value = this.value+'px'">
             <output><?php echo isset($float_option) ? esc_html( $float_option['TWCH_bottomDistanceMobile'] ) : '24'; ?>px</output>
