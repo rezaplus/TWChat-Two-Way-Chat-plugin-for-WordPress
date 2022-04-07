@@ -79,14 +79,6 @@ Open the WP admin panel.. click the “Plugins” page.. and click “Activate�
 
 == Changelog ==
 
-== 3.1.2 ==
-* Fixed reported problems
-= 3.1.1 =
-* Added new icons for support widget
-* Ability to select applications for the support widget
-* Improved Send Message page
-= 3.0.0 =
-* Rewrite the plugin
-* Added Float Support Widget
-* Improved plugin settings page
-* User access management
+== 3.1.6 ==
+* Fixed reported bugs
+* Improved WhatsApp section on the order page
