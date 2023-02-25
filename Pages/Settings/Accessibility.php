@@ -31,4 +31,4 @@ foreach($roles as $key => $value){
 <?php } ?>
     </tr>
 </table>
-<button type="submit" name="submit" class="button button-primary" value="Accessibility"><?php esc_html_e('Save Changes','TWCHLANG'); ?></button>
+<button type="submit" name="submit" class="button button-primary btn-twchat" value="Accessibility"><?php esc_html_e('Save Changes','TWCHLANG'); ?></button>

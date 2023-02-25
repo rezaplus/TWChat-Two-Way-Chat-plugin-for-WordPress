@@ -55,7 +55,7 @@ msgstr ""
 
 #: Classes/woocommerce/Preview_order_button.php:36
 #: Pages/Settings/ready_message.php:17
-msgid "You need to get the premium version for this feature."
+msgid "This feature is only available in the premium version, which offers advanced functionality, enhanced security, and dedicated customer support. To unlock these benefits, please upgrade to the premium version now."
 msgstr "این ویژگی برای نسخه پریمیوم می باشد، لطفاً ارتقاء دهید."
 
 #: Classes/woocommerce/order_edit_admin.php:9
@@ -342,7 +342,7 @@ msgstr ""
 "به فعال سازی ندارد."
 
 #: Pages/Settings/ready_message.php:18
-msgid "Upgrade"
+msgid "Discover Premium Benefits"
 msgstr "ارتقا"
 
 #: Pages/Settings/ready_message.php:37

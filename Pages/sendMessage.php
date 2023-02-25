@@ -38,7 +38,7 @@ wp_localize_script('TWCH_ORS', 'TWCH_ORS', array(
             </td>
         </tr>
     </table>
-    <button id="SubmitBtn" type="button" class="button button-primary"><?php esc_html_e('Send message','TWCHLANG'); ?></button>
+    <button id="SubmitBtn" type="button" class="button button-primary btn-twchat"><?php esc_html_e('Send message','TWCHLANG'); ?></button>
 </div>
 <script>
 //QuickMessages

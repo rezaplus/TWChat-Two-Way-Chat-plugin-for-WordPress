@@ -69,7 +69,7 @@ $Accounts_info = get_option('TWCH_Accounts_list');
             <br>
             <label for="DefaultText"><?php esc_html_e('Message','TWCHLANG'); ?></label>
             <textarea id="DefaultText" name="DefaultText"><?php echo   isset($_GET['Edit']) ? esc_attr( $Accounts_edit['DefaultText'] ) : '' ; ?></textarea>
-            <button type="submit" name="submit" class="button button-primary" value="Accounts"><?php isset($_GET['Edit'])? esc_html_e('Save','TWCHLANG') : esc_html_e('Insert','TWCHLANG'); ?></button>
+            <button type="submit" name="submit" class="button button-primary btn-twchat" value="Accounts"><?php isset($_GET['Edit'])? esc_html_e('Save','TWCHLANG') : esc_html_e('Insert','TWCHLANG'); ?></button>
             <br>
             <a href="?page=TWCH_settings&tab=Float&sT=Accounts" class="button button-small new-ACS-btn" style="<?php echo  isset($_GET['Edit']) ? '' : 'display:none;' ?>"><?php esc_html_e('New','TWCHLANG'); ?></a>
 

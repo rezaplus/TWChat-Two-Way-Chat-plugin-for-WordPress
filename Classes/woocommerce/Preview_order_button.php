@@ -33,7 +33,7 @@ add_action('woocommerce_admin_order_preview_start',function(){ ?>
 	if($TWCH_general['qmessage_is_enable']=='true'){ ?>
         <div class="qms_premium" style=" filter: grayscale(1); display: flex;">
             <img   src="<?php echo TWCH_image ?>Quick.svg" id="QuickMessage_btn">
-            <span class='TWCH-tooltip'><?php esc_html_e('You need to get the premium version for this feature.','TWCHLANG'); ?></span>
+            <span class='TWCH-tooltip'><?php esc_html_e('This feature is only available in the premium version, which offers advanced functionality, enhanced security, and dedicated customer support. To unlock these benefits, please upgrade to the premium version now.','TWCHLANG'); ?></span>
         </div>
     <?php } ?>
     </div>

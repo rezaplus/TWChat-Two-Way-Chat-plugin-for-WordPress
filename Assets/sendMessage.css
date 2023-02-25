@@ -1,11 +1,12 @@
-body{
-    background: #73ff9e26 !important;
-}
 #Country_Code {
     width: 170px;
 }
 tr th {
-    width: 89px !important;
+    width: 60px !important;
+}
+tr td {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
 }
 #TWCH_message {
     width: 500px;
@@ -13,37 +14,41 @@ tr th {
     height: 170px;
 }
  .button-primary {
-    background: #029a16c9;
+    background: #32373c;
     border-color: #fff;
 }
 div#wpbody-content {
     padding: 15px;
 }
 div#wpbody-content h1 {
-    border-bottom: 1px solid #b3b3b3;
     padding-bottom: 22px;
-    color: #54a470;
+}
+.phoneNumber input[type="number"] {
+    width: 500px !important;
+    height: 35px !important;
 }
 
 
 #SubmitBtn{
-    display: flex;
-    justify-content: flex-end;
+    margin: 25px 0px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 7px 30px;
 }
 
  .button{
-    background: #029a16c9 !important;
+    background: #32373c !important;
     border-color: #fff !important;
 }
  .button:hover {
-    background: #57b346 !important;
+    background: #292c2f !important;
     border-color: #fff !important;
 }
 .phoneNumber td {
     display: block;
 }
 tr.phoneNumber td p {
-    color: #b25151;
     margin-top: 0px;
 }
 #QuickMessage_list {

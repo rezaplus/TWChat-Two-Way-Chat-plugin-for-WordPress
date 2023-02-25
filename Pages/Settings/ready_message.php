@@ -14,8 +14,8 @@
 }
 </style>
 <div class="notice notice-warning notice-TWCH-premium">
-             <p><?php esc_html_e('You need to get the premium version for this feature.','TWCHLANG'); ?></p>
-             <a href="https://rellaco.com/product/TWChat/" target="_blank"class="button-primary"><?php  esc_html_e('Upgrade','TWCHLANG'); ?></a>
+             <p><?php esc_html_e('This feature is only available in the premium version, which offers advanced functionality, enhanced security, and dedicated customer support. To unlock these benefits, please upgrade to the premium version now.','TWCHLANG'); ?></p>
+             <a href="https://rellaco.com/product/twchat-premium/" target="_blank"class="button-primary"><?php  esc_html_e('Discover Premium Benefits','TWCHLANG'); ?></a>
 </div>
 <table class="form-table TWCH-form-table">
     <tbody>

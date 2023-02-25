@@ -1,29 +1,25 @@
-=== Two Way CHAT - Send or receive messages to your user ===
+=== Two Way Chat - Send or receive messages to your user ===
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress
-Requires at least: 5.8
-Requires PHP: 5.6
-Tested up to: 5.9.3
-Stable tag: 3.1.6
-WC requires at least: 4.0
-WC tested up to: 6.3.1
+Requires at least: 5.0
+Requires PHP: 7.0
+Tested up to: 6.1
+Stable tag: 3.1.7
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 TWChat | Send a message to the user and receive a message from the user by WhatsApp.
 
 == Description ==
-## With this plugin, your communication with users is two-way. What does that mean? ##
-This means that you can send messages to your customers via WhatsApp, and users can send messages to you via the floating WhatsApp button.
-
-## See the screenshots below to get an even better idea of the plugins functionality. ##
+## With this plugin, you can communicate with your customers via WhatsApp in a more efficient and effective way.##
+Users can send messages to you via the floating WhatsApp button, and you can send messages to them as well. The plugin offers several features, including:
 
 ## WooCommerce support: ##
 WhatsApp button has been added in the orders page and order preview, which you can send your message to the customer with one click.
 
 * **Quick Message:** Ready Messages with Shortcode Orders (Premium): You can prepare common messages with shortcodes and if necessary, send your message to the customer with one click.
 
-* **Shortcodes:**
+* **Shortcodes:** ([Premium Feature](https://www.rellaco.com/product/twchat-premium/)))
 Name, Last name, Phone number, Email, State, City, Address, Address 2, Payment Method, Transaction Number, Payment Link, Shipping Method, Shipping Cost, Order Status, Order Items, link Order Items, Order Number, Maturity Total order, Thanks page link, Comments link for ordered items
 
 ## Floating Widget Support: ##
@@ -71,13 +67,32 @@ Upload the extracted OrdersPro folder to this directory location.
 Open the WP admin panel.. click the “Plugins” page.. and click “Activate” under the newly added “OrdersPro” plugin.
 
 
+== Frequently Asked Questions ==
 
+= How do I use the plugin? =
+Once you have installed and activated the plugin, you can go to the plugin settings to configure the options. You can customize the floating WhatsApp button and the account box, define frequently asked questions, and more.
+
+= Does the plugin support WooCommerce? =
+Yes, the plugin supports WooCommerce. You can use the WhatsApp button to communicate with customers about their orders.
+
+= Can I customize the floating WhatsApp button? =
+Yes, you can fully customize the floating WhatsApp button and the account box to suit your needs.
+
+= Can I send messages to any number? =
+Yes, you are not limited to WooCommerce numbers. You can send messages to any number you want.
 
 == Screenshots ==
 
 1. Float Support Widget
+2. WooCommerce
+3. Custom number
 
 == Changelog ==
+
+== 3.1.7 ==
+* Stabilized the plugin
+* Style improvements
+* Fixed reported bugs
 
 == 3.1.6 ==
 * Fixed reported bugs

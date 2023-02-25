@@ -56,7 +56,7 @@ if(isset($_GET['Edit'])){
         <tr>
     </tbody>
 </Table>
-<button type="submit" name="submit" class="button button-primary" value="FAQ"><?php isset($_GET['Edit'])? esc_html_e('Save','TWCHLANG') : esc_html_e('Insert','TWCHLANG'); ?></button>
+<button type="submit" name="submit" class="button button-primary btn-twchat" value="FAQ"><?php isset($_GET['Edit'])? esc_html_e('Save','TWCHLANG') : esc_html_e('Insert','TWCHLANG'); ?></button>
 <?php 
 	$IDs_list = get_option('TWCH_FAQ_list');
 if(!empty($IDs_list)){ ?>

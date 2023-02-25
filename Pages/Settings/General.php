@@ -85,7 +85,7 @@ $dwtp_data = get_option('TWCH_General_Option');
         </td>
     </tr>
 </table>
-<button type="submit" name="submit" class="button button-primary" value="General"><?php esc_html_e('Save Changes', 'TWCHLANG'); ?></button>
+<button type="submit" name="submit" class="button button-primary btn-twchat" value="General"><?php esc_html_e('Save Changes', 'TWCHLANG'); ?></button>
 
 <script>
     document.getElementById('Country_Code').value = "<?php echo $dwtp_data['Country_Code']; ?>";

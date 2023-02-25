@@ -114,4 +114,4 @@ $TWCH_social = get_option('TWCH_Float_social');
         <tr>
     </tbody>
 </table>
-<button type="submit" name="submit" class="button button-primary" value="social"><?php esc_html_e('Save Changes','TWCHLANG'); ?></button>
+<button type="submit" name="submit" class="button button-primary btn-twchat" value="social"><?php esc_html_e('Save Changes','TWCHLANG'); ?></button>

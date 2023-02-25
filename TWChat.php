@@ -2,17 +2,13 @@
 /**
  * Plugin Name: TWChat
  * Description: Two Way Chat | Communication between you and your customers through WhatsApp.
- * Plugin URI: "https://rellaco.com/product/TwoWayChat"
+ * Plugin URI: "https://rellaco.com/product/twchat-premium/"
  * Author: rellaco
- * Version: 3.1.6
+ * Version: 3.1.7
  * Text Domain: TWCHLANG
  * Author URI: https://rellaco.com/
- *
- * Requires at least: 5.8
- * Requires PHP: 5.6
- * 
- * WC requires at least: 4.0
- * WC tested up to: 6.3.1
+ * Requires at least: 5.0
+ * Requires PHP: 7.0
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,7 +26,7 @@ if (! defined('ABSPATH')) {
 } // Exit if accessed directly
 
 TWCH_class::get_instance();
-define('TWCH_plugin_version', "3.1.6");
+define('TWCH_plugin_version', "3.1.7");
 
 class TWCH_class
 {
