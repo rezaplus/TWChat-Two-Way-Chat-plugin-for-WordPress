@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 === Two Way Chat - Send or receive messages to your user ===
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, whatsapp business, admin whatsapp, order whatsapp, send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress
@@ -101,6 +102,11 @@ Yes, you are not limited to WooCommerce numbers. You can send messages to any nu
 === Two Way Chat - Send or receive messages to your user ===
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, whatsapp business,admin whatsapp, order whatsapp,send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress
+=======
+=== Two Way Chat - Send or receive messages to your user ===
+Contributors: Rellaco, rezaplus
+Tags: whatsapp, whatsapp business, admin whatsapp, order whatsapp, send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress
+>>>>>>> parent of 2abb75f (big update)
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 6.1
@@ -196,5 +202,8 @@ Yes, you are not limited to WooCommerce numbers. You can send messages to any nu
 
 == 3.1.6 ==
 * Fixed reported bugs
+<<<<<<< HEAD
 >>>>>>> parent of 1f18047 (readme)
+=======
+>>>>>>> parent of 2abb75f (big update)
 * Improved WhatsApp section on the order page
