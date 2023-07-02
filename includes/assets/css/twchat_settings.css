@@ -1,0 +1,80 @@
+.twchat-admin-page.wrap {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.twchat-admin-page.wrap .nav-tab-wrapper {
+  display: flex !important;
+}
+.twchat-admin-page.wrap .nav-tab {
+  background: unset;
+  border: unset;
+  padding: 10px;
+  cursor: pointer;
+}
+.twchat-admin-page.wrap .nav-tab .submit {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.twchat-admin-page.wrap .nav-tab.submitbtn {
+  margin-left: auto;
+}
+.twchat-admin-page.wrap .nav-tab.nav-tab-active {
+  background: #fff;
+  border-bottom: 2px solid black;
+}
+.twchat-admin-page.wrap .nav-tab .tab-content {
+  margin-top: 30px;
+  padding: 0 10px;
+}
+.twchat-admin-page.wrap .button.button-primary {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+.twchat-admin-page.wrap .button.button-primary:hover {
+  background: #fff;
+  border-color: #000;
+  color: #000;
+}
+.twchat-admin-page.wrap .shortcuts-tooltip {
+  padding: 10px;
+}
+.twchat-admin-page.wrap .twchat-repeater-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.twchat-admin-page.wrap .twchat_textarea_callback {
+  min-width: 50%;
+  min-height: 100px;
+}
+.twchat-admin-page.wrap .twchat-providers-radio-button {
+  display: flex;
+}
+.twchat-admin-page.wrap .twchat-providers-radio-button input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.twchat-admin-page.wrap .twchat-providers-radio-button label {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 0 2px;
+  border-radius: 5px;
+}
+.twchat-admin-page.wrap .twchat-providers-radio-button label:hover {
+  background: #000;
+  color: #fff;
+}
+.twchat-admin-page.wrap .twchat-providers-radio-button input[type=radio][readonly] + label {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.twchat-admin-page.wrap .twchat-providers-radio-button input[type=radio]:checked + label {
+  background: #000;
+  color: #fff;
+}/*# sourceMappingURL=twchat_settings.css.map */
