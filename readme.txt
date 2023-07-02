@@ -2,7 +2,7 @@
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, whatsapp business, admin whatsapp, order whatsapp, send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress
 Requires at least: 5.0
-Requires PHP: 7.0
+Requires PHP: 7.4
 Tested up to: 6.1
 Stable tag: 3.1.7
 License: GPLv2
