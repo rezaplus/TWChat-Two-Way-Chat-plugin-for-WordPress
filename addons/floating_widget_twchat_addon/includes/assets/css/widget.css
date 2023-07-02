@@ -1,0 +1,402 @@
+@media only screen and (max-width: 768px) {
+    #TWCHFloatBox {
+    bottom: 0px !important;
+    right: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    padding: 0px !important;
+    }
+    .TWCHBoxHeader,.TWCHBoxFooter {
+        border-radius: 0px !important;
+        height: fit-content;
+        padding-bottom: 15px !important;
+    }
+}
+@keyframes TWCHBox{
+  from {
+    max-height: 0px;
+    
+  }
+  to {
+    max-height: 450px;
+  }
+}
+.show .TWCHBox{
+        animation: TWCHBox 0.6s;
+}
+.TWCHFloatContainer{
+    z-index:999999;
+    position: fixed;
+}
+
+
+.TWCHBox {
+    max-height: 450px;
+    overflow-y: auto;
+}
+.TWCHBox::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+    border-radius: 50px;
+}
+
+.TWCHBox::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: #F5F5F5;
+}
+
+.TWCHBox::-webkit-scrollbar-thumb
+{
+    background-color: #00000069;
+    border-radius: 50px;
+}
+
+.TWCHBoxHeader {
+    border-radius: 10px 10px 0px 0px;
+    padding: 15px 15px 10px;
+}
+.TWCHFloatBoxTitle {
+    font-size: 25px;
+}
+.TWCHFloatBox {
+    position: fixed;
+    background: #ffffff;
+    z-index: 9999999;
+    width:350px;
+    display: grid;
+    border-radius: 10px;
+    padding: 1px;
+    box-shadow: 0 0 2px 0px #0b0b0ba1;
+    transition: ease-out .12s all;
+    -webkit-transition: ease-out .12s all;
+    -o-transition: ease-out .12s all;
+    transform: scale(0);
+}
+.TWCHFloatContainer .show {
+    transform: scale(1);
+}
+
+.TWCHBoxQuestion {
+    font-size: 13px;
+    font-weight: normal;
+    display: block;
+    margin: 0px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.TWCHBoxAnswer{
+    display: none;
+}
+
+.TWCHBubble{
+    position: absolute !important;
+    bottom: calc(100% - 30px);
+    right: calc(100% + 3px);
+    width: max-content !important;
+    background: #fff !important;
+    border-radius: 10px 5px 10px 5px !important;
+    padding: 7px 15px !important;
+    box-shadow: 0px 1px 6px #0000005e !important;
+    z-index: 999999 !important;
+}
+
+.TWCHBubble .TWCHBubbleText{
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    display: inherit !important;
+    word-break: break-word !important;
+    max-width: 200px !important;
+    max-height: 70px !important;
+}
+
+.TWCHBoxQuestions.active .TWCHBoxAnswer {
+    display: block;
+}
+
+.TWCHBoxACSavailableTime {
+    font-size: 13px;
+    font-weight: normal;
+}
+.TWCHFloatBox ul {
+    list-style-type: none;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.TWCHBoxACSF img {
+    width: 70px;
+    border-radius: 50%;
+}
+.TWCHBoxACSF{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.TWCHBoxACSL{
+    margin: auto 15px;
+    width: 75%;
+}
+.TWCHBoxACSChatBtns {
+    display: flex;
+    justify-content: flex-end;
+}
+.TWCHBoxACSChatBtns a.TWCHBoxACSChatBtn{
+    width: 50px;
+    height: 30px;
+    margin-left: 5px;
+    border: 1px solid #dedede;
+    padding: 4px;
+    border-radius: 25px !important;
+    cursor: pointer;
+}
+.TWCHBoxACSChatBtn img{
+    width: 100%;
+    height: 100%;
+}
+
+.TWCHBoxACSChatBtns a:hover {
+    transition: ease-out .12s all;
+    -webkit-transition: ease-out .12s all;
+    -o-transition: ease-out .12s all;
+    -moz-transition: ease-out .12s all;
+    height: 50px !important;
+    padding: 8px !important;
+}
+
+/* margin left if trl else right */
+html[dir="rtl"] .TWCHBoxACSChatBtn {
+    margin-left: 0px !important;
+    margin-right: 5px !important;
+}
+
+.TWCHBoxAccounts {
+    padding: 5px 15px;
+}
+.TWCHBoxAccounts ul li a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+.TWCHBoxAccounts ul li {
+    border: 1px solid #dedede;
+    padding: 7px;
+    margin: 4px 0px;
+    border-radius: 10px;
+    background: #eafff03d;
+    cursor:pointer;
+    display: flex;
+}
+.TWCHBoxACSTitle {
+    color: #1a1a1ac7;
+    font-size: 13px;
+}
+.TWCHBoxACSName {
+    color: #010101;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+}
+.notAvailable{
+    background: #f8f8f8 !important;
+    cursor: not-allowed !important;
+    border-color: #d7d7d7 !important;
+}
+.notAvailable a{
+    pointer-events: none;
+}
+.notAvailable .TWCHBoxACSName {
+    color: #747474;
+}
+.TWCHBoxAnswer {
+    padding: 8px 3px;
+    white-space: pre-wrap;
+    line-height:1.5;
+}
+.TWCHBoxQuestions span {
+    color: #363636ab;
+}
+
+.TWCHBoxFooter {
+    text-align: center;
+    padding: 3px 0px;
+}
+.TWCHBoxFooter img {
+    width: 22px;
+    display: inline;
+    margin: 0px 2px;
+    opacity: 0.9;
+}
+.TWCHBoxFooter img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: ease-out .12s all;
+    -webkit-transition: ease-out .12s all;
+    -o-transition: ease-out .12s all;
+    -moz-transition: ease-out .12s all;
+}
+.TWCHBoxHeader svg {
+    width: 22px;
+    float: right;
+    cursor:pointer;
+}
+.TWCHBoxHeader p {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+.TWCHFloatBtn{
+    cursor:pointer;
+}
+.RTL .TWCHBoxHeader svg {
+    float: left !important;
+}
+.TWCHBoxACSnotAvailable{
+    color: #ff000099 !important;
+}
+.TWCHBoxACSavailable{
+    color: rgb(84, 83, 83) !important;
+}
+.TWCHBoxACSnotAvailable .TWCHBoxACSavailableTime{
+    color:red !important;
+}
+.TWCHBoxACSAvailable .TWCHBoxACSavailableTime{
+    display:none;
+}
+.TWCHBoxACSnotAvailable{
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.TWChatAccount .TWCHBoxACSChatBtns {
+    display: none;
+  }
+
+.TWChatAccount.active .TWCHBoxACSChatBtns {
+    display: flex;
+    overflow: hidden; 
+    height: 50px;
+    align-items: center;    
+  }
+  .TWChatAccount.active {
+    cursor:default !important;
+  }
+  
+  .TWChatAccount.active .TWCHBoxACSChatBtns a.TWCHBoxACSChatBtn {
+    opacity: 0; 
+    animation: showBtns 0.5s ease-in-out forwards;
+    -webkit-animation: showBtns 0.5s ease-in-out forwards;
+    -o-animation: showBtns 0.5s ease-in-out forwards;
+    -moz-animation: showBtns 0.5s ease-in-out forwards;
+  }
+  
+  .TWChatAccount.active .TWCHBoxACSChatBtns a:nth-child(1) {
+    animation-delay: 0s; 
+    -webkit-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+  }
+  
+  .TWChatAccount.active .TWCHBoxACSChatBtns a:nth-child(2) {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+  }
+  
+  .TWChatAccount.active .TWCHBoxACSChatBtns a:nth-child(3) {
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+  }
+  
+  .TWChatAccount.active .TWCHBoxACSChatBtns a:nth-child(4) {
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+  }
+
+  .TWChatAccount.active .TWCHBoxACSChatBtns a:nth-child(5) {
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+  }
+
+  .TWChatAccount.active .TWCHBoxACSChatBtns a:nth-child(6) {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+  }
+
+  .TWChatAccount.active .TWCHBoxACSChatBtns a:nth-child(7) {
+    animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+  }
+
+  
+  @keyframes showBtns {
+    0% {
+      opacity: 0;
+      transform:translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  
+.TWCHBoxFAQLink {
+    margin: 5px;
+    margin-bottom: 0px !important;
+}
+
+.TWCHBoxQuestions.active {
+    background: #f9f8f8;
+    padding: 12px 10px;
+    border-radius: 10px;
+    margin: 3px -10px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.TWCHBoxQuestions.active span {
+    color: red;
+}
+.TWCHBoxQuestions:not(.active) {
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.TWCHBoxFAQ {
+    padding: 5px 15px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #2a2a2a;
+}
+.TWCHBoxFAQ ul li {
+    padding: 6px;
+    border-bottom: 1px solid #e5e2e2;
+    margin: 0px !important;
+}
+
+p.TWCHBoxFooterText {
+    font-size: 8px;
+    position: absolute;
+    right: 17px;
+    bottom: -5px;
+    color: #a7a7a7;
+}
+p.TWCHBoxFooterText a{
+    color: #3c3c3c;
+}

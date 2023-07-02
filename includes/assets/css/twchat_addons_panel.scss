@@ -1,0 +1,133 @@
+.twchat-addons-page {
+  .twchat-addons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .twchat-addon {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    &-detail {
+      height: 100%;
+      cursor: pointer;
+      background: #1d2327;
+      padding: 20px !important;
+
+      h3 {
+        color: #fff;
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: bold;
+      }
+
+      p {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+    }
+
+    &-content {
+      background: #fff;
+
+      h3 {
+        margin: 0 0 10px;
+        padding: 10px;
+      }
+
+      p {
+        margin: 0 0 10px;
+        padding: 0 10px;
+      }
+    }
+
+    &-priceDetails {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      color: #1d2327;
+      padding: 10px 20px;
+      box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background: #f5f5f5;
+        color: #1d2327;
+      }
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // mobile
+  @media (max-width: 767px) {
+    .twchat-addon {
+      width: 100%;
+    }
+  }
+}
+
+.twchat-admin-page.wrap {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .nav-tab-wrapper {
+    display: flex !important;
+
+    .nav-tab {
+      background: unset;
+      border: unset;
+      padding: 10px;
+      cursor: pointer;
+
+      .submit {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      &.submitbtn {
+        margin-left: auto;
+      }
+
+      &.nav-tab-active {
+        background: #fff;
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+
+  .tab-content {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+}
+
+.shortcuts-tooltip {
+  padding: 10px;
+}
+
+.twchat-addon-info-btn {
+  margin: 0px 10px; // margin from start 10px
+}

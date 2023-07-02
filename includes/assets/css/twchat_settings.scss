@@ -1,0 +1,98 @@
+.twchat-admin-page.wrap {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    .nav-tab-wrapper {
+      display: flex !important;
+    }
+    
+    .nav-tab {
+      background: unset;
+      border: unset;
+      padding: 10px;
+      cursor: pointer;
+      
+      .submit {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      
+      &.submitbtn {
+        margin-left: auto;
+      }
+      
+      &.nav-tab-active {
+        background: #fff;
+        border-bottom: 2px solid black;
+      }
+
+      .tab-content {
+      margin-top: 30px;
+      padding: 0 10px;
+    }
+    }
+    
+    .button.button-primary {
+      background: #000;
+      border-color: #000;
+      color: #fff;
+      
+      &:hover {
+        background: #fff;
+        border-color: #000;
+        color: #000;
+      }
+    }
+    
+    .shortcuts-tooltip {
+      padding: 10px;
+    }
+    
+    .twchat-repeater-field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    
+    .twchat_textarea_callback {
+      min-width: 50%;
+      min-height: 100px;
+    }
+    
+    .twchat-providers-radio-button {
+      display: flex;
+      
+      input[type="radio"] {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+      }
+      
+      label {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 0 2px;
+        border-radius: 5px;
+        
+        &:hover {
+          background: #000;
+          color: #fff;
+        }
+      }
+      
+      input[type="radio"][readonly] + label {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+      
+      input[type="radio"]:checked + label {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+  
