@@ -31,8 +31,8 @@ $defaultSections = array(
 $defaultFields = array(
     array(
         'id' => 'enable_direct_message',
-        'title' => 'Enable Direct Message',
-        'description' => 'Enable/Disable WhatsApp Button in admin toolbar for easy access to the send message page.',
+        'title' => __('Enable Direct Message', 'twchatlang'),
+        'description' => __('Enable/Disable WhatsApp Button in admin toolbar for easy access to the send message page.', 'twchatlang'),
         'type' => 'checkbox',
         'callback' => 'checkbox_callback',
         'page' => 'twchat-general',
@@ -42,8 +42,8 @@ $defaultFields = array(
     ),
     array(
         'id' => 'static_country_code',
-        'title' => 'Enable Static Country Code',
-        'description' => 'If phone numbers are being submitted without a country code, you can enable the option to set a static country code.',
+        'title' => __('Enable Static Country Code', 'twchatlang'),
+        'description' => __('If phone numbers are being submitted without a country code, you can enable the option to set a static country code.', 'twchatlang'),
         'type' => 'checkbox',
         'callback' => 'checkbox_callback',
         'page' => 'twchat-general',
@@ -53,8 +53,8 @@ $defaultFields = array(
     ),
     array(
         'id' => 'country_code',
-        'title' => 'Country Code',
-        'description' => 'Select a country code to be used for all phone numbers.',
+        'title' => __('Country Code', 'twchatlang'),
+        'description' => __('Select a country code to be used for all phone numbers.', 'twchatlang'),
         'type' => 'select',
         'callback' => 'country_code_callback',
         'page' => 'twchat-general',
