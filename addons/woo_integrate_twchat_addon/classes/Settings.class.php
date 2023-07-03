@@ -19,32 +19,6 @@ if (!defined('ABSPATH')) {
 class Settings
 {
     /**
-     * Default fields for WooCommerce settings
-     * @var array
-     */
-    public $default_fields = [
-        [
-            'id' => 'application_mode',
-            'title' => 'Application Mode',
-            'description' => 'Choose the way you want to send messages to your customers',
-            'type' => 'select',
-            'callback' => 'select_callback',
-            'page' => 'twchat-woocommerce',
-            'section' => 'woocommerce',
-            'args' => [
-                'id' => 'application_mode',
-                'options' => [
-                    'auto' => 'Auto (Recommended)',
-                    'application' => 'Application - Should have WhatsApp installed on your device',
-                    'browser' => 'Browser (Web Application)'
-                ],
-                'default' => 'auto'
-            ],
-            'priority' => '0'
-        ],
-    ];
-
-    /**
      * Initialize the Settings class
      */
     public function __construct()
@@ -63,8 +37,31 @@ class Settings
      */
     public function add_fields($fields)
     {
+
+        $default_fields = [
+            [
+                'id' => 'application_mode',
+                'title' => __('Open WhatsApp with', 'twchatlang'),
+                'description' => __('Choose a way to start a conversation with your customers', 'twchatlang'),
+                'type' => 'select',
+                'callback' => 'select_callback',
+                'page' => 'twchat-woocommerce',
+                'section' => 'woocommerce',
+                'args' => [
+                    'id' => 'application_mode',
+                    'options' => [
+                        'auto' => __('Auto (Recommended)', 'twchatlang'),
+                        'application' => __('Application - Should have WhatsApp installed on your device', 'twchatlang'),
+                        'browser' => __('Browser (Web Application)', 'twchatlang')
+                    ],
+                    'default' => 'auto'
+                ],
+                'priority' => '0'
+            ],
+        ];
+
         // Merge default fields with the fields array
-        $fields = array_merge($fields, $this->default_fields);
+        $fields = array_merge($fields, $default_fields);
         return $fields;
     }
 
