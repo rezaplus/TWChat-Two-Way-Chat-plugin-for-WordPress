@@ -176,10 +176,10 @@ class Settings
      */
     public function save_settings_response()
     {
-        if (isset($_GET['settings-updated']) && !isset($_GET['reload'])) {
-            $reloadUrl = admin_url('admin.php?page=TWChat_settings&settings-updated=true&reload=true');
+        if (isset($_GET['twchat-settings-updated']) && !isset($_GET['reload'])) {
+            $reloadUrl = admin_url('admin.php?page=TWChat_settings&twchat-settings-updated=true&reload=true');
             echo '<script type="text/javascript">window.location.href = "' . $reloadUrl . '";</script>';
-        } elseif (isset($_GET['reload']) && isset($_GET['settings-updated'])) {
+        } elseif (isset($_GET['reload']) && isset($_GET['twchat-settings-updated'])) {
             TWChat_notice(__('Settings saved successfully.', 'twchatlang'), 'success');
         } elseif (isset($_GET['error'])) {
             TWChat_notice(__('Error occurred while saving settings. Please try again.', 'twchatlang'), 'error');
