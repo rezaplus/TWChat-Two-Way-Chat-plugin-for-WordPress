@@ -1,50 +1,42 @@
-=== Two Way Chat - Send or receive messages to your user ===
+=== Two Way Chat - Send or receive messages from users ===
 Contributors: Rellaco, rezaplus
-Tags: whatsapp, whatsapp business, admin whatsapp, order whatsapp, send message to customer, send message to user, wc whatsapp, whatsapp chat, whatsapp support, whatsapp message, social chat, whatsapp wordpress
+Tags: whatsapp, WooCommerce whatsapp, whatsapp chat, whatsapp button, whatsapp woocommerce, whatsapp order, floating button
 Requires at least: 5.0
 Requires PHP: 7.4
-Tested up to: 6.1
-Stable tag: 3.1.7
+Tested up to: 6.2
+Stable tag: 4.0.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-TWChat | Send a message to the user and receive a message from the user by WhatsApp.
+TWChat | Send or Get messages from users Through WhatsApp or other common platforms. This is Two Way Communication ;)
 
 == Description ==
-## With this plugin, you can communicate with your customers via WhatsApp in a more efficient and effective way.##
-Users can send messages to you via the floating WhatsApp button, and you can send messages to them as well. The plugin offers several features, including:
+## What does TWChat do? ##
+TWChat has two main functions: sending messages to clients and receiving messages. Additionally, it offers other features to improve your support and marketing strategies. Let's explore the key features:
 
-## WooCommerce support: ##
-WhatsApp button has been added in the orders page and order preview, which you can send your message to the customer with one click.
+## Send Messages to Customers ##
+With WooCommerce integration, you can send messages directly to your WooCommerce customers by utilizing the WhatsApp button added to the orders page and order preview, enabling you to send messages with just one click.
 
-* **Quick Message:** Ready Messages with Shortcode Orders (Premium): You can prepare common messages with shortcodes and if necessary, send your message to the customer with one click.
+* **WOO Notes (Paid):** Easily send notes about WooCommerce orders with a single click.
 
-* **Shortcodes:** ([Premium Feature](https://www.rellaco.com/product/twchat-premium/)))
-Name, Last name, Phone number, Email, State, City, Address, Address 2, Payment Method, Transaction Number, Payment Link, Shipping Method, Shipping Cost, Order Status, Order Items, link Order Items, Order Number, Maturity Total order, Thanks page link, Comments link for ordered items
+* **Ready Messages add-on (Paid):** Prepare message templates and send them instantly.
 
-## Floating Widget Support: ##
-* **- Frequently Asked Questions Support:**
-To reduce the number of incoming messages, you can define frequently asked questions that users will be able to find their answers quickly and you will receive fewer messages.
+* **Shortcodes (Paid):** Customize message templates using shortcodes such as Name, Phone Number, Email, State, City, Address, Address 2, Payment Method, Transaction Number, Payment Link, Shipping Method, Shipping Cost, Order Status, Order Items, Link Order Items, Order Number, Total Order Maturity, Thanks Page Link, and Comments Link for Ordered Items.
 
-* **- Supports multiple WhatsApp accounts:**
-You can assign a person responsible for each section. for example: to follow orders, consult products and ...
+## Floating Widget ##
+Users reaching out to you with a floating widget for message sending on your website.
 
-* **- Ability to set access time for accounts:**
-Set a time limit for each WhatsApp account, for example, from 8 am to 12 pm
+* **Multi-account:** Add multiple accounts to the widget.
 
-* **- Support other social networks:**
-Show other social networks such as Instagram, Facebook, YouTube and ...
+* **Accounts Access time:** Define availability times for each account.
 
-* **- Customization capability:**
-You can fully customize the floating button and the account box.
+* **Customizable Style:** Fully customize the chat widget's appearance to match your website design.
 
-* **- Send a message to the desired number:**
-You are not limited to WooCommerce numbers, you can send messages to any number you want.
+* **Frequently Asked Questions (Paid):** Reduce support inquiries by providing an FAQ section. Users can find answers to common questions, resulting in fewer messages.
 
-## Two Way chat evolves your relationship with your users, in line with customer satisfaction and increasing your company's profitability. ##
+* **Social Networks:** Display links to your Instagram, Facebook, YouTube, and other social network profiles.
 
 == Installation ==
-
 
 From the WP admin panel, click “Plugins” -> “Add new”.
 In the browser input box, type “Two Way chat”.
@@ -66,34 +58,8 @@ Browse to the wp-content/plugins directory.
 Upload the extracted OrdersPro folder to this directory location.
 Open the WP admin panel.. click the “Plugins” page.. and click “Activate” under the newly added “OrdersPro” plugin.
 
-
-== Frequently Asked Questions ==
-
-= How do I use the plugin? =
-Once you have installed and activated the plugin, you can go to the plugin settings to configure the options. You can customize the floating WhatsApp button and the account box, define frequently asked questions, and more.
-
-= Does the plugin support WooCommerce? =
-Yes, the plugin supports WooCommerce. You can use the WhatsApp button to communicate with customers about their orders.
-
-= Can I customize the floating WhatsApp button? =
-Yes, you can fully customize the floating WhatsApp button and the account box to suit your needs.
-
-= Can I send messages to any number? =
-Yes, you are not limited to WooCommerce numbers. You can send messages to any number you want.
-
 == Screenshots ==
 
 1. Float Support Widget
 2. WooCommerce
 3. Custom number
-
-== Changelog ==
-
-== 3.1.7 ==
-* Stabilized the plugin
-* Style improvements
-* Fixed reported bugs
-
-== 3.1.6 ==
-* Fixed reported bugs
-* Improved WhatsApp section on the order page
