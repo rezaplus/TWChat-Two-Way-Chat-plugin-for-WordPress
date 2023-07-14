@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
  * @return void
  */
 if (!function_exists('twchat_load_scripts')) {
-    function twchat_load_scripts($type, $handle, $src, $deps = array(), $pages = array(), $version, $in_footer = true, $args = array())
+    function twchat_load_scripts($type, $handle, $src, $deps = array(), $pages = array(), $version, $in_footer = true, $args = array(), $args_name = 'TWCH')
     {
         if (function_exists('get_current_screen')) { // check if function exists - some pages don't have this function
             // if array is empty load scripts in all pages else load scripts in specific pages
@@ -56,7 +56,7 @@ if (!function_exists('twchat_load_scripts')) {
             wp_enqueue_script($handle, $src, $deps, $version, $in_footer);
             // add localize
             if (!empty($args)) {
-                wp_localize_script($handle, 'TWCH', $args);
+                wp_localize_script($handle, $args_name, $args);
             }
         }
     }

@@ -160,16 +160,9 @@ class Send_message
         // Get country code
         $args['country_code'] = $this->get_country_code();
 
-        // Add phone number to args - used in notes section
-        $order = new \WC_Order($_GET['post'] ?? '');
-        $phoneNumber = $order->get_billing_phone();
-        if ($phoneNumber) {
-            $args['phone_number'] = $phoneNumber;
-            $args['button_text'] = __('Send via WhatsApp', 'twchatlang');
-        }
         twchat_load_scripts(
             'js',
-            'twchat_woocommerce_admin_scripts',
+            'twchat_woocommerce_admin_note_scripts',
             TWCHAT_ADDON_WOOINTEGRATE_DIR_URL . 'includes/assets/js/twchat_woo_orders.js',
             ['jquery'],
             null,

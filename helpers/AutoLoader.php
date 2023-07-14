@@ -57,7 +57,7 @@ class AutoLoader
         if (($where == 'admin' && !is_admin()) || ($where == 'front' && is_admin())) {
             return false;
         }
-
+        
         if (class_exists($class)) {
             $reflector = new ReflectionClass($class);
             return $reflector->newInstanceArgs($args);
@@ -88,6 +88,28 @@ class AutoLoader
         $this->addon = $addon;
         spl_autoload_register(array($this, 'addonLoad'));
     }
+
+    /**
+     * run the external addon classes
+     * 
+     * @param  string $addon
+     * @return void
+     */
+    public static function getInstanceOfExternalAddon($addon){
+        $is = get_option('twchat_activated_addons', array());
+        // get addon name from last part of class name
+        $addonName = substr($addon, strrpos($addon, "\\") + 1);
+        if(!in_array($addonName, $is)){
+            return false;
+        }
+        if (class_exists($addon)) {
+            $reflector = new ReflectionClass($addon);
+            return $reflector->newInstanceArgs([]);
+        }else{
+            TWChat_notice(sprintf(__('Class %s not found. please contact the plugin developer.', 'twchatlang'), $addon), 'error', false);
+        }
+    }
+
 
     /**
      * set the external addon classes
