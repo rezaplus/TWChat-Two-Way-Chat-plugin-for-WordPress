@@ -43,7 +43,7 @@
   padding: 0 10px;
 }
 .twchat-addons-page .twchat-addon-priceDetails {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
@@ -65,6 +65,9 @@
 .twchat-addons-page .twchat-addon-actions {
   display: flex;
   align-items: center;
+}
+.twchat-addons-page .twchat-addon a {
+  text-decoration: none;
 }
 @media (max-width: 767px) {
   .twchat-addons-page .twchat-addon {
@@ -109,4 +112,6 @@
 
 .twchat-addon-info-btn {
   margin: 0px 10px;
+  width: -moz-max-content;
+  width: max-content;
 }/*# sourceMappingURL=twchat_addons_panel.css.map */

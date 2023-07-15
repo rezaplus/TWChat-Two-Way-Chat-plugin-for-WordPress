@@ -51,11 +51,12 @@
     }
 
     &-priceDetails {
-      display: flex;
+      display: grid;
       align-items: center;
       justify-content: space-between;
       font-weight: bold;
       font-size: 14px;
+
     }
 
     &-footer {
@@ -76,6 +77,9 @@
     &-actions {
       display: flex;
       align-items: center;
+    }
+    a{
+      text-decoration: none;
     }
   }
 
@@ -129,5 +133,6 @@
 }
 
 .twchat-addon-info-btn {
-  margin: 0px 10px; // margin from start 10px
+  margin: 0px 10px;
+  width: max-content;
 }

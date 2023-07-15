@@ -17,7 +17,7 @@
                         <div class="twchat-addon-priceDetails">
                             <span class="twchat-addon-price-amount"><?php echo isset($addon['button']['PriceDetails']) ? $addon['button']['PriceDetails'] : $addon['PriceDetails']; ?></span>
                             <?php if (isset($addon['ls'])) : ?>
-                                <a href="<?php echo $addon['ls']['link'] ?>"  class="twchat-addon-info-btn" style="color: <?php echo $addon['ls']['color']; ?>;"><?php echo $addon['ls']['status']; ?> </a>
+                                <a href="<?php echo $addon['ls']['link'] ?>" style="color: <?php echo $addon['ls']['color']; ?>;"><?php echo $addon['ls']['status']; ?> </a>
                             <?php endif; ?>
                         </div>
                         <div class="twchat-addon-actions">

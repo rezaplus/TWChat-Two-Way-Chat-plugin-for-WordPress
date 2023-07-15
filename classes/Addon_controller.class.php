@@ -318,7 +318,7 @@ class Addon_controller
 
             $addons_list[$key]['PriceDetails'] = '';
 
-            if (strtolower($addon['PricingModel']) == 'paid') {
+            if (strtolower($addon['PricingModel']) == 'paid' && $this->is_installed($key)) {
                 $ls_status = $this->get_ls_data($key, 'status');
                 if ($ls_status) {
                     $addons_list[$key]['ls'] = [
@@ -327,7 +327,6 @@ class Addon_controller
                         'color' => $ls_status == 'active' ? 'green' : '#e40003',
                     ];
                 } else {
-                    // $addons_list[$key]['ls'] = 'Please activate your license key.';
                     $addons_list[$key]['ls'] = [
                         'status' => __('Please activate your license key.', 'twchatlang'),
                         'link' => admin_url('admin.php?page=' . $key . '&referral=' . $this->addonsPage),
