@@ -22,22 +22,22 @@ class Template_render {
      */
     public function get_widget_style() {
         // Calculate widget style properties based on theme mods
-        $this->widget_style['padding'] = get_theme_mod('twchat_floating_widget_icon_size') * get_theme_mod('twchat_floating_widget_icon_padding') / 100;
-        $this->widget_style['width'] = get_theme_mod('twchat_floating_widget_icon_size') - $this->widget_style['padding'];
-        $this->widget_style['widget_size'] = get_theme_mod('twchat_floating_widget_icon_size');
-        $this->widget_style['icon_radius'] = get_theme_mod('twchat_floating_widget_icon_border_radius');
-        $this->widget_style['icon_bg_color'] = $this->widget_style['padding'] > 0 ? get_theme_mod('twchat_floating_widget_icon_bg_color') : 'transparent';
-        $this->widget_style['desktop_alignment'] = get_theme_mod('twchat_floating_widget_icon_alignment');
-        $this->widget_style['desktop_horizontal_position'] = get_theme_mod('twchat_floating_widget_icon_horizontal_position');
-        $this->widget_style['desktop_vertical_position'] = get_theme_mod('twchat_floating_widget_icon_vertical_position');
-        $this->widget_style['mobile_alignment'] = get_theme_mod('twchat_floating_widget_icon_mobile_alignment');
-        $this->widget_style['mobile_horizontal_position'] = get_theme_mod('twchat_floating_widget_icon_mobile_horizontal_position');
-        $this->widget_style['mobile_vertical_position'] = get_theme_mod('twchat_floating_widget_icon_mobile_vertical_position');
-        $this->widget_style['bubble_bg_color'] = get_theme_mod('twchat_floating_widget_bubble_bg_color');
-        $this->widget_style['bubble_text_color'] = get_theme_mod('twchat_floating_widget_bubble_text_color');
-        $this->widget_style['chatbox_bg_color'] = get_theme_mod('twchat_floating_widget_chatbox_bg_color');
-        $this->widget_style['chatbox_header_color'] = get_theme_mod('twchat_floating_widget_chatbox_header_color');
-        $this->widget_style['chatbox_close_btn_color'] = get_theme_mod('twchat_floating_widget_chatbox_close_btn_color');
+        $this->widget_style['padding'] = get_theme_mod('twchat_floating_widget_icon_size') * get_theme_mod('twchat_floating_widget_icon_padding') / 100 ?: '0';
+        $this->widget_style['width'] = get_theme_mod('twchat_floating_widget_icon_size', '45') - $this->widget_style['padding'];
+        $this->widget_style['widget_size'] = get_theme_mod('twchat_floating_widget_icon_size' , '20');
+        $this->widget_style['icon_radius'] = get_theme_mod('twchat_floating_widget_icon_border_radius' , '0');
+        $this->widget_style['icon_bg_color'] = $this->widget_style['padding'] > 0 ? get_theme_mod('twchat_floating_widget_icon_bg_color', '#ffffff') : 'transparent';
+        $this->widget_style['desktop_alignment'] = get_theme_mod('twchat_floating_widget_icon_alignment', 'right');
+        $this->widget_style['desktop_horizontal_position'] = get_theme_mod('twchat_floating_widget_icon_horizontal_position', '20');
+        $this->widget_style['desktop_vertical_position'] = get_theme_mod('twchat_floating_widget_icon_vertical_position', '20');
+        $this->widget_style['mobile_alignment'] = get_theme_mod('twchat_floating_widget_icon_mobile_alignment') ?: 'right';
+        $this->widget_style['mobile_horizontal_position'] = get_theme_mod('twchat_floating_widget_icon_mobile_horizontal_position', '20');
+        $this->widget_style['mobile_vertical_position'] = get_theme_mod('twchat_floating_widget_icon_mobile_vertical_position', '20');
+        $this->widget_style['bubble_bg_color'] = get_theme_mod('twchat_floating_widget_bubble_bg_color', '#ffffff');
+        $this->widget_style['bubble_text_color'] = get_theme_mod('twchat_floating_widget_bubble_text_color', '#000000');
+        $this->widget_style['chatbox_bg_color'] = get_theme_mod('twchat_floating_widget_chatbox_bg_color', '#ffffff');
+        $this->widget_style['chatbox_header_color'] = get_theme_mod('twchat_floating_widget_chatbox_header_color', '#000000');
+        $this->widget_style['chatbox_close_btn_color'] = get_theme_mod('twchat_floating_widget_chatbox_close_btn_color', 'black');
     }
 
     /**

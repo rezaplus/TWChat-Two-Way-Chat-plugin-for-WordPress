@@ -78,6 +78,10 @@
     transform: scale(1);
 }
 
+.TWCHFloatContainer a{
+    text-decoration: none;
+}
+
 .TWCHBoxQuestion {
     font-size: 13px;
     font-weight: normal;
@@ -127,6 +131,7 @@
 }
 .TWCHBoxACSF img {
     width: 70px;
+    height: auto;
     border-radius: 50%;
 }
 .TWCHBoxACSF{
@@ -226,6 +231,7 @@ html[dir="rtl"] .TWCHBoxACSChatBtn {
 }
 .TWCHBoxFooter img {
     width: 22px;
+    height: 22px;
     display: inline;
     margin: 0px 2px;
     opacity: 0.9;
@@ -392,11 +398,14 @@ html[dir="rtl"] .TWCHBoxACSChatBtn {
 
 p.TWCHBoxFooterText {
     font-size: 8px;
-    position: absolute;
-    right: 17px;
-    bottom: -5px;
     color: #a7a7a7;
+    position: absolute;
+    right: 20px;
+    bottom: 7px;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 p.TWCHBoxFooterText a{
     color: #3c3c3c;
+    text-decoration: none;
 }

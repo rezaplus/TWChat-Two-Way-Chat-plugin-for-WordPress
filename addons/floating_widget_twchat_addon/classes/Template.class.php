@@ -33,7 +33,7 @@ class Template extends Template_render
         // add account chat buttons action
         add_action('twchat/addon/floating/chatbox/accounts/details', array($this, 'account_chat_buttons'), 40);
         // add twchat to footer
-        add_action('wp_footer', array($this, 'render_html'));
+        add_action('wp_footer', array($this, 'render_widget_html'));
     }
 
     // header title
@@ -179,10 +179,13 @@ class Template extends Template_render
 
 
     // render html
-    public function render_html()
+    public function render_widget_html()
     {
-
-        $icon = get_theme_mod('twchat_floating_widget_icon') != 'custom' ?esc_url(TWCHAT_ADDON_FLOATING_IMG_URL . "widgetIcons/" . get_theme_mod('twchat_floating_widget_icon').".svg") : get_theme_mod('twchat_floating_widget_custom_icon');
+        if(!empty(get_theme_mod('twchat_floating_widget_icon')) || !empty(get_theme_mod('twchat_floating_widget_custom_icon'))){
+            $icon = get_theme_mod('twchat_floating_widget_icon') != 'custom' ?esc_url(TWCHAT_ADDON_FLOATING_IMG_URL . "widgetIcons/" . get_theme_mod('twchat_floating_widget_icon').".svg") : get_theme_mod('twchat_floating_widget_custom_icon');
+        }else{
+            $icon = TWCHAT_ADDON_FLOATING_IMG_URL . "widgetIcons/float-icon14.svg";
+        }
 
         $html = $this->css_style();
         $html  .= '<div class="TWCHFloatContainer ' . (is_rtl() ? 'RTL' : '') . '">';

@@ -36,7 +36,7 @@ class Customizer {
         
        // Icon select
         $wp_customize->add_setting( 'twchat_floating_widget_icon', array(
-            'default'           => 'float-icon-0',
+            'default'           => 'float-icon14',
             'sanitize_callback' => 'sanitize_text_field',
         ) );
 
@@ -47,8 +47,8 @@ class Customizer {
             'priority' => 10,
             'type'     => 'select',
             'choices'  => array(
-                'float-icon0' => __('Default', 'twchatlang'),
                 'custom' => __('Custom Icon', 'twchatlang'),
+                'float-icon0' => __('Default', 'twchatlang'),
                 'float-icon1' => __('Icon 1', 'twchatlang'),
                 'float-icon2' => __('Icon 2', 'twchatlang'),
                 'float-icon3' => __('Icon 3', 'twchatlang'),
@@ -147,7 +147,7 @@ class Customizer {
 
         // add icon background color
         $wp_customize->add_setting( 'twchat_floating_widget_icon_bg_color', array(
-            'default'           => '#000000',
+            'default'           => '#ffffff',
             'sanitize_callback' => 'sanitize_hex_color',
         ) );
 
