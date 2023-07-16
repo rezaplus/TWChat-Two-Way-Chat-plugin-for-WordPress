@@ -302,10 +302,15 @@ class Metabox_callback
     {
         echo '<label for="' . $field['id'] . '">' . $field['label'] . '</label>';
         echo '<div class="twchat-field TWChat-default-account-images">';
+        $required = $field['required'] ? 'required' : '';
 
         foreach ($field['options'] as $key => $option) {
+            $checked = $field['value'] == strval($option['name']) ? 'checked' : '';
+            if ($checked == '' && $field['value'] != 'custom') {
+                $checked = $field['default'] == strval($option['name']) ? 'checked' : '';
+            }
             echo '<div class="radio">';
-            echo '<input type="radio" id="' . $option['name'] . '" name="' . $field['meta_key'] . '[' . $field['id'] . ']" value="' . $option['name'] . '" ' . ($field['value'] == strval($option['name']) ? 'checked' : '') . '>';
+            echo '<input type="radio" id="' . $option['name'] . '" name="' . $field['meta_key'] . '[' . $field['id'] . ']" value="' . $option['name'] . '" ' . $checked . ' ' . $required . '>';
             echo '<label for="' . $option['name'] . '">';
             echo '<img src="' . $option['url'] . '" alt="' . $option['name'] . '" class="' . $option['class'] . '">';
             echo '</label>';

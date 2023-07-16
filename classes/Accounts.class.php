@@ -178,6 +178,19 @@ class Accounts extends Custom_post_type
             $first_name = isset($postarr['TWChat_account_details']['first_name']) ? $postarr['TWChat_account_details']['first_name'] : '';
             $last_name = isset($postarr['TWChat_account_details']['last_name']) ? $postarr['TWChat_account_details']['last_name'] : '';
             $nickname = isset($postarr['TWChat_account_details']['nickname']) ? $postarr['TWChat_account_details']['nickname'] : '';
+
+            // if display name as is not set, set it to first_last
+            if (!isset($postarr['TWChat_account_details']['display_name_as'])) {
+                $postarr['TWChat_account_details']['display_name_as'] = 'first_last';
+            }
+
+            // if first name and last name is empty, set post title untitled
+            if (empty($first_name) and empty($last_name)) {
+                $data['post_title'] = __('Untitled', 'twchatlang');
+                return $data;
+            }
+            
+            // set post title based on display name as
             switch ($postarr['TWChat_account_details']['display_name_as']) {
                 case 'first_last':
                     $data['post_title'] = $first_name . ' ' . $last_name;
@@ -242,8 +255,9 @@ class Accounts extends Custom_post_type
             'label' => __('Photo', 'twchatlang'),
             'type' => 'profile_image_radio',
             'placeholder' => __('Photo', 'twchatlang'),
-            'required' => false,
+            'required' => true,
             'priority' => '10',
+            'default' => 'account_3',
             'options' => $this->get_default_profile_images(),
         );
         return $fields;

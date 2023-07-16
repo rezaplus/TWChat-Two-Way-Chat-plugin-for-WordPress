@@ -130,7 +130,11 @@ class Template extends Template_render
             $account_details = get_post_meta($account->ID, 'TWChat_account_details', true);
             $account_profile = get_post_meta($account->ID, 'TWChat_account_profile', true);
             $account_contacts = get_post_meta($account->ID, 'TWChat_floating_contacts', true);
-            $thumbnail_url =  TWCHAT_ASSETS_URL . "images/account_default_images/" . $account_profile['thumbnail'] . ".png";
+            if (isset($account_profile['thumbnail']) && !empty($account_profile['thumbnail'])) {
+                $thumbnail_url =  TWCHAT_ASSETS_URL . "images/account_default_images/" . $account_profile['thumbnail'] . ".png";
+            } else {
+                $thumbnail_url = TWCHAT_ASSETS_URL . "images/account_default_images/account_3.png";
+            }
 
             $accounts[$key] = (object) array(
                 'ID' => $account->ID,
