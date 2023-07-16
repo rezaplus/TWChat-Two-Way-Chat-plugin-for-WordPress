@@ -174,6 +174,5 @@ class Custom_post_type
     public function include_css()
     {
         twchat_load_scripts('css', 'twchat-custom-post-type', TWCHAT_ASSETS_URL . '/css/twchat_custom_post_style.css', array(), array(), TWCH_VERSION);
-        twchat_load_scripts('js', 'twchat-custom-post-type', TWCHAT_ASSETS_URL . '/js/twchat_custom_post_type_script.js', array(), array(), TWCH_VERSION);
     }
 }

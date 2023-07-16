@@ -151,6 +151,11 @@ class Template extends Template_render
 
     public function is_available($available_from, $available_to)
     {
+        // if available is not set or empty means available all time
+        if (empty($available_from) || empty($available_to)) {
+            return true;
+        }
+
         $available_from = explode(':', $available_from);
         $available_to = explode(':', $available_to);
         $current_time = explode(':', date('H:i'));

@@ -45,6 +45,7 @@ class Accounts extends Custom_post_type
             add_filter('TWChat_account_details_fields', array($this, 'TWChat_account_details_fields')); // fields of account details meta box
             add_filter('TWChat_account_profile_fields', array($this, 'TWChat_account_profile_fields')); // fields of account profile meta box
             add_filter('TWChat_account_whatsapp_fields', array($this, 'TWChat_account_whatsapp_fields')); // fields of account whatsapp meta box
+            add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts')); // enqueue admin scripts
         }
     }
 
@@ -218,7 +219,7 @@ class Accounts extends Custom_post_type
                 'away' => __('Away', 'twchatlang'),
                 'busy' => __('Busy', 'twchatlang'),
             ),
-            'required' => true,
+            'required' => false,
             'priority' => '10',
         );
 
@@ -226,7 +227,7 @@ class Accounts extends Custom_post_type
             'label' => __('Available From', 'twchatlang'),
             'type' => 'time',
             'placeholder' => __('When are you available from?', 'twchatlang'),
-            'required' => true,
+            'required' => false,
             'priority' => '20',
         );
 
@@ -234,14 +235,14 @@ class Accounts extends Custom_post_type
             'label' => __('Available To', 'twchatlang'),
             'type' => 'time',
             'placeholder' => __('When are you available to?', 'twchatlang'),
-            'required' => true,
+            'required' => false,
             'priority' => '30',
         );
         $fields['thumbnail'] = array(
             'label' => __('Photo', 'twchatlang'),
             'type' => 'profile_image_radio',
             'placeholder' => __('Photo', 'twchatlang'),
-            'required' => true,
+            'required' => false,
             'priority' => '10',
             'options' => $this->get_default_profile_images(),
         );
@@ -264,14 +265,14 @@ class Accounts extends Custom_post_type
             'label' => __('First Name', 'twchatlang'),
             'type' => 'text',
             'placeholder' => __('First Name', 'twchatlang'),
-            'required' => true,
+            'required' => false,
             'priority' => '10',
         );
         $fields['last_name'] = array(
             'label' => __('Last Name', 'twchatlang'),
             'type' => 'text',
             'placeholder' => __('Last Name', 'twchatlang'),
-            'required' => true,
+            'required' => false,
             'priority' => '20',
         );
         $fields['nickname'] = array(
@@ -293,7 +294,7 @@ class Accounts extends Custom_post_type
             'label' => __('Email', 'twchatlang'),
             'type' => 'email',
             'placeholder' => __('Email', 'twchatlang'),
-            'required' => true,
+            'required' => false,
             'priority' => '50',
         );
         $fields['phone'] = array(
@@ -334,16 +335,17 @@ class Accounts extends Custom_post_type
     {
         $fields['whatsapp_number'] = array(
             'label' => __('Whatsapp Number', 'twchatlang'),
+            'desc' => __('Whatsapp Number with country code.', 'twchatlang'),
             'type' => 'text',
-            'placeholder' => __('Whatsapp Number', 'twchatlang'),
-            'required' => true,
+            'placeholder' => __('Ex: +18038475568', 'twchatlang'),
+            'required' => false,
             'priority' => '10',
         );
         $fields['whatsapp_message'] = array(
             'label' => __('Whatsapp Message', 'twchatlang'),
             'type' => 'textarea',
             'placeholder' => __('Whatsapp Message', 'twchatlang'),
-            'required' => true,
+            'required' => false,
             'priority' => '20',
         );
         return $fields;
@@ -379,5 +381,10 @@ class Accounts extends Custom_post_type
         }
 
         return $default_images;
+    }
+
+    public function admin_enqueue_scripts()
+    {
+        twchat_load_scripts('js', 'twchat-custom-post-type', TWCHAT_ASSETS_URL . '/js/accounts_admin.js', array(), array('twchat_account'), TWCH_VERSION);
     }
 }
