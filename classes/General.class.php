@@ -44,6 +44,9 @@ class General{
         // Initialize Addon_controller
         AutoLoader::init()->getInstanceOf(Addon_controller::class);
 
+        // Initialize Migrations - Disabled for now
+        // AutoLoader::init()->getInstanceOf( Migrations::class );
+
         // Check if accounts are enabled
         if(apply_filters('twchat_accouns_is_enable', false)){
             AutoLoader::init()->getInstanceOf(Accounts::class, [], 'admin');
@@ -119,7 +122,7 @@ class General{
      */
     public function plugin_action_links( $links ){
         $links[] = '<a href="' . admin_url( 'admin.php?page=TWChat_settings' ) . '">' . __( 'Settings', 'twchatlang' ) . '</a>';
-        $links[] = '<a href="' . admin_url( 'admin.php?page=TWChat_addons' ) . '">' . __( 'Addons', 'twchatlang' ) . '</a>';
+        $links[] = '<a href="' . admin_url( 'admin.php?page=TWChat_addons' ) . '">' . __( 'Add-ons', 'twchatlang' ) . '</a>';
         return $links;
     }
 
