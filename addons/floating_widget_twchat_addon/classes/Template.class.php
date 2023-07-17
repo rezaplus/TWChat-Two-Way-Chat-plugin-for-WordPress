@@ -71,7 +71,7 @@ class Template extends Template_render
         echo '<div class="TWCHBoxACSavailableTime">';
         esc_html_e('Available from ', 'twchatlang');
         esc_html_e($account->available_time->from);
-        esc_html_e(' to ', 'twchatlang');
+        echo ' '._x('to', 'Available from to', 'twchatlang').' ';
         esc_html_e($account->available_time->to);
         echo '</div>';
     }

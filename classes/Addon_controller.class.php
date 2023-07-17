@@ -588,7 +588,7 @@ class Addon_controller
 
                     // Check if the addon is active
                     if (!in_array($internalAddon, $this->activated_addons)) {
-                        twchat_notice(sprintf(__('%s addon is required to activate this addon. Please activate it first.', 'twchatlang'), $internalAddon), 'error');
+                        twchat_notice(sprintf(__('%s add-on is required to activate this add-on. Please activate it first.', 'twchatlang'), $internalAddon), 'error');
                         $passed = false;
                     }
 
@@ -597,7 +597,7 @@ class Addon_controller
                         $installedVersion = get_plugin_data(TWCHAT_ADDONS_PATH . $internalAddon . '/' . $internalAddon . '.php')['Version'];
                         // die(var_dump(version_compare($installedVersion, $version, '<=')).' '.$installedVersion.' '.$version);
                         if (version_compare($installedVersion, $version, '<=')) {
-                            twchat_notice(sprintf(__('%s addon version %s or higher is required to activate this addon. Please update it first.', 'twchatlang'), $internalAddon, $version), 'error');
+                            twchat_notice(sprintf(__('%s add-on version %s or higher is required to activate this add-on. Please update it first.', 'twchatlang'), $internalAddon, $version), 'error');
                             $passed = false;
                         }
                     }
@@ -607,7 +607,7 @@ class Addon_controller
 
                 // Check if plugin is active
                 if (!is_plugin_active($plugin . '/' . $plugin . '.php')) {
-                    twchat_notice(sprintf(__('%s plugin is required to activate this addon. Please install and activate it first.', 'twchatlang'), $plugin), 'error');
+                    twchat_notice(sprintf(__('%s plugin is required to activate this add-on. Please install and activate it first.', 'twchatlang'), $plugin), 'error');
                     $passed = false;
                     continue;
                 }
@@ -616,7 +616,7 @@ class Addon_controller
                 if (isset($version) && $checkVersion) {
                     $installedVersion = get_plugin_data(WP_PLUGIN_DIR . '/' . $plugin . '/' . $plugin . '.php')['Version'];
                     if (version_compare($installedVersion, $version, '<=')) {
-                        twchat_notice(sprintf(__('%s plugin version %s or higher is required to activate this addon. Please update it first.', 'twchatlang'), $plugin, $version), 'error');
+                        twchat_notice(sprintf(__('%s plugin version %s or higher is required to activate this add-on. Please update it first.', 'twchatlang'), $plugin, $version), 'error');
                         $passed = false;
                     }
                 }
