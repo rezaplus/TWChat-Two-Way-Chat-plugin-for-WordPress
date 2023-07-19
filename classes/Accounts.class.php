@@ -62,8 +62,8 @@ class Accounts extends Custom_post_type
         $labels = array(
             'name'                  => _x('Accounts', 'Post type general name', 'twchatlang'),
             'singular_name'         => __('Account', 'twchatlang'),
-            'menu_name'             => __('TWChat', 'twchatlang'),
-            'name_admin_bar'        => __('Account', 'twchatlang'),
+            'menu_name'             => __('Accounts', 'twchatlang'),
+            'name_admin_bar'        => __('Accounts', 'twchatlang'),
             'add_new_item'          => __('Create New Account', 'twchatlang'),
             'new_item'              => __('New Account', 'twchatlang'),
             'edit_item'             => __('Edit Account', 'twchatlang'),

@@ -87,11 +87,11 @@ class TWChat_Core{
         $this->load_helpers();
 
         /**
-         * localization of the plugin
+         * Localization setup
          * 
          * @since 1.0.0
          */
-        add_action( 'init', array( $this, 'localization' ) );
+        $this->Localization_setup();
 
         /**
          * load plugin core classes
@@ -156,14 +156,14 @@ class TWChat_Core{
     }
 
     /**
-     * Localization of the plugin
+     * Localization setup
      * 
      * @since 1.0.0
      * @access public
      * @return void
      */
-    public function localization(){
-        load_plugin_textdomain( 'twchatlang', false, TWCHAT_DIR_PATH . 'languages/' );
+    public function Localization_setup(){
+        load_plugin_textdomain( 'twchatlang', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
     }
 
     /**

@@ -66,7 +66,7 @@ class General{
         $menu_icon = "data:image/svg+xml;base64," . base64_encode( file_get_contents( TWCHAT_INCLUDES_PATH . 'assets/images/twchat.svg' ) );
         add_menu_page(
             __('TWChat', 'twchatlang'), // Page title
-            __('TWChat', 'twchatlang'), // Menu title
+            'twchat', // Menu title
             'manage_options', // Capability required to access the menu item
             'twchat', // Menu slug
             array( $this, 'main_page' ), // Callback function to render the page content
