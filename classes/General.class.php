@@ -22,12 +22,6 @@ class General{
      * Initialize the TWChat plugin and its dependencies
      */
     public function __construct(){
-
-        // Register activation hook
-        register_activation_hook( __FILE__, array( $this, 'activation_hook' ) );
-        // Register deactivation hook
-        register_deactivation_hook( __FILE__, array( $this, 'deactivation_hook' ) );
-
         // Add main page to admin menu
         add_action( 'admin_menu', array( $this, 'add_main_page' ) , 10);
         // add Settings page to admin menu
@@ -46,6 +40,9 @@ class General{
 
         // Initialize Migrations - Disabled for now
         // AutoLoader::init()->getInstanceOf( Migrations::class );
+
+        // new version notice
+        $this->new_version_notice();
 
         // Check if accounts are enabled
         if(apply_filters('twchat_accouns_is_enable', false)){
@@ -135,29 +132,37 @@ class General{
      */
     public function plugin_row_meta( $links, $file ){
         if ( $file == 'twchat/twchat.php' ) {
-            $links[] = '<a href="https://wordpress.org/plugins/twchat/#reviews" target="_blank">' . __( 'Rate', 'twchatlang' ) . '</a>';
+            $links[] = '<a href="https://wordpress.org/plugins/twchat/#reviews" target="_blank">' . __( 'Rate', 'twchatlang' ) . ' </a>' ;
             $links[] = '<a href="https://rellaco.com/support/" target="_blank">' . __( 'Support', 'twchatlang' ) . '</a>';
-            $links[] = '<a href="https://rellaco.com/docs-category/twchat-documentation/" target="_blank">' . __( 'Docs', 'twchatlang' ) . '</a>';
+            $links[] = '<a href="https://rellaco.com/docs-category/twchat-documentation/" target="_blank">' . __( 'Docs', 'twchatlang' ) . ' </a> ';
         }
         return $links;
     }
 
     /**
-     * Activation hook
-     * Perform actions when the plugin is activated
+     * new version notice about big update
+     * plugin settings tottaly changed in version 4.0.0 so we need to notify users to set up the plugin again     
      */
-    public static function activation_hook(){
-        $activation = AutoLoader::init()->getInstanceOf( Activation::class, [], 'admin' );
-        $activation->activation();
-    }
+    public function new_version_notice(){
 
-    /**
-     * Deactivation hook
-     * Perform actions when the plugin is deactivated
-     */
-    public static function deactivation_hook(){
-        $deactivation = AutoLoader::init()->getInstanceOf( Activation::class ,[],'admin');
-        $deactivation->deactivation();
+        $dismissed = get_option('TWChat_new_version_notice_dismissed', false);
+
+        // if user dismiss the notice
+        if(isset($_GET['twchat_dismiss_notice']) && $_GET['twchat_dismiss_notice'] == 1){
+            update_option('TWChat_new_version_notice_dismissed', true);
+            $dismissed = true;
+        }
+
+        // if TWCH_General_Option is exist in database show notice
+        if(!$dismissed && get_option('TWCH_General_Option', false)){
+            $html= '<h3>'.__('Important Notice: 📢 Big update is here 🚀 ', 'twchatlang').'</h3>';
+            $html.= '<p>'.__('Now TWChat is modular and you can enable or disable features that you need.', 'twchatlang').'</p>';
+            $html.= '<p style="color: red; margin-bottom: 10px;"><strong>'.__('Please note that you need to activate the add-ons and set up the plugin again.', 'twchatlang').'</strong></p>';
+            $html.= '<a href="'.admin_url('admin.php?page=TWChat_addons').'" class="button button-primary">'.__('Go to Add-ons', 'twchatlang').'</a> ';
+            $html.= '<a href="'.admin_url('admin.php?page=TWChat_settings').'" class="button button-primary">'.__('Go to Settings', 'twchatlang').'</a> ';
+            $html.= '<a href="?twchat_dismiss_notice=1" class="button button-secondary">'.__('Understood, dismiss this notice', 'twchatlang').'</a> ';
+            TWChat_notice($html, 'info', false);
+        }
     }
 
 }

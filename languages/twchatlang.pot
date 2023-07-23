@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Two Way Chat\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-17 20:53+0000\n"
+"POT-Creation-Date: 2023-07-23 12:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -47,7 +47,7 @@ msgid ""
 "update it first."
 msgstr ""
 
-#: classes/Accounts.class.php:64 classes/Accounts.class.php:66
+#: classes/Accounts.class.php:64
 msgid "Account"
 msgstr ""
 
@@ -59,6 +59,7 @@ msgstr ""
 msgid "Account Status"
 msgstr ""
 
+#: classes/Accounts.class.php:65 classes/Accounts.class.php:66
 #: classes/Accounts.class.php:71
 msgid "Accounts"
 msgstr ""
@@ -329,6 +330,14 @@ msgstr ""
 msgid "General Settings"
 msgstr ""
 
+#: classes/General.class.php:161
+msgid "Go to Add-ons"
+msgstr ""
+
+#: classes/General.class.php:162
+msgid "Go to Settings"
+msgstr ""
+
 #: addons/floating_widget_twchat_addon/classes/Settings.class.php:27
 msgid "Heading Title"
 msgstr ""
@@ -459,6 +468,10 @@ msgid ""
 "the option to set a static country code."
 msgstr ""
 
+#: classes/General.class.php:158
+msgid "Important Notice: 📢 Big update is here 🚀 "
+msgstr ""
+
 #: classes/Accounts.class.php:216
 msgid "Inactive"
 msgstr ""
@@ -509,6 +522,11 @@ msgstr ""
 msgid "Nickname"
 msgstr ""
 
+#: classes/General.class.php:159
+msgid ""
+"Now TWChat is modular and you can enable or disable features that you need."
+msgstr ""
+
 #: templates/admin/direct_message.php:9
 msgid "Number:"
 msgstr ""
@@ -552,6 +570,12 @@ msgstr ""
 
 #: classes/Social_settings.class.php:91
 msgid "Please enter your social links."
+msgstr ""
+
+#: classes/General.class.php:160
+msgid ""
+"Please note that you need to activate the add-ons and set up the plugin "
+"again."
 msgstr ""
 
 #: classes/Accounts.class.php:286
@@ -695,9 +719,7 @@ msgstr ""
 msgid "Title of the account"
 msgstr ""
 
-#. Page title
-#: classes/General.class.php:65 classes/General.class.php:66
-#: classes/Accounts.class.php:65
+#: classes/General.class.php:65
 #: addons/floating_widget_twchat_addon/classes/Customizer.class.php:25
 msgid "TWChat"
 msgstr ""
@@ -716,6 +738,10 @@ msgstr ""
 
 #: addons/woo_integrate_twchat_addon/classes/Send_message.class.php:117
 msgid "Type your message here"
+msgstr ""
+
+#: classes/General.class.php:163
+msgid "Understood, dismiss this notice"
 msgstr ""
 
 #: classes/Accounts.class.php:174

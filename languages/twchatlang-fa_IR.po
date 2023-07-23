@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: Two Way Chat\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-02 16:20+0000\n"
-"PO-Revision-Date: 2023-07-17 20:53+0000\n"
+"PO-Revision-Date: 2023-07-23 12:48+0000\n"
 "Last-Translator: \n"
-"Language-Team: Persian\n"
+"Language-Team: فارسی\n"
 "Language: fa_IR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgid ""
 "update it first."
 msgstr "افزونه %s نسخه %s یا بالاتر ضروری است. لطفا اول برورسانی کنید."
 
-#: classes/Accounts.class.php:64 classes/Accounts.class.php:66
+#: classes/Accounts.class.php:64
 msgid "Account"
 msgstr "حساب کاربری"
 
@@ -71,6 +71,7 @@ msgstr "عکس حساب کاربری"
 msgid "Account Status"
 msgstr "وضعیت حساب"
 
+#: classes/Accounts.class.php:65 classes/Accounts.class.php:66
 #: classes/Accounts.class.php:71
 msgid "Accounts"
 msgstr "حساب ها"
@@ -345,6 +346,14 @@ msgstr "ویجت شناور"
 msgid "General Settings"
 msgstr "تنظیمات عمومی"
 
+#: classes/General.class.php:161
+msgid "Go to Add-ons"
+msgstr "برو به اددان ها"
+
+#: classes/General.class.php:162
+msgid "Go to Settings"
+msgstr "برو به تنظیمات"
+
 #: addons/floating_widget_twchat_addon/classes/Settings.class.php:27
 msgid "Heading Title"
 msgstr "عنوان اصلی"
@@ -477,6 +486,10 @@ msgstr ""
 "اگر شماره‌های تلفن بدون کد کشور ثبت می شوند، می‌توانید گزینه \"کد کشور "
 "ثابت\" را فعال کنید."
 
+#: classes/General.class.php:158
+msgid "Important Notice: 📢 Big update is here 🚀 "
+msgstr "اطلاعیه مهم: 📢 به روز رسانی بزرگ اینجاست 🚀"
+
 #: classes/Accounts.class.php:216
 msgid "Inactive"
 msgstr "غیرفعال"
@@ -527,6 +540,13 @@ msgstr "حساب جدید"
 msgid "Nickname"
 msgstr "نام مستعار"
 
+#: classes/General.class.php:159
+msgid ""
+"Now TWChat is modular and you can enable or disable features that you need."
+msgstr ""
+"اکنون TWChat ماژولار است و می توانید ویژگی های مورد نیاز خود را فعال یا "
+"غیرفعال کنید."
+
 #: templates/admin/direct_message.php:9
 msgid "Number:"
 msgstr "شماره موبایل:"
@@ -571,6 +591,14 @@ msgstr "لطفا شماره تلفن معتبر وارد کنید."
 #: classes/Social_settings.class.php:91
 msgid "Please enter your social links."
 msgstr "لطفا لینک های شبکه های اجتماعی خود را وارد کنید."
+
+#: classes/General.class.php:160
+msgid ""
+"Please note that you need to activate the add-ons and set up the plugin "
+"again."
+msgstr ""
+"لطفاً توجه داشته باشید که باید اددان ها را فعال کرده و دوباره افزونه را راه "
+"تنظیم کنید."
 
 #: classes/Accounts.class.php:286
 msgid "Position or title of the owner of the account."
@@ -717,9 +745,7 @@ msgstr "عنوان"
 msgid "Title of the account"
 msgstr "عنوان حساب کاربری"
 
-#. Page title
-#: classes/General.class.php:65 classes/General.class.php:66
-#: classes/Accounts.class.php:65
+#: classes/General.class.php:65
 #: addons/floating_widget_twchat_addon/classes/Customizer.class.php:25
 msgid "TWChat"
 msgstr "چت دو طرفه"
@@ -739,6 +765,10 @@ msgstr "تنظیمات چت دو طرفه"
 #: addons/woo_integrate_twchat_addon/classes/Send_message.class.php:117
 msgid "Type your message here"
 msgstr "پیام خود را در اینجا وارد کنید"
+
+#: classes/General.class.php:163
+msgid "Understood, dismiss this notice"
+msgstr "فهمیدم، اخطار رو ببند"
 
 #: classes/Accounts.class.php:174
 msgid "Untitled"

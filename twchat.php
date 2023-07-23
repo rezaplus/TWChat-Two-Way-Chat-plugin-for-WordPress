@@ -7,8 +7,12 @@
  * Author URI: https://rellaco.com
  * Plugin URI: "https://rellaco.com/product/TwoWayChat"
  * Text Domain: twchatlang
+ * Domain Path: /languages
  * Requires at least: 5.9
+ * Tested up to: 6.2.2
  * Requires PHP: 7.4
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -165,7 +169,7 @@ class TWChat_Core{
     public function Localization_setup(){
         load_plugin_textdomain( 'twchatlang', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
     }
-
+    
     /**
      * Get instance of the class
      * 
@@ -179,4 +183,5 @@ class TWChat_Core{
         }
         return self::$instance;
     }
+
 }
