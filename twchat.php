@@ -40,7 +40,7 @@ use twchat\classes\General;
  * 
  * @since 4.0.0
  */
-defined( 'TWCH_DEV_MODE' ) or define( 'TWCH_DEV_MODE', true );
+defined( 'TWCH_DEV_MODE' ) or define( 'TWCH_DEV_MODE', false );
 
 /**
  * Define plugin version
