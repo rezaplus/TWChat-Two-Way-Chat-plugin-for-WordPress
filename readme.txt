@@ -1,10 +1,10 @@
-=== Two Way Chat - Send or receive messages from users ===
+=== TWChat - Send or receive messages from users ===
 Contributors: Rellaco, rezaplus
 Tags: whatsapp, WooCommerce whatsapp, whatsapp chat, whatsapp button, whatsapp woocommerce, whatsapp order, floating button
 Requires at least: 5.0
 Requires PHP: 7.4
 Tested up to: 6.2
-Stable tag: 4.0.0
+Stable tag: 4.0.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
