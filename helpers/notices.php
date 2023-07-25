@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Manage the notice of the plugin in admin panel
  * 
@@ -9,8 +10,10 @@
  * @since 4.0.0
  */
 
- // Exit if accessed directly
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 class TWChat_notice
 {
@@ -36,9 +39,10 @@ class TWChat_notice
         $this->type = $type;
         $this->dismissible = $dismissible;
         $this->button = $button;
-        // show notice
         echo $this->display_notice();
     }
+
+
     /**
      * Display notice html code with message and type and button
      * 
@@ -57,7 +61,7 @@ class TWChat_notice
             $button = sprintf('<p><a href="%1$s" class="button" target="%3$s" >%2$s</a></p>', $this->button['url'], $this->button['text'], isset($this->button['target']) ? $this->button['target'] : '_self');
         }
         // print notice html
-        printf('<div class="%1$s"><p>%2$s</p>%3$s</div>', esc_attr($class), $message, $button);
+        return sprintf('<div class="%1$s"><p>%2$s</p>%3$s</div>', esc_attr($class), $message, $button);
     }
 }
 
@@ -75,7 +79,10 @@ class TWChat_notice
 if (!function_exists('TWChat_notice')) {
     function TWChat_notice($message, $type = 'info', $dismissible = true, $button = array())
     {
-        $notice = new TWChat_notice();
-        $notice->add_notice($message, $type, $dismissible, $button);
+        // if is admin panel
+        if (is_admin()) {
+            $notice = new TWChat_notice();
+            $notice->add_notice($message, $type, $dismissible, $button);
+        }
     }
 }
