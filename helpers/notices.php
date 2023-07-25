@@ -39,7 +39,7 @@ class TWChat_notice
         $this->type = $type;
         $this->dismissible = $dismissible;
         $this->button = $button;
-        echo $this->display_notice();
+        return $this->display_notice();
     }
 
 
@@ -61,7 +61,7 @@ class TWChat_notice
             $button = sprintf('<p><a href="%1$s" class="button" target="%3$s" >%2$s</a></p>', $this->button['url'], $this->button['text'], isset($this->button['target']) ? $this->button['target'] : '_self');
         }
         // print notice html
-        return sprintf('<div class="%1$s"><p>%2$s</p>%3$s</div>', esc_attr($class), $message, $button);
+        return printf('<div class="%1$s"><p>%2$s</p>%3$s</div>', esc_attr($class), $message, $button);
     }
 }
 
@@ -79,10 +79,10 @@ class TWChat_notice
 if (!function_exists('TWChat_notice')) {
     function TWChat_notice($message, $type = 'info', $dismissible = true, $button = array())
     {
-        // if is admin panel
-        if (is_admin()) {
-            $notice = new TWChat_notice();
-            $notice->add_notice($message, $type, $dismissible, $button);
-        }
+        $notice = new TWChat_notice();
+        $notice_html = $notice->add_notice($message, $type, $dismissible, $button);
+        add_action('admin_notices', function () use ($notice_html) {
+            echo $notice_html;
+        }, 10);
     }
 }

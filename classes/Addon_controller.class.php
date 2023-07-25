@@ -485,12 +485,12 @@ class Addon_controller
         if (in_array($addon, $this->activated_addons)) {
             return 'already_activated'; // Addon is already activated
         }
-
+        
         if ($this->checkRequirements($addon, true) !== true) {
             return; // Addon requirements are not met
         }
 
-        $this->lsHandler($addon); // Handle the licensing server
+        $this->lsHandler($addon);
 
 
         // Activate the addon
