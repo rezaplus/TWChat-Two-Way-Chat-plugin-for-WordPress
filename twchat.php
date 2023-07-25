@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Two Way Chat
+ * Plugin Name: TWChat
  * Description: Allowing admins to send messages to customers and vice versa through popular chat platforms.
  * Author: Rellaco
  * Version: 4.0.1
