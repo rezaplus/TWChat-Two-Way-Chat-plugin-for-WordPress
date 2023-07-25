@@ -31,7 +31,7 @@ class General{
         // Remove submenu to hide main page
         add_action( 'admin_menu', array( $this, 'remove_submenu' ) , 11);
         // plugin action links
-        add_filter( 'plugin_action_links_twchat/TWChat.php', array( $this, 'plugin_action_links' ) );
+        add_filter( 'plugin_action_links_twchat/twchat.php', array( $this, 'plugin_action_links' ) );
         // plugin row meta
         add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
 
@@ -131,7 +131,7 @@ class General{
      * @return array
      */
     public function plugin_row_meta( $links, $file ){
-        if ( $file == 'twchat/TWChat.php' ) {
+        if ( $file == 'twchat/twchat.php' ) {
             $links[] = '<a href="https://wordpress.org/plugins/twchat/#reviews" target="_blank">' . __( 'Rate', 'twchatlang' ) . ' </a>' ;
             $links[] = '<a href="https://rellaco.com/support/" target="_blank">' . __( 'Support', 'twchatlang' ) . '</a>';
             $links[] = '<a href="https://rellaco.com/docs-category/twchat-documentation/" target="_blank">' . __( 'Docs', 'twchatlang' ) . ' </a> ';
