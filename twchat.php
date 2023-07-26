@@ -50,9 +50,7 @@ defined( 'TWCH_DEV_MODE' ) or define( 'TWCH_DEV_MODE', false );
 defined( 'TWCH_VERSION' ) or define( 'TWCH_VERSION', '4.0.2' );
 
 // run plugin
-if ( ! class_exists( 'TWChat_Core' ) ) {
-    new TWChat_Core();
-}
+TWChat_Core::init();
 
 class TWChat_Core{
 
