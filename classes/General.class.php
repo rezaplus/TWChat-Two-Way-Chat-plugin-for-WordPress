@@ -160,7 +160,7 @@ class General{
             $html.= '<p style="color: red; margin-bottom: 10px;"><strong>'.__('Please note that you need to activate the add-ons and set up the plugin again.', 'twchatlang').'</strong></p>';
             $html.= '<a href="'.admin_url('admin.php?page=TWChat_addons').'" class="button button-primary">'.__('Go to Add-ons', 'twchatlang').'</a> ';
             $html.= '<a href="'.admin_url('admin.php?page=TWChat_settings').'" class="button button-primary">'.__('Go to Settings', 'twchatlang').'</a> ';
-            $html.= '<a href="?twchat_dismiss_notice=1" class="button button-secondary">'.__('Understood, dismiss this notice', 'twchatlang').'</a> ';
+            $html.= '<a href="'.admin_url('admin.php?page=TWChat_settings&twchat_dismiss_notice=1').'"class="button button-secondary">'.__('Understood, dismiss this notice', 'twchatlang').'</a> ';
             TWChat_notice($html, 'info', false);
         }
     }
