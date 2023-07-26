@@ -3,7 +3,7 @@
  * Plugin Name: TWChat
  * Description: Allowing admins to send messages to customers and vice versa through popular chat platforms.
  * Author: Rellaco
- * Version: 4.0.1
+ * Version: 4.0.2
  * Author URI: https://rellaco.com
  * Plugin URI: "https://rellaco.com/product/TwoWayChat"
  * Text Domain: twchatlang
@@ -47,7 +47,7 @@ defined( 'TWCH_DEV_MODE' ) or define( 'TWCH_DEV_MODE', false );
  * 
  * @since 1.0.0
  */
-defined( 'TWCH_VERSION' ) or define( 'TWCH_VERSION', '4.0.1' );
+defined( 'TWCH_VERSION' ) or define( 'TWCH_VERSION', '4.0.2' );
 
 // run plugin
 if ( ! class_exists( 'TWChat_Core' ) ) {
@@ -179,6 +179,15 @@ class TWChat_Core{
      */
     public static function init(){
         if ( ! isset( self::$instance ) && ! ( self::$instance instanceof TWChat_Core ) ) {
+
+            // if class TWCH_class_premium is exists, notice the user to deactivate it
+            if ( class_exists( 'TWCH_class_premium' ) ) {
+                add_action( 'admin_notices', function(){
+                    echo '<div class="notice notice-error is-dismissible"><p>' . __( 'TWChat: Please deactivate the premium version of the plugin to avoid conflicts.', 'twchatlang' ) . '</p></div>';
+                } );
+                return;
+            }
+
             self::$instance = new TWChat_Core();
         }
         return self::$instance;
