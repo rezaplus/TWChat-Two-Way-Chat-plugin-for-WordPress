@@ -24,11 +24,6 @@ class Settings
      */
     public function __construct()
     {
-        // if is not TWChat_settings page, return
-        if (!isset($_GET['page']) || $_GET['page'] != 'TWChat_settings') {
-            return;
-        }
-
         add_action('admin_init', array($this, 'page_init'));
         add_action('admin_notices', array($this, 'settings_notice'));
         add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts'));
