@@ -34,6 +34,8 @@ class General{
         add_filter( 'plugin_action_links_twchat/twchat.php', array( $this, 'plugin_action_links' ) );
         // plugin row meta
         add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
+        // new version notice
+        add_action( 'admin_notices', array( $this, 'new_version_notice' ) );
 
         // Initialize Addon_controller
         AutoLoader::init()->getInstanceOf(Addon_controller::class);
@@ -41,8 +43,6 @@ class General{
         // Initialize Migrations - Disabled for now
         // AutoLoader::init()->getInstanceOf( Migrations::class );
 
-        // new version notice
-        $this->new_version_notice();
 
         // Check if accounts are enabled
         if(apply_filters('twchat_accouns_is_enable', false)){

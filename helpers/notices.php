@@ -81,8 +81,11 @@ if (!function_exists('TWChat_notice')) {
     {
         $notice = new TWChat_notice();
         $notice_html = $notice->add_notice($message, $type, $dismissible, $button);
-        add_action('admin_notices', function () use ($notice_html) {
-            echo $notice_html;
-        }, 10);
+
+        if (!is_admin()) {
+            return;
+        }
+
+        echo $notice_html ? $notice_html : '';
     }
 }

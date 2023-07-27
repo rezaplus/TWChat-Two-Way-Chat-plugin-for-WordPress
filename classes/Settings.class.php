@@ -3,7 +3,9 @@
 namespace twchat\classes;
 
 // Exit if accessed directly
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 use twchat\helpers\Autoloader;
 use twchat\classes\Settings_callback;
@@ -22,7 +24,13 @@ class Settings
      */
     public function __construct()
     {
+        // if is not TWChat_settings page, return
+        if (!isset($_GET['page']) || $_GET['page'] != 'TWChat_settings') {
+            return;
+        }
+
         add_action('admin_init', array($this, 'page_init'));
+        add_action('admin_notices', array($this, 'settings_notice'));
         add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts'));
     }
 
@@ -50,7 +58,6 @@ class Settings
         $settings_fields = Autoloader::init()->getInstanceOf(Settings_fields::class, [], 'admin');
         $this->generate_sections($settings_fields->get_default_sections());
         $this->generate_fields($settings_fields->get_default_fields());
-        $this->save_settings_response();
     }
 
     /**
@@ -171,15 +178,13 @@ class Settings
         }
     }
 
-    /**
-     * saves the settings response.
-     */
-    public function save_settings_response()
+
+    function settings_notice()
     {
-        if (isset($_GET['twchat-settings-updated']) && !isset($_GET['reload'])) {
-            $reloadUrl = admin_url('admin.php?page=TWChat_settings&twchat-settings-updated=true&reload=true');
+        if (isset($_GET['settings-updated']) && !isset($_GET['reload'])) {
+            $reloadUrl = admin_url('admin.php?page=TWChat_settings&settings-updated=true&reload=true');
             echo '<script type="text/javascript">window.location.href = "' . $reloadUrl . '";</script>';
-        } elseif (isset($_GET['reload']) && isset($_GET['twchat-settings-updated'])) {
+        } elseif (isset($_GET['reload']) && isset($_GET['settings-updated'])) {
             TWChat_notice(__('Settings saved successfully.', 'twchatlang'), 'success');
         } elseif (isset($_GET['error'])) {
             TWChat_notice(__('Error occurred while saving settings. Please try again.', 'twchatlang'), 'error');

@@ -136,6 +136,10 @@ class TWChat_Core{
      */
     public function load_helpers(){
         /**
+         * load notices helper functions
+         */
+        require_once dirname( __FILE__ ) . '/helpers/notices.php';
+        /**
          * load class autoloader
          */
         require_once dirname( __FILE__ ) . '/helpers/AutoLoader.php';
@@ -151,10 +155,6 @@ class TWChat_Core{
          * load general helper functions
          */
         require_once dirname( __FILE__ ) . '/helpers/functions.php';
-        /**
-         * load notices helper functions
-         */
-        require_once dirname( __FILE__ ) . '/helpers/notices.php';
     }
 
     /**
