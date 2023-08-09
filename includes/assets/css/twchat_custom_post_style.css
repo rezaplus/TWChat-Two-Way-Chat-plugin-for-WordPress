@@ -12,12 +12,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-input[type="radio"]:checked + label {
+#TWChat_account_profile input[type="radio"]:checked + label {
     border: 1px solid #bae7ff;
     background: #e6f5ff;
     border-radius: 60%;
 }
-input[type="radio"]:disabled + label {
+#TWChat_account_profile input[type="radio"]:disabled + label {
     opacity: 0.5;
 }
    

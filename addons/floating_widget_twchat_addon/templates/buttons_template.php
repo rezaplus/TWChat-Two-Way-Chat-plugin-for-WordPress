@@ -10,6 +10,14 @@
                 echo '</a>';
             }
         }
+    }elseif(is_user_logged_in() && current_user_can('manage_options')){ //if contacts not found and user is logged in (admin)
+        echo  '<p style="color: red ; font-size: 14px;">' .
+        __('Available contacts not found, please check your account page.', 'twchat') .
+        '</p>';
+    }else{
+        echo  '<p style="color: red ; font-size: 14px;">' .
+        __('Available contacts not found.', 'twchat') .
+        '</p>';
     }
     ?>
 </div>

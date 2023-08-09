@@ -3,13 +3,13 @@
  * Plugin Name: TWChat
  * Description: Allowing admins to send messages to customers and vice versa through popular chat platforms.
  * Author: Rellaco
- * Version: 4.0.2
+ * Version: 4.0.3
  * Author URI: https://rellaco.com
  * Plugin URI: "https://rellaco.com/product/TwoWayChat"
  * Text Domain: twchatlang
  * Domain Path: /languages
  * Requires at least: 5.9
- * Tested up to: 6.2.2
+ * Tested up to: 6.3
  * Requires PHP: 7.4
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -47,7 +47,7 @@ defined( 'TWCH_DEV_MODE' ) or define( 'TWCH_DEV_MODE', false );
  * 
  * @since 1.0.0
  */
-defined( 'TWCH_VERSION' ) or define( 'TWCH_VERSION', '4.0.2' );
+defined( 'TWCH_VERSION' ) or define( 'TWCH_VERSION', '4.0.3' );
 
 // run plugin
 TWChat_Core::init();

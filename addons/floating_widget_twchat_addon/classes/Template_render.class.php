@@ -72,6 +72,6 @@ class Template_render {
      */
     public function load_css() {
         // Enqueue the widget CSS file
-        twchat_load_scripts('css', 'twchat-floating-widget', TWCHAT_ADDON_FLOATING_DIR_URL . 'includes/assets/css/widget.css', array(), TWCHAT_ADDON_FLOATING_VERSION, 'all');
+        twchat_load_scripts('css', 'twchat-floating-widget', TWCHAT_ADDON_FLOATING_DIR_URL . 'includes/assets/css/widget.css', array(), array(), TWCHAT_ADDON_FLOATING_VERSION, 'all');
     }
 }

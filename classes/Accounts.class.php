@@ -208,18 +208,22 @@ class Accounts extends Custom_post_type
      */
     public function TWChat_account_profile_fields($fields)
     {
-        $fields['account_status'] = array(
-            'label' => __('Account Status', 'twchatlang'),
-            'type' => 'select',
-            'options' => array(
-                'active' => __('Active', 'twchatlang'),
-                'inactive' => __('Inactive', 'twchatlang'),
-                'away' => __('Away', 'twchatlang'),
-                'busy' => __('Busy', 'twchatlang'),
-            ),
-            'required' => false,
-            'priority' => '10',
-        );
+        /**
+         * NOTE: This field is not developed yet and there is no another function to handle this field.
+         */
+
+        // $fields['account_status'] = array(
+        //     'label' => __('Account Status', 'twchatlang'),
+        //     'type' => 'select',
+        //     'options' => array(
+        //         'active' => __('Active', 'twchatlang'),
+        //         'inactive' => __('Inactive', 'twchatlang'),
+        //         'away' => __('Away', 'twchatlang'),
+        //         'busy' => __('Busy', 'twchatlang'),
+        //     ),
+        //     'required' => false,
+        //     'priority' => '10',
+        // );
 
         $fields['available_from'] = array(
             'label' => __('Available From', 'twchatlang'),

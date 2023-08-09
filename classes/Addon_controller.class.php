@@ -196,7 +196,7 @@ class Addon_controller
                 ['reload', 'result', 'twchat_activate_addon', 'twchat_deactivate_addon']
             );
             echo "<script>history.replaceState({}, '', '$url');</script>";
-        } elseif (isset($result)) {
+        } elseif ($result !== false) {
             wp_redirect(admin_url('admin.php?page=' . $this->addonsPage . '&reload=true&result=' . $result));
             exit;
         }
@@ -215,7 +215,7 @@ class Addon_controller
     {
         switch ($result) {
             case 'activated':
-                $message = __('Add-on activated successfully.', 'twchatlang');
+                $message = sprintf(__('Congratulations! Add-on activated successfully. <b> Configure it from %s.</b>', 'twchatlang'), '<a href="' . admin_url('admin.php?page=TWChat_settings') . '">' . __('TWChat Settings', 'twchatlang') . '</a>');
                 $type = 'success';
                 break;
             case 'deactivated':

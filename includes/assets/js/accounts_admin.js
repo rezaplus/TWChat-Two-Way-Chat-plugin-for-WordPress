@@ -7,12 +7,6 @@ jQuery(document).ready(function() {
     profile_image_control(this, true);
   });
 
-  // TWChat_floating_contacts[available_contacts][] checkboxes required
-  $available_contacts = 'input[name="TWChat_floating_contacts[available_contacts][]"]';
-  required_checkboxes($available_contacts);
-  jQuery(document).on('input', $available_contacts, function() {
-    required_checkboxes($available_contacts);
-  });
 
   // if one of date is filled, make the other required
   available_time_required();
