@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Two Way Chat\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-23 12:41+0000\n"
+"POT-Creation-Date: 2023-08-09 19:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -55,10 +55,6 @@ msgstr ""
 msgid "Account Image"
 msgstr ""
 
-#: classes/Accounts.class.php:212
-msgid "Account Status"
-msgstr ""
-
 #: classes/Accounts.class.php:65 classes/Accounts.class.php:66
 #: classes/Accounts.class.php:71
 msgid "Accounts"
@@ -72,16 +68,12 @@ msgstr ""
 msgid "Activate in WordPress"
 msgstr ""
 
-#: classes/Accounts.class.php:215 classes/Addon_controller.class.php:325
+#: classes/Addon_controller.class.php:325
 msgid "Active"
 msgstr ""
 
 #: classes/Settings_callback.class.php:203
 msgid "Add"
-msgstr ""
-
-#: classes/Addon_controller.class.php:218
-msgid "Add-on activated successfully."
 msgstr ""
 
 #: classes/Addon_controller.class.php:230
@@ -127,7 +119,7 @@ msgstr ""
 msgid "Available Contacts"
 msgstr ""
 
-#: classes/Accounts.class.php:225
+#: classes/Accounts.class.php:229
 msgid "Available From"
 msgstr ""
 
@@ -140,12 +132,8 @@ msgctxt "Available from to"
 msgid "to"
 msgstr ""
 
-#: classes/Accounts.class.php:233
+#: classes/Accounts.class.php:237
 msgid "Available To"
-msgstr ""
-
-#: classes/Accounts.class.php:217
-msgid "Away"
 msgstr ""
 
 #: addons/woo_integrate_twchat_addon/classes/Settings.class.php:55
@@ -166,10 +154,6 @@ msgstr ""
 
 #: addons/floating_widget_twchat_addon/classes/Customizer.class.php:299
 msgid "Bubble Text Color"
-msgstr ""
-
-#: classes/Accounts.class.php:218
-msgid "Busy"
 msgstr ""
 
 #: addons/floating_widget_twchat_addon/classes/Template.class.php:43
@@ -210,6 +194,12 @@ msgid ""
 "Configure your TWChat settings below. For more information, you can follow "
 "the <a href=\"https://rellaco.com/docs/intro/\" target=\"_blank\">"
 "documentation</a>."
+msgstr ""
+
+#: classes/Addon_controller.class.php:218
+#, php-format
+msgid ""
+"Congratulations! Add-on activated successfully. <b> Configure it from %s.</b>"
 msgstr ""
 
 #: classes/Settings_fields.class.php:56
@@ -254,7 +244,7 @@ msgstr ""
 msgid "Direct Message"
 msgstr ""
 
-#: classes/Accounts.class.php:307
+#: classes/Accounts.class.php:311
 msgid "display name as"
 msgstr ""
 
@@ -266,7 +256,7 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
-#: classes/Accounts.class.php:339
+#: classes/Accounts.class.php:343
 msgid "E.g. +18038475568"
 msgstr ""
 
@@ -274,7 +264,7 @@ msgstr ""
 msgid "Edit Account"
 msgstr ""
 
-#: classes/Accounts.class.php:293 classes/Accounts.class.php:295
+#: classes/Accounts.class.php:297 classes/Accounts.class.php:299
 #: addons/floating_widget_twchat_addon/classes/Accounts.class.php:65
 msgid "Email"
 msgstr ""
@@ -313,11 +303,11 @@ msgstr ""
 msgid "Extend the functionality of TWChat with these add-ons."
 msgstr ""
 
-#: classes/Accounts.class.php:311
+#: classes/Accounts.class.php:315
 msgid "First Last"
 msgstr ""
 
-#: classes/Accounts.class.php:264 classes/Accounts.class.php:266
+#: classes/Accounts.class.php:268 classes/Accounts.class.php:270
 msgid "First Name"
 msgstr ""
 
@@ -472,10 +462,6 @@ msgstr ""
 msgid "Important Notice: 📢 Big update is here 🚀 "
 msgstr ""
 
-#: classes/Accounts.class.php:216
-msgid "Inactive"
-msgstr ""
-
 #: addons/floating_widget_twchat_addon/classes/Settings.class.php:39
 msgid "It will be displayed after the title."
 msgstr ""
@@ -488,11 +474,11 @@ msgstr ""
 msgid "It will be displayed on the top of the widget."
 msgstr ""
 
-#: classes/Accounts.class.php:312
+#: classes/Accounts.class.php:316
 msgid "Last First"
 msgstr ""
 
-#: classes/Accounts.class.php:271 classes/Accounts.class.php:273
+#: classes/Accounts.class.php:275 classes/Accounts.class.php:277
 msgid "Last Name"
 msgstr ""
 
@@ -517,8 +503,8 @@ msgstr ""
 msgid "New Account"
 msgstr ""
 
-#: classes/Accounts.class.php:278 classes/Accounts.class.php:280
-#: classes/Accounts.class.php:315
+#: classes/Accounts.class.php:282 classes/Accounts.class.php:284
+#: classes/Accounts.class.php:319
 msgid "Nickname"
 msgstr ""
 
@@ -531,11 +517,11 @@ msgstr ""
 msgid "Number:"
 msgstr ""
 
-#: classes/Accounts.class.php:313
+#: classes/Accounts.class.php:317
 msgid "Only First Name"
 msgstr ""
 
-#: classes/Accounts.class.php:314
+#: classes/Accounts.class.php:318
 msgid "Only Last Name"
 msgstr ""
 
@@ -550,12 +536,12 @@ msgstr ""
 msgid "Paid Add-on"
 msgstr ""
 
-#: classes/Accounts.class.php:300 classes/Accounts.class.php:302
+#: classes/Accounts.class.php:304 classes/Accounts.class.php:306
 #: addons/floating_widget_twchat_addon/classes/Accounts.class.php:64
 msgid "Phone"
 msgstr ""
 
-#: classes/Accounts.class.php:240 classes/Accounts.class.php:242
+#: classes/Accounts.class.php:244 classes/Accounts.class.php:246
 msgid "Photo"
 msgstr ""
 
@@ -578,7 +564,7 @@ msgid ""
 "again."
 msgstr ""
 
-#: classes/Accounts.class.php:286
+#: classes/Accounts.class.php:290
 msgid "Position or title of the owner of the account."
 msgstr ""
 
@@ -627,7 +613,7 @@ msgstr ""
 msgid "Select a social media"
 msgstr ""
 
-#: classes/Accounts.class.php:308
+#: classes/Accounts.class.php:312
 msgid "Select how you want to display the name of the account."
 msgstr ""
 
@@ -711,14 +697,15 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: classes/Accounts.class.php:285
+#: classes/Accounts.class.php:289
 msgid "Title"
 msgstr ""
 
-#: classes/Accounts.class.php:288
+#: classes/Accounts.class.php:292
 msgid "Title of the account"
 msgstr ""
 
+#. Name of the plugin
 #: classes/General.class.php:65
 #: addons/floating_widget_twchat_addon/classes/Customizer.class.php:25
 msgid "TWChat"
@@ -728,8 +715,14 @@ msgstr ""
 msgid "TWChat Add-ons"
 msgstr ""
 
-#. Name of the plugin
-msgid "Two Way Chat"
+#: classes/Addon_controller.class.php:218
+msgid "TWChat Settings"
+msgstr ""
+
+#: twchat.php:184
+msgid ""
+"TWChat: Please deactivate the premium version of the plugin to avoid "
+"conflicts."
 msgstr ""
 
 #: templates/admin/settings.php:3
@@ -768,23 +761,23 @@ msgstr ""
 msgid "WhatsApp"
 msgstr ""
 
-#: classes/Accounts.class.php:344 classes/Accounts.class.php:346
+#: classes/Accounts.class.php:348 classes/Accounts.class.php:350
 msgid "Whatsapp Message"
 msgstr ""
 
-#: classes/Accounts.class.php:336
+#: classes/Accounts.class.php:340
 msgid "Whatsapp Number"
 msgstr ""
 
-#: classes/Accounts.class.php:337
+#: classes/Accounts.class.php:341
 msgid "Whatsapp Number with country code."
 msgstr ""
 
-#: classes/Accounts.class.php:227
+#: classes/Accounts.class.php:231
 msgid "When are you available from?"
 msgstr ""
 
-#: classes/Accounts.class.php:235
+#: classes/Accounts.class.php:239
 msgid "When are you available to?"
 msgstr ""
 

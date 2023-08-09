@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: Two Way Chat\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-02 16:20+0000\n"
-"PO-Revision-Date: 2023-07-23 12:48+0000\n"
+"PO-Revision-Date: 2023-08-09 19:24+0000\n"
 "Last-Translator: \n"
-"Language-Team: فارسی\n"
+"Language-Team: Persian\n"
 "Language: fa_IR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
@@ -67,10 +67,6 @@ msgstr "حساب کاربری"
 msgid "Account Image"
 msgstr "عکس حساب کاربری"
 
-#: classes/Accounts.class.php:212
-msgid "Account Status"
-msgstr "وضعیت حساب"
-
 #: classes/Accounts.class.php:65 classes/Accounts.class.php:66
 #: classes/Accounts.class.php:71
 msgid "Accounts"
@@ -84,17 +80,13 @@ msgstr "فعال کردن"
 msgid "Activate in WordPress"
 msgstr "فعال کردن در وردپرس"
 
-#: classes/Accounts.class.php:215 classes/Addon_controller.class.php:325
+#: classes/Addon_controller.class.php:325
 msgid "Active"
 msgstr "فعال"
 
 #: classes/Settings_callback.class.php:203
 msgid "Add"
 msgstr "اضافه کردن"
-
-#: classes/Addon_controller.class.php:218
-msgid "Add-on activated successfully."
-msgstr "اددان با موفقیت فعال شد."
 
 #: classes/Addon_controller.class.php:230
 msgid "Add-on already activated."
@@ -139,7 +131,7 @@ msgstr "خودکار ( توصیه می شود )"
 msgid "Available Contacts"
 msgstr "راه های ارتباطی فعال"
 
-#: classes/Accounts.class.php:225
+#: classes/Accounts.class.php:229
 msgid "Available From"
 msgstr "در دسترس از"
 
@@ -152,13 +144,9 @@ msgctxt "Available from to"
 msgid "to"
 msgstr "تا"
 
-#: classes/Accounts.class.php:233
+#: classes/Accounts.class.php:237
 msgid "Available To"
 msgstr "در دسترس تا"
-
-#: classes/Accounts.class.php:217
-msgid "Away"
-msgstr "دور از دسترس"
 
 #: addons/woo_integrate_twchat_addon/classes/Settings.class.php:55
 msgid "Browser (Web Application)"
@@ -179,10 +167,6 @@ msgstr "متن حباب"
 #: addons/floating_widget_twchat_addon/classes/Customizer.class.php:299
 msgid "Bubble Text Color"
 msgstr "رنگ متن حباب"
-
-#: classes/Accounts.class.php:218
-msgid "Busy"
-msgstr "مشغول"
 
 #: addons/floating_widget_twchat_addon/classes/Template.class.php:43
 msgid "Chat with us"
@@ -226,6 +210,13 @@ msgstr ""
 "TWChat را پیکربندی کنید. برای اطلاعات بیشتر، می‌توانید <a href=\"https:"
 "//rellaco.com/docs/intro/\" target=\"_blank\">مستندات</a> را دنبال کنید."
 
+#: classes/Addon_controller.class.php:218
+#, php-format
+msgid ""
+"Congratulations! Add-on activated successfully. <b> Configure it from %s.</b>"
+msgstr ""
+"تبریک می گویم! اددان با موفقیت فعال شد. <b> آن را از %s پیکربندی کنید.</b>"
+
 #: classes/Settings_fields.class.php:56
 msgid "Country Code"
 msgstr "کد کشور"
@@ -268,7 +259,7 @@ msgstr "جزئیات"
 msgid "Direct Message"
 msgstr "پیام مستقیم"
 
-#: classes/Accounts.class.php:307
+#: classes/Accounts.class.php:311
 msgid "display name as"
 msgstr "نمایش نام به صورت"
 
@@ -280,7 +271,7 @@ msgstr "مستندات"
 msgid "Download"
 msgstr "دانلود"
 
-#: classes/Accounts.class.php:339
+#: classes/Accounts.class.php:343
 msgid "E.g. +18038475568"
 msgstr "+18038475568 "
 
@@ -288,7 +279,7 @@ msgstr "+18038475568 "
 msgid "Edit Account"
 msgstr "ویرایش حساب"
 
-#: classes/Accounts.class.php:293 classes/Accounts.class.php:295
+#: classes/Accounts.class.php:297 classes/Accounts.class.php:299
 #: addons/floating_widget_twchat_addon/classes/Accounts.class.php:65
 msgid "Email"
 msgstr "ایمیل"
@@ -329,11 +320,11 @@ msgstr "خطا، لطفا بعدا دوباره امتحان کنید."
 msgid "Extend the functionality of TWChat with these add-ons."
 msgstr "قابلیت Twchat را با اددان ها گسترش دهید."
 
-#: classes/Accounts.class.php:311
+#: classes/Accounts.class.php:315
 msgid "First Last"
 msgstr "نام و نام خانوادگی"
 
-#: classes/Accounts.class.php:264 classes/Accounts.class.php:266
+#: classes/Accounts.class.php:268 classes/Accounts.class.php:270
 msgid "First Name"
 msgstr "نام"
 
@@ -490,10 +481,6 @@ msgstr ""
 msgid "Important Notice: 📢 Big update is here 🚀 "
 msgstr "اطلاعیه مهم: 📢 به روز رسانی بزرگ اینجاست 🚀"
 
-#: classes/Accounts.class.php:216
-msgid "Inactive"
-msgstr "غیرفعال"
-
 #: addons/floating_widget_twchat_addon/classes/Settings.class.php:39
 msgid "It will be displayed after the title."
 msgstr "بعد از عنوان نمایش داده می شود."
@@ -506,11 +493,11 @@ msgstr "این متن در جعبه حبابی کنار ویجت نمایش دا
 msgid "It will be displayed on the top of the widget."
 msgstr "در بالای ویجت نمایش داده می شود."
 
-#: classes/Accounts.class.php:312
+#: classes/Accounts.class.php:316
 msgid "Last First"
 msgstr "نام خانوادگی نام"
 
-#: classes/Accounts.class.php:271 classes/Accounts.class.php:273
+#: classes/Accounts.class.php:275 classes/Accounts.class.php:277
 msgid "Last Name"
 msgstr "نام خانوادگی"
 
@@ -535,8 +522,8 @@ msgstr "به کمک نیاز دارید؟"
 msgid "New Account"
 msgstr "حساب جدید"
 
-#: classes/Accounts.class.php:278 classes/Accounts.class.php:280
-#: classes/Accounts.class.php:315
+#: classes/Accounts.class.php:282 classes/Accounts.class.php:284
+#: classes/Accounts.class.php:319
 msgid "Nickname"
 msgstr "نام مستعار"
 
@@ -551,11 +538,11 @@ msgstr ""
 msgid "Number:"
 msgstr "شماره موبایل:"
 
-#: classes/Accounts.class.php:313
+#: classes/Accounts.class.php:317
 msgid "Only First Name"
 msgstr "فقط نام"
 
-#: classes/Accounts.class.php:314
+#: classes/Accounts.class.php:318
 msgid "Only Last Name"
 msgstr "فقط نام خانوادگی"
 
@@ -570,12 +557,12 @@ msgstr "باز کنید واتساپ را با"
 msgid "Paid Add-on"
 msgstr "اددان پرومیوم"
 
-#: classes/Accounts.class.php:300 classes/Accounts.class.php:302
+#: classes/Accounts.class.php:304 classes/Accounts.class.php:306
 #: addons/floating_widget_twchat_addon/classes/Accounts.class.php:64
 msgid "Phone"
 msgstr "تلفن"
 
-#: classes/Accounts.class.php:240 classes/Accounts.class.php:242
+#: classes/Accounts.class.php:244 classes/Accounts.class.php:246
 msgid "Photo"
 msgstr "تصویر"
 
@@ -600,7 +587,7 @@ msgstr ""
 "لطفاً توجه داشته باشید که باید اددان ها را فعال کرده و دوباره افزونه را راه "
 "تنظیم کنید."
 
-#: classes/Accounts.class.php:286
+#: classes/Accounts.class.php:290
 msgid "Position or title of the owner of the account."
 msgstr "موقعیت یا عنوان مالک حساب"
 
@@ -651,7 +638,7 @@ msgstr "کد کشوری را برای استفاده برای همه شماره�
 msgid "Select a social media"
 msgstr "یک شبکه اجتماعی انتخاب کنید."
 
-#: classes/Accounts.class.php:308
+#: classes/Accounts.class.php:312
 msgid "Select how you want to display the name of the account."
 msgstr "انتخاب کنید که چگونه می خواهید نام حساب را نمایش دهید."
 
@@ -737,14 +724,15 @@ msgstr "طرح"
 msgid "Support"
 msgstr "پشتیبانی"
 
-#: classes/Accounts.class.php:285
+#: classes/Accounts.class.php:289
 msgid "Title"
 msgstr "عنوان"
 
-#: classes/Accounts.class.php:288
+#: classes/Accounts.class.php:292
 msgid "Title of the account"
 msgstr "عنوان حساب کاربری"
 
+#. Name of the plugin
 #: classes/General.class.php:65
 #: addons/floating_widget_twchat_addon/classes/Customizer.class.php:25
 msgid "TWChat"
@@ -754,9 +742,15 @@ msgstr "چت دو طرفه"
 msgid "TWChat Add-ons"
 msgstr "اددان های افزونه چت دو طرفه"
 
-#. Name of the plugin
-msgid "Two Way Chat"
-msgstr "چت دو طرفه"
+#: classes/Addon_controller.class.php:218
+msgid "TWChat Settings"
+msgstr "تنظیمات چت دو طرفه"
+
+#: twchat.php:184
+msgid ""
+"TWChat: Please deactivate the premium version of the plugin to avoid "
+"conflicts."
+msgstr "TWChat: لطفاً نسخه پریمیوم افزونه را غیرفعال کنید."
 
 #: templates/admin/settings.php:3
 msgid "Two Way Chat Settings"
@@ -796,23 +790,23 @@ msgstr ""
 msgid "WhatsApp"
 msgstr "واتساپ"
 
-#: classes/Accounts.class.php:344 classes/Accounts.class.php:346
+#: classes/Accounts.class.php:348 classes/Accounts.class.php:350
 msgid "Whatsapp Message"
 msgstr "پیام واتساپ"
 
-#: classes/Accounts.class.php:336
+#: classes/Accounts.class.php:340
 msgid "Whatsapp Number"
 msgstr "شماره واتساپ"
 
-#: classes/Accounts.class.php:337
+#: classes/Accounts.class.php:341
 msgid "Whatsapp Number with country code."
 msgstr "شماره واتس اپ با کد کشور"
 
-#: classes/Accounts.class.php:227
+#: classes/Accounts.class.php:231
 msgid "When are you available from?"
 msgstr "از چه زمانی در دسترس هستید؟"
 
-#: classes/Accounts.class.php:235
+#: classes/Accounts.class.php:239
 msgid "When are you available to?"
 msgstr "تا چه زمانی در دسترس هستید؟"
 
