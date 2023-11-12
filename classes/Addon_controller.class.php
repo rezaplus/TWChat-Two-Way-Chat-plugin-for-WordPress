@@ -595,7 +595,6 @@ class Addon_controller
                     // If version is set, check if the version is compatible
                     if (isset($version) && $checkVersion) {
                         $installedVersion = get_plugin_data(TWCHAT_ADDONS_PATH . $internalAddon . '/' . $internalAddon . '.php')['Version'];
-                        // die(var_dump(version_compare($installedVersion, $version, '<=')).' '.$installedVersion.' '.$version);
                         if (version_compare($installedVersion, $version, '<=')) {
                             twchat_notice(sprintf(__('%s add-on version %s or higher is required to activate this add-on. Please update it first.', 'twchatlang'), $internalAddon, $version), 'error');
                             $passed = false;
