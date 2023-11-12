@@ -176,6 +176,11 @@ class Settings
 
     function settings_notice()
     {
+
+        if (!isset($_GET['page']) || (isset($_GET['page']) && $_GET['page'] != 'TWChat_settings')) {
+            return;
+        }
+
         if (isset($_GET['settings-updated']) && !isset($_GET['reload'])) {
             $reloadUrl = admin_url('admin.php?page=TWChat_settings&settings-updated=true&reload=true');
             echo '<script type="text/javascript">window.location.href = "' . $reloadUrl . '";</script>';
