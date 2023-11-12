@@ -61,6 +61,12 @@ class Send_message
      */
     public function twchat_woocommerce_add_meta_box()
     {
+
+        // return if is not order edit page
+        if (get_post_type() !== 'shop_order' || !isset($_GET['post']) || (isset($_GET['action']) && $_GET['action'] !== 'edit')) {
+            return;
+        }
+
         add_meta_box(
             'twchat_woocommerce_send_message',
             __('Send Message', 'twchatlang'),
@@ -78,7 +84,15 @@ class Send_message
     {
         // Get order phone number
         $order = new \WC_Order($_GET['post'] ?? '');
-        $phoneNumber = $order->get_billing_phone();
+        $phoneNumber = $order->get_billing_phone();        
+
+        if (empty($phoneNumber)) {
+            echo sprintf(
+                '<p>%s</p>',
+                __('Phone number is not available', 'twchatlang')
+            );
+            return;
+        }
 
         ob_start();
         do_action('twchat/addon/woo_integrate/order_edit', $phoneNumber);
